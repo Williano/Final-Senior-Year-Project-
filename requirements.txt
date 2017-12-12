@@ -1,0 +1,6 @@
+Python 3.6.3
+Django 1.11.7
+Pillow 4.3.0
+Psycopg2
+Celery-4.1.0 
+Django_paypal-0.4.1
