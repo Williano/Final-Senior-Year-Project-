@@ -20,8 +20,11 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'coupons/', include('coupons.urls', namespace='coupons')),
     url(r'^orders/', include('orders.urls', namespace='orders')),
     url(r'^cart/', include('cart.urls', namespace='cart')),
+    url(r'^paypal/', include('paypal.standard.ipn.urls')),
+    url(r'^payment/', include('payment.urls', namespace='payment')),
     url(r'^', include('onlineshop.urls', namespace='onlineshop')),
 ]
 

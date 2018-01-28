@@ -1,0 +1,17 @@
+table {
+    width:100%;
+}
+
+.module {
+    margin:20px 0;
+}
+
+.num {
+    text-align:right;
+}
+
+.total {
+    background:#417690;
+    color:#fff;
+    font-weight:bold;
+}

@@ -45,13 +45,38 @@ Your shopping cart
                 </tr>
             {% endwith %}
         {% endfor %}
+        {% if cart.coupon %}
+            <tr class="subtotal">
+                <td>Subtotal</td>
+                <td colspan="4"></td>
+                <td class="num">${{ cart.get_total_price }}</td>
+            </tr>
+            <tr>
+                <td>
+                "{{ cart.coupon.code }}" coupon
+                ({{ cart.coupon.discount }}% off)
+                </td>
+                <td colspan="4"></td>
+                <td class="num neg">
+                - ${{ cart.get_discount|floatformat:"2" }}
+                </td>
+            </tr>
+        {% endif %}
         <tr class="total">
             <td>Total</td>
             <td colspan="4"></td>
-            <td class="num">${{ cart.get_total_price }}</td>
+            <td class="num">
+            ${{ cart.get_total_price_after_discount|floatformat:"2" }}
+            </td>
         </tr>
       </tbody>
     </table>
+    <p>Apply a coupon:</p>
+    <form action="{% url "coupons:apply" %}" method="post">
+        {{ coupon_apply_form }}
+        <input type="submit" value="Apply">
+        {% csrf_token %}
+    </form>
     <p class="text-right">
         <a href="{% url "onlineshop:product_list" %}" class="button light">Continue shopping</a>
         <a href="{% url "orders:order_create" %}" class="button">
