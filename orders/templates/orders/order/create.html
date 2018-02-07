@@ -1,12 +1,16 @@
 {% extends "onlineshop/base.html" %}
 
+{% load static %}
+
 {% block title %}
     Checkout
 {% endblock %}
 
+
 {% block content %}
+    <div id="content">
     <h1>Checkout</h1>
-    
+
     <div class="order-info">
         <h3>Your order</h3>
         <ul>
@@ -25,10 +29,26 @@
         </ul>
              <p>Total: ${{ cart.get_total_price_after_discount|floatformat:"2" }}</p>
     </div>
-    
+
     <form action="." method="post" class="order-form">
+        {% csrf_token %}
         {{ form.as_p }}
         <p><input type="submit" value="Place order"></p>
         {% csrf_token %}
     </form>
+    </div>
+
+     <br /><br /><br /><br /><br />
+
+    <section id="advertisement">
+		<div class="container">
+			<img src="{% static 'img/advertisement4.jpg' %}" alt="" />
+		</div>
+	</section>
+
 {% endblock %}
+
+
+
+
+

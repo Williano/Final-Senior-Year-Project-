@@ -1,18 +1,24 @@
 from django.db import models
 from onlineshop.models import Product
 from decimal import Decimal
-from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.validators import MinValueValidator, MaxValueValidator, RegexValidator
 from coupons.models import Coupon
 
 
 class Order(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    email = models.EmailField()
-    address = models.CharField(max_length=250)
-    postal_code = models.CharField(max_length=20)
-    city = models.CharField(max_length=100)
-    country = models.CharField(max_length=100)
+    phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Phone Number must be entered in the format: "
+                                                                   "'+999999999'. Up to 15 digits allowed.")
+    email_regex = RegexValidator(regex=r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$')
+
+    first_name = models.CharField(max_length=50, blank=False)
+    last_name = models.CharField(max_length=50, blank=False)
+    email = models.EmailField(validators=[email_regex], blank=False)
+    phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=False)
+    postal_code = models.CharField(max_length=5, blank=False)
+    address = models.CharField(max_length=250, blank=False)
+    city = models.CharField(max_length=100, blank=False)
+    state_or_region = models.CharField(max_length=100, blank=False)
+    country = models.CharField(max_length=100, blank=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     paid = models.BooleanField(default=False)

@@ -6,49 +6,117 @@
 {% endblock %}
 
 {% block content %}
-    <div id="sidebar">
-        <h3>CATEGORIES</h3>
-        <ul>
-            <li {% if not category %}class="selected"{% endif %}>
-                <a href="{% url "onlineshop:product_list" %}">All</a>
-            </li>
-            {% for c in categories %}
-                    <li {% if category.slug == c.slug %}class="selected"{% endif %}>
-                        <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
-                    </li>
-            {% endfor %}
 
-        <br />
-        <br />
-        <br />
+    <section id="advertisement">
+		<div class="container">
+			<img src="{% static 'img/advertisement3.jpg' %}" alt="" />
+		</div>
+	</section>
 
-            <h3>{% if category %}{{ category.name }}{% else %}BRANDS{% endif %}</h3>
-            {% for product in products %}
-                <div class="item">
-                     <a href="{{ product.get_absolute_url }}">
-                     </a>
-                    <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
+
+    	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+                	<div class="left-sidebar">
+						<h2>Categories</h2>
+                                <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+            						<div class="panel panel-default">
+                                     {% for c in categories %}
+								       <div class="panel-heading">
+									<h4  {% if category.slug == c.slug %}{% endif %} class="panel-title">
+                                        <a href="{{ c.get_absolute_url }}">{{ c.name }}</a></h4>
+								</div>
+                                     {% endfor %}
+							</div>
+                        </div><!--/category-productsr-->
+
+
+						<div class="brands_products"><!--brands_products-->
+							<h2>Brands</h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									<li><a href=""> <span class="pull-right">(50)</span>Acne</a></li>
+									<li><a href=""> <span class="pull-right">(56)</span>Grüne Erde</a></li>
+									<li><a href=""> <span class="pull-right">(27)</span>Albiro</a></li>
+									<li><a href=""> <span class="pull-right">(32)</span>Ronhill</a></li>
+									<li><a href=""> <span class="pull-right">(5)</span>Oddmolly</a></li>
+									<li><a href=""> <span class="pull-right">(9)</span>Boudestijn</a></li>
+									<li><a href=""> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
+								</ul>
+							</div>
+						</div><!--/brands_products-->
+
+						<div class="price-range"><!--price-range-->
+							<h2>Price Range</h2>
+							<div class="well">
+								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
+								 <b>$ 0</b> <b class="pull-right">$ 600</b>
+							</div>
+						</div><!--/price-range-->
+
+						<div class="shipping text-center"><!--shipping-->
+							<img src="{% static 'img/shipping.jpg' %}" alt="" />
+						</div><!--/shipping-->
                     </div>
-            {% endfor %}
 
-        </ul>
-    </div>
+                </div>
+            <div class="col-sm-9 padding-right">
+					<div class="features_items"><!--features_products-->
+						<h2 class="title text-center">{% if category %}{{ category.name }}{% else %}PRODUCTS{% endif %}</h2>
+						  {% for product in products %}
+                        <div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+                                          <a href="{{ product.get_absolute_url }}">
+                                              <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+                                          </a>
+										<h2>${{ product.price }}</h2>
+										<p href="{{ product.get_absolute_url }}">{{ product.name }}</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									</div>
 
+								</div>
 
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href=""><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href=""><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+                    {% endfor %}
 
-    <div id="main" class="product-list">
-        <center><h1>{% if category %}{{ category.name }}{% else %}PRODUCTS{% endif %}</h1></center>
-    {% for product in products %}
-        <div class="item">
-             <a href="{{ product.get_absolute_url }}">
-                <img src="{% if product.image %}{{ product.image.url }}
-                          {% else %}
-                                {% static "img/no_image.png" %}{% endif %}">
-             </a>
-            <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
-            ${{ product.price }}
+             <center>
+            {% if products.has_other_pages %}<!--pagination-->
+                        <ul class="pagination">
+                          {% if products.has_previous %}
+                             <li><a href="?page={{ products.previous_page_number }}">&laquo;</a></li>
+                    {% else %}
+                       <li class="disabled"><span>&laquo;</span></li>
+                    {% endif %}
+                    {% for i in products.paginator.page_range %}
+                       {% if products.number == i %}
+                          <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                       {% else %}
+                         <li><a href="?page={{ i }}">{{ i }}</a></li>
+                       {% endif %}
+                    {% endfor %}
+                    {% if products.has_next %}
+                       <li><a href="?page={{ products.next_page_number }}">&raquo;</a></li>
+                    {% else %}
+                       <li class="disabled"><span>&raquo;</span></li>
+                    {% endif %}
+                  </ul>
+            {% endif %}<!--pagination-->
+     </center>
+
             </div>
-    {% endfor %}
-    </div>
+        </div>
+            </div>
+        </div>
+        </section>
 
-{% endblock %}        
+{% endblock %}

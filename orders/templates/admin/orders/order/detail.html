@@ -37,8 +37,13 @@
             <td><a href="mailto:{{ order.email }}">{{ order.email }}</a></td>
         </tr>
         <tr>
+            <th>Phone Number</th>
+            <td>{{ order.phone_number }}</td>
+        </tr>
+        <tr>
             <th>Address</th>
-            <td>{{ order.address }}, {{ order.postal_code }} {{ order.city }} {{ order.country }}</td>
+            <td>{{ order.address }},
+                {{ order.city }}, {{ order.state_or_region }}, {{ order.country }}, {{ order.postal_code }}.</td>
         </tr>
         <tr>
             <th>Total amount</th>

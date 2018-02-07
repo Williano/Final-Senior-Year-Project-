@@ -5,7 +5,26 @@
 {% endblock %}
 
 {% block content %}
+    <center>
     <h1>Thank you</h1>
-    <p>Your order has been successfully completed. Your order number is <strong>{{ order.id }}</strong>.</p>
+        <p>Your Order has been successfully completed. Your order number is <strong>{{ order.id }}</strong>.</p>
+
+        <br />
+        <h4>The Total amount of your Order is ${{ order.get_total_cost }}</h4>
+
+        <br />
+        <p>Your Order will be shipped to:
+            <br />
+            { order.first_name }} {{ order.last_name }}
+            <br />
+            {{ order.address }},
+            <br />
+            {{ order.city }},
+            <br />
+            {{ order.state_region }}
+            <br />
+            {{ order.country }}, {{ order.postal_code }}.
+        </p>
+    </center>
 {% endblock %}
 

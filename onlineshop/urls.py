@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     url(
-        regex=r'^$',
+        regex=r'^product_list/$',
         view=views.product_list,
         name='product_list'
     ),

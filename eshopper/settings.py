@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'paypal.standard.ipn',
 
     # my apps
+    'home',
+    'about',
+    'contact',
     'onlineshop',
     'cart',
     'orders',
