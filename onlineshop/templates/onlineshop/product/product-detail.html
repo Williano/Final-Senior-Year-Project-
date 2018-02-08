@@ -15,18 +15,61 @@
         <h1>{{ product.name }}</h1>
         <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
         <p class="price">${{ product.price }}</p>
-        {{ product.description|linebreaks }}
         <form action="{% url "cart:cart_add" product.id %}" method="post">
                 {{ cart_product_form }}
                 {% csrf_token %}
                 <input type="submit" value="Add to cart" >
         </form>
+        <br />
+        <p><b>Availability:</b> {{ product.available }}</p>
+        <p><b>Stock:</b> {{ product.stock }}</p>
+        <p><b>Condition:</b> New</p>
     </div>
     </div>
 
-      <br /><br /><br /><br /><br />
+    <center><div class="category-tab shop-details-tab"><!--category-tab-->
+						<div class="col-sm-12">
+							<ul class="nav nav-tabs">
+								<li><a href="#details" data-toggle="tab">Product Details</a></li>
+								<li class="active"><a href="#reviews" data-toggle="tab">Product Reviews (5)</a></li>
+							</ul>
+						</div>
+						<div class="tab-content">
+							<div class="tab-pane fade" id="details" >
+                                <p>{{ product.description|linebreaks }}</p>
+                            </div>
 
-     <br /><br /><br /><br /><br />
+							<div class="tab-pane fade" id="tag" >
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+							</div>
+
+							<div class="tab-pane fade active in" id="reviews" >
+								<div class="col-sm-12">
+									<ul>
+										<li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
+										<li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
+										<li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
+									</ul>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+									<p><b>Write Your Review</b></p>
+
+									<form action="#">
+										<span>
+											<input type="text" placeholder="Your Name"/>
+											<input type="email" placeholder="Email Address"/>
+										</span>
+										<textarea name="Review" placeholder="Your Review" ></textarea>
+										<b>Rating: </b> <img src="{% static 'img/rating.png' %}" alt="" />
+										<button type="button" class="btn btn-default pull-right">
+											Submit
+										</button>
+									</form>
+								</div>
+							</div>
+
+						</div>
+                    </div></div><!--/category-tab-->
+</center>
 
     <div class="recommended_items"><!--recommended_items-->
 						<h2 class="title text-center">People who bought this also bought</h2>
@@ -124,5 +167,12 @@
 							  </a>
 						</div>
 					</div><!--/recommended_items-->
+
+        <section id="advertisement">
+		<div class="container">
+			<img src="{% static 'img/advertisement2.jpg' %}" alt="" />
+		</div>
+	</section>
+
 
 {% endblock %}

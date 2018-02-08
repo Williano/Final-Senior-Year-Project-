@@ -1352,9 +1352,9 @@ h2.title {
 #reviews form span input {
   background:#F0F0E9;
   border: 0 none;
-  color: #A6A6A1;
+  color: #3A5C83;
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   outline: medium none;
   padding: 8px;
   width: 48%;
@@ -1366,7 +1366,7 @@ h2.title {
 #reviews textarea {
   background: #F0F0E9;
   border: medium none;
-  color: #A6A6A1;
+  color: #3A5C83;
   height: 195px;
   margin-bottom: 25px;
   margin-top: 15px;
@@ -1475,7 +1475,7 @@ h2.title {
 #contact-page .form-control:focus, 
 #contact-page .form-control:hover {
   box-shadow: inherit;
-  border-color: #FDB45E;
+  border-color:  #3A5C83;
 }
 
 #contact-page .contact-info {

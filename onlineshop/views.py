@@ -8,8 +8,8 @@ def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
     products = Product.objects.filter(available=True)
-
-    page = request.GET.get('page', 1)
+    page_var = 'page'
+    page = request.GET.get(page_var, 1)
     paginator = Paginator(products, 10)
     try:
         products = paginator.page(page)
