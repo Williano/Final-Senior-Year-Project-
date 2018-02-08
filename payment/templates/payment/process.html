@@ -1,13 +1,20 @@
 {% extends "onlineshop/base.html" %}
 
-{% block title %}Pay using PayPal{% endblock %}
+{% load static %}
+
+{% block title %}Payment{% endblock %}
 
 {% block content %}
-   <center><h1>Pay using PayPal</h1>
-    {{ form.render }}
+    <br /><br />
+   <center>
+       <div class="jumbotron">
+
+           <h1 class="display-3">Pay using PayPal</h1>
+            {{ form.render }}
+       </div>
    </center>
 
-     <br /><br /><br /><br /><br /> <br /><br /><br /><br /><br />
+     <br /><br /><br />
 
     <section id="advertisement">
 		<div class="container">

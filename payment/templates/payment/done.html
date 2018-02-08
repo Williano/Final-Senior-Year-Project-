@@ -1,6 +1,25 @@
 {% extends "onlineshop/base.html" %}
 
+{% load static %}
+
+{% block title %}
+    Successful Payment
+{% endblock %}
+
 {% block content %}
-    <h1>Your payment was successful</h1>
-    <p>Your payment has been successfully received.</p>
+    <center>
+        <div class="jumbotron">
+
+            <h1 class="display-3">Your payment was successful</h1>
+            <p class="lead">Your payment has been successfully received.</p>
+       </div>
+    </center>
+
+             <br /><br /><br /><br /><br /> <br /><br /><br /><br /><br />
+
+    <section id="advertisement">
+		<div class="container">
+			<img src="{% static 'img/advertisement2.jpg' %}" alt="" />
+		</div>
+	</section>
 {% endblock %}

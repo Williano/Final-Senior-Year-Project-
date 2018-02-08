@@ -1,6 +1,25 @@
 {% extends "onlineshop/base.html" %}
 
+{% load static %}
+
+{% block title %}
+    Canceled Payment
+{% endblock %}
+
 {% block content %}
-    <h1>Your payment has not been processed</h1>
-    <p>There was a problem processing your payment.</p>
+       <center>
+        <div class="jumbotron">
+
+            <h1 class="display-3">Your payment has not been processed</h1>
+            <p class="lead">There was a problem processing your payment.</p>
+        </div>
+       </center>
+
+         <br /><br /><br /><br /><br /> <br /><br /><br /><br /><br />
+
+    <section id="advertisement">
+		<div class="container">
+			<img src="{% static 'img/advertisement3.jpg' %}" alt="" />
+		</div>
+	</section>
 {% endblock %}
