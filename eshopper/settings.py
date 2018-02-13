@@ -25,7 +25,8 @@ SECRET_KEY = '04kh!wy)e4i0mc3*xda7#jt9y6e@hy379g#)2cnsh93bqdy44&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'https://cd0dc0dc.ngrok.io']
+
+ALLOWED_HOSTS = ['127.0.0.1', ]
 
 
 # Application definition
@@ -91,9 +92,9 @@ WSGI_APPLICATION = 'eshopper.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'eshopper',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -146,17 +147,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Key to store the cart in the user session.
 CART_SESSION_ID = 'cart'
 
-# django-paypal settings
-PAYPAL_RECEIVER_EMAIL = 'daviose@mail.regent.edu'
-PAYPAL_TEST = True
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-'''EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'paawilly@gmail.com'
-EMAIL_HOST_PASSWORD = '@CmftET21'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-'''
+# Redis settings
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 1
+

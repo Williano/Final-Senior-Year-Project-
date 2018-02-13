@@ -5,12 +5,17 @@ celery==3.1.18
 certifi==2017.11.5
 chardet==3.0.4
 Django==1.8.6
+django-parler==1.5.1
 django-paypal==0.2.5
+django-rosetta==0.8.1
 idna==2.6
 kombu==3.0.37
+microsofttranslator==0.8
 Pillow==5.0.0
+polib==1.1.0
 psycopg2==2.7.3.2
 pytz==2017.3
+redis==2.10.3
 requests==2.18.4
 six==1.11.0
 South==1.0.2

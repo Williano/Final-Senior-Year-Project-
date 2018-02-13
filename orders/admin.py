@@ -5,6 +5,12 @@ from django.http import HttpResponse
 from django.core.urlresolvers import reverse
 from .models import Order, OrderItem
 
+# Customizes the admin backend for the project.
+
+admin.site.site_title = "E-Shopper"
+admin.site.site_header = "E-Shopper Administration"
+admin.site.index_title = "E-Shopper"
+
 
 def export_to_csv(modeladmin, request, queryset):
     opts = modeladmin.model._meta
@@ -48,8 +54,8 @@ class OrderAdmin(admin.ModelAdmin):
                     'first_name',
                     'last_name',
                     'email',
+                    'phone_number',
                     'address',
-                    'postal_code',
                     'city',
                     'country',
                     'paid',

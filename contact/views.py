@@ -19,7 +19,7 @@ def contact(request):
             message = form.cleaned_data['subject']
             name = form.cleaned_data['name']
             try:
-                send_mail(subject, message, email, ['admin@eshopper.com'], name)
+                send_mail(subject, message, email, ['paawilly17@gmail.com'], name)
             except BadHeaderError:
                 return HttpResponse('Invalid Header Found')
             return redirect('contact:email_success')

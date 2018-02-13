@@ -5,6 +5,7 @@ from .models import Order, OrderItem
 from .forms import OrderCreateForm
 from .tasks import order_created
 from cart.cart import Cart
+from coupons.forms import CouponApplyForm
 
 
 def order_create(request):
@@ -39,6 +40,8 @@ def order_create(request):
 @staff_member_required
 def admin_order_detail(request, order_id):
     order = get_object_or_404(Order, id=order_id)
-    return render(request, 'admin/orders/order/detail.html', {'order': order})
+    coupon_apply_form = CouponApplyForm()
+    return render(request, 'admin/orders/order/detail.html', {'order': order,
+                                                              'coupon_apply_form': coupon_apply_form})
 
 
