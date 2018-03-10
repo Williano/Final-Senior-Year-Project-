@@ -84,7 +84,9 @@
 						<div class="col-sm-12">
 							<ul class="nav nav-tabs">
 								<li><a href="#details" data-toggle="tab">Product Details</a></li>
-								<li class="active"><a href="#reviews" data-toggle="tab">Product Reviews (5)</a></li>
+                                {% with reviews.count as total_reviews %}
+								<li class="active"><a href="#reviews" data-toggle="tab">Product Reviews({{ total_reviews }})</a></li>
+                                {% endwith %}
 							</ul>
 						</div>
 						<div class="tab-content">
@@ -92,31 +94,35 @@
                                 <p>{{ product.description|linebreaks }}</p>
                             </div>
 
-							<div class="tab-pane fade" id="tag" >
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-							</div>
 
 							<div class="tab-pane fade active in" id="reviews" >
 								<div class="col-sm-12">
-									<ul>
-										<li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
-										<li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
-										<li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
+									{% for review in reviews %}
+                                    <ul>
+										<li><a href=""><i class="fa fa-user"></i>{{ review.name }}</a></li>
+										<li><a href=""><i class="fa fa-clock-o"></i>{{ review.created.time}}</a></li>
+										<li><a href=""><i class="fa fa-calendar-o"></i>{{ review.created.date}}</a></li>
 									</ul>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-									<p><b>Write Your Review</b></p>
+									<p>{{ review.body|linebreaks }}</p>
+                                      {% empty %}
+                                        <p>There are no reviews yet.</p>
+									{% endfor %}
+                                    {% if new_review %}
+                                            <h2>Your review has been added.</h2>
+                                    {% else %}
+                                        <br />
+                                    <p><b>Write Your Review</b></p>
 
-									<form action="#">
+                                        <form action="{% url 'onlineshop:product_detail' id=product.id slug=product.slug %}" method="POST" name="review_form">
+                                        {% csrf_token %}
 										<span>
-											<input type="text" placeholder="Your Name"/>
-											<input type="email" placeholder="Email Address"/>
+											<input type="text" placeholder="Your Name" name="name"/>
+											<input type="email" placeholder="Email Address" name="email"/>
 										</span>
-										<textarea name="Review" placeholder="Your Review" ></textarea>
-										<b>Rating: </b> <img src="{% static 'img/rating.png' %}" alt="" />
-										<button type="button" class="btn btn-default pull-right">
-											Submit
-										</button>
+										<textarea name="review" placeholder="Your Review"></textarea>
+										<input type="submit" name="submit" value="Submit">
 									</form>
+                                {% endif %}
 								</div>
 							</div>
 

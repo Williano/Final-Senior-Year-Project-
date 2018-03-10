@@ -34,5 +34,5 @@ def payment_process(request):
     }
     form = PayPalPaymentsForm(initial=paypal_dict)
     return render(request, 'payment/process.html', {'order': order,
-                                                    'form':form})
+                                                    'form': form})
 

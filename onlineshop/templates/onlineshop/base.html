@@ -7,7 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{% static 'img/favi.gif' %}">
+
+    <!-- Title -->
     <title>E-Shopper | {% block title %}{% endblock %}</title>
+
+    <!-- Bootstrap Files and Plugins -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/prettyPhoto.css' %}" rel="stylesheet">
@@ -17,7 +24,10 @@
 	<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
 
+   <!-- Crisp Live Chat -->
+   <script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="38d6144c-67a0-4b31-8cfb-2ee97bf4c905";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
 </head>
+
 <body>
    {% block header %}
 <header id="header"><!--header-->
@@ -225,7 +235,6 @@
 						<div class="single-widget">
 							<h2>Service</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Online Help</a></li>
 								<li><a href="#">Contact Us</a></li>
 								<li><a href="#">Order Status</a></li>
 

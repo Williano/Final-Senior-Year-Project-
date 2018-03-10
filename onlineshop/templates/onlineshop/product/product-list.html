@@ -73,7 +73,7 @@
                                               <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
                                           </a>
 										<h2>${{ product.price }}</h2>
-										<p href="{{ product.get_absolute_url }}">{{ product.name }}</p>
+                                        <p><strong><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></strong></p>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
 
@@ -89,7 +89,7 @@
 						</div>
                     {% endfor %}
 
-             <center>
+             <br />
             {% if products.has_other_pages %}<!--pagination-->
                         <ul class="pagination">
                           {% if products.has_previous %}
@@ -111,7 +111,7 @@
                     {% endif %}
                   </ul>
             {% endif %}<!--pagination-->
-     </center>
+
 
             </div>
         </div>

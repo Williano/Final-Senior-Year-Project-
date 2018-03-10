@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product
+from .models import Category, Product, Review
 
 
 # Customizes the admin backend for the project.
@@ -35,3 +35,10 @@ class ProductAdmin(admin.ModelAdmin):
 admin.site.register(Product, ProductAdmin)
 
 
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'product', 'created', 'active')
+    list_filter = ('active', 'created', 'updated')
+    search_fields = ('name', 'email', 'body')
+
+
+admin.site.register(Review, ReviewAdmin)
