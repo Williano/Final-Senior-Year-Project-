@@ -14,26 +14,29 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 
-from jet.dashboard.dashboard_modules import google_analytics_views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import include, url
+from django.utils.translation import gettext_lazy as _
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 
-urlpatterns = [
+
+urlpatterns = i18n_patterns(
     url(r'^jet/', include('jet.urls', 'jet')), # Django JET URLS
     url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')), # Django JET dashboard URLS
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^rosetta/', include('rosetta.urls')),
     url(r'^', include('home.urls', namespace='home')),
-    url(r'^about/', include('about.urls', namespace='about')),
-    url(r'^contact/', include('contact.urls', namespace='contact')),
-    url(r'coupons/', include('coupons.urls', namespace='coupons')),
-    url(r'^orders/', include('orders.urls', namespace='orders')),
-    url(r'^cart/', include('cart.urls', namespace='cart')),
+    url(_(r'^about/'), include('about.urls', namespace='about')),
+    url(_(r'^contact/'), include('contact.urls', namespace='contact')),
+    url(_(r'coupons/'), include('coupons.urls', namespace='coupons')),
+    url(_(r'^orders/'), include('orders.urls', namespace='orders')),
+    url(_(r'^cart/'), include('cart.urls', namespace='cart')),
     url(r'^paypal/', include('paypal.standard.ipn.urls')),
-    url(r'^payment/', include('payment.urls', namespace='payment')),
-    url(r'^onlineshop/', include('onlineshop.urls', namespace='onlineshop')),
-]
+    url(_(r'^payment/'), include('payment.urls', namespace='payment')),
+    url(_(r'^onlineshop/'), include('onlineshop.urls', namespace='onlineshop')),
+)
 
 if settings.DEBUG:
             urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

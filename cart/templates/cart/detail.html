@@ -1,22 +1,23 @@
 {% extends "onlineshop/base.html" %}
+{% load i18n %}
 {% load static %}
 
 {% block title %}
-     Cart
+     {% trans "Cart" %}
 {% endblock %}
 
 
 {% block content %}
     <div id="content">
-    <h1>Your shopping cart</h1>
+    <h1>{% trans "Your shopping cart" %}</h1>
     <table class="cart" >
         <thead>
             <tr>
-                <th>Image</th>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Remove</th>
-                <th>Unit price</th>
+                <th>{% trans "Image" %}</th>
+                <th>{% trans "Product" %}</th>
+                <th>{% trans "Quantity" %}</th>
+                <th>{% trans "Remove" %}</th>
+                <th>{% trans "Unit price" %}</th>
                 <th>Price</th>
             </tr>
         </thead>
@@ -32,16 +33,16 @@
                                       {% endif %}">
                         </a>
                     </td>
-                    <td>{{ product.name }}</td>
+                    <td>{% blocktrans with product_name = product.name %}{{ product_name }}{% endblocktrans %}</td>
                     <td>
                         <form action="{% url "cart:cart_add" product.id %}" method="post">
                             {{ item.update_quantity_form.quantity }}
                             {{ item.update_quantity_form.update }}
-                            <input type="submit" value="Update">
+                            <input type="submit" value="{% trans "Update" %}">
                             {% csrf_token %}
                         </form>
                     </td>
-                    <td><a href="{% url "cart:cart_remove" product.id %}">Remove</a></td>
+                    <td><a href="{% url "cart:cart_remove" product.id %}">{% trans "Remove" %}</a></td>
                     <td class="num">${{ item.price }}</td>
                     <td class="num">${{ item.total_price }}</td>
                 </tr>
@@ -49,15 +50,14 @@
         {% endfor %}
         {% if cart.coupon %}
             <tr class="subtotal">
-                <td>Subtotal</td>
+                <td>{% trans "Subtotal" %}</td>
                 <td colspan="4"></td>
                 <td class="num">${{ cart.get_total_price }}</td>
             </tr>
             <tr>
-                <td>
-                "{{ cart.coupon.code }}" coupon
-                ({{ cart.coupon.discount }}% off)
-                </td>
+                {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
+                    <td>"{{ code }}" coupon ({{ discount }}% off)</td>
+                {% endblocktrans %}
                 <td colspan="4"></td>
                 <td class="num neg">
                 - ${{ cart.get_discount|floatformat:"2" }}
@@ -65,7 +65,7 @@
             </tr>
         {% endif %}
         <tr class="total">
-            <td>Total</td>
+            <td>{% trans "Total" %}</td>
             <td colspan="4"></td>
             <td class="num">
             ${{ cart.get_total_price_after_discount|floatformat:"2" }}
@@ -73,16 +73,16 @@
         </tr>
       </tbody>
     </table>
-    <p>Apply a coupon:</p>
+    <p>{% trans "Apply a coupon" %}}:</p>
     <form action="{% url "coupons:apply" %}" method="post">
         {{ coupon_apply_form }}
-        <input type="submit" value="Apply">
+        <input type="submit" value="{% trans "Apply" %}">
         {% csrf_token %}
     </form>
     <p class="text-right">
-        <a href="{% url "onlineshop:product_list" %}" class="button light">Continue shopping</a>
+        <a href="{% url "onlineshop:product_list" %}" class="button light">{% trans "Continue shopping" %}</a>
         <a href="{% url "orders:order_create" %}" class="button">
-           Proceed To Checkout
+           {% trans "Proceed To Checkout" %}
         </a>
     </p>
     </div>
@@ -91,7 +91,7 @@
 
     {% if recommended_products %}
     <div class="recommended_items"><!--recommended_items-->
-						<h2 class="title text-center">People who bought this also bought</h2>
+						<h2 class="title text-center">{% trans "People who bought this also bought" %}</h2>
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
 								<div class="item active">
@@ -103,8 +103,8 @@
 													 <a href="{{ p.get_absolute_url }}">
                                                          <img src="{% if p.image %}{{ p.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"></a>
 													<h2></h2>
-													<p><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+													<p><a href="{{ p.get_absolute_url }}">{% blocktrans  with product_name = p.name %}{{ product_name }}{% endblocktrans %}</a></p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>{% trans "Add to cart" %}</a>
 												</div>
 											</div>
 										</div>
@@ -121,8 +121,8 @@
 													 <a href="{{ p.get_absolute_url }}">
                                                         <img src="{% if p.image %}{{ p.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"></a>
 													<h2></h2>
-													<p><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+													<p><a href="{{ p.get_absolute_url }}">{% blocktrans with product_name = p.name %}{{ product_name }}</a>{% endblocktrans %}</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>{% trans "Add to cart" %}</a>
 												</div>
 											</div>
 										</div>

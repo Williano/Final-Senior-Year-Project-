@@ -1,9 +1,9 @@
 {% extends 'onlineshop/base.html' %}
-
+{% load i18n %}
 {% load static %}
 
 
-{% block title%}Home{% endblock %}
+{% block title%}{% trans "Home" %}{% endblock %}
 
 {% block content %}
 	<section id="slider"><!--slider-->
@@ -20,10 +20,10 @@
 						<div class="carousel-inner">
 							<div class="item active">
 								<div class="col-sm-6">
-									<h1><span>Software</span> Engineering</h1>
-									<h2>Essentials of Software Engineering</h2>
-									<p>Written for the undergraduate, one-term course, Essentials of Software Engineering, Fourth Edition provides students with a systematic engineering approach to software engineering principles and methodologies. Comprehensive, yet concise, the Fourth Edition includes new information on areas of high interest to computer scientists, including Big Data and developing in the cloud. </p>
-									<button type="button" class="btn btn-default get" ><a href="{% url 'onlineshop:product_list' %}" style="color:inherit">Get it now</a></button>
+									<h1><span>{% trans "Software" %}</span> {% trans "Engineering" %}</h1>
+									<h2>{% trans "Essentials of Software Engineering" %}</h2>
+									<p>{% trans "Written for the undergraduate, one-term course, Essentials of Software Engineering, Fourth Edition provides students with a systematic engineering approach to software engineering principles and methodologies. Comprehensive, yet concise, the Fourth Edition includes new information on areas of high interest to computer scientists, including Big Data and developing in the cloud." %} </p>
+									<button type="button" class="btn btn-default get" ><a href="{% url 'onlineshop:product_list' %}" style="color:inherit">{% trans "Get it now" %}</a></button>
 								</div>
 								<div class="col-sm-6">
 									<img src="{% static 'img/Essentials Of Software Engineering.jpg' %}" class="girl img-responsive" alt="" />
@@ -31,10 +31,10 @@
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>Web</span> Development</h1>
-									<h2>Django for Beginners</h2>
-									<p>Django for Beginners takes you from total beginner to confident Django developer. Proceed step-by-step through four progressively more complex web applications: from a "Hello World" app all the way to a robust Blog app with forms and user accounts. Learn current best practices around class-based views, templates, urls, user authentication, testing, and deployment. </p>
-									<button type="button" class="btn btn-default get" ><a href="{% url 'onlineshop:product_list' %}" style="color:inherit">Get it now</a></button>
+									<h1><span>{% trans "Web" %}</span> {% trans "Development" %}</h1>
+									<h2>{% trans "Django for Beginners" %}</h2>
+									<p>{% trans "Django for Beginners takes you from total beginner to confident Django developer. Proceed step-by-step through four progressively more complex web applications: from a 'Hello World' app all the way to a robust Blog app with forms and user accounts. Learn current best practices around class-based views, templates, urls, user authentication, testing, and deployment." %} </p>
+									<button type="button" class="btn btn-default get" ><a href="{% url 'onlineshop:product_list' %}" style="color:inherit">{% trans "Get it now" %}</a></button>
 								</div>
 								<div class="col-sm-6">
 									<img src="{% static 'img/1.jpg' %}" class="girl img-responsive" alt="" />
@@ -43,10 +43,10 @@
 
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>Prog</span>ramming</h1>
-									<h2>Starting Out with Python</h2>
-									<p>In Starting Out with Python®, Third Edition Tony Gaddis’ evenly-paced, accessible coverage introduces students to the basics of programming and prepares them to transition into more complicated languages. Python, an easy-to-learn and increasingly popular object-oriented language, allows readers to become comfortable with the fundamentals of programming without the troublesome syntax that can be challenging for novices. With the knowledge acquired using Python, students gain confidence in their skills and learn to recognize the logic behind developing high-quality programs. </p>
-									<button type="button" class="btn btn-default get" ><a href="{% url 'onlineshop:product_list' %}" style="color:inherit">Get it now</a></button>
+									<h1><span>{% trans "Prog" %}</span>{% trans "ramming" %}</h1>
+									<h2>{% trans "Starting Out with Python" %}</h2>
+									<p>{% trans "In Starting Out with Python®, Third Edition Tony Gaddis’ evenly-paced, accessible coverage introduces students to the basics of programming and prepares them to transition into more complicated languages. Python, an easy-to-learn and increasingly popular object-oriented language, allows readers to become comfortable with the fundamentals of programming without the troublesome syntax that can be challenging for novices. With the knowledge acquired using Python, students gain confidence in their skills and learn to recognize the logic behind developing high-quality programs."%} </p>
+									<button type="button" class="btn btn-default get" ><a href="{% url 'onlineshop:product_list' %}" style="color:inherit">{% trans "Get it now" %}</a></button>
 								</div>
 								<div class="col-sm-6">
 									<img src="{% static 'img/Python.jpg' %}" class="girl img-responsive" alt="" />

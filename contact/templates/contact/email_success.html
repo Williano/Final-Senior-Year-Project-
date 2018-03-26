@@ -1,6 +1,7 @@
 {% extends 'onlineshop/base.html' %}
+{% load i18n %}
 
-{% block title %}Email Sent{% endblock %}
+{% block title %}{% trans "Email Sent" %}{% endblock %}
 
 {% block content %}
     <br />
@@ -8,12 +9,11 @@
 
     <center>
         <div class="jumbotron">
-        <h1 class="display-3">Email Sent</h1>
+        <h1 class="display-3">{% trans "Email Sent" %}</h1>
       <p class="lead">
-           Your Email was sent successfully ! We will get back to you as soon as possible.
-           Thank You !!
+           {% trans "Your Email was sent successfully ! We will get back to you as soon as possible. Thank You !!" %}
         </p>
-        <p><a class="btn btn-lg btn-success" href="{% url 'home:home' %}" role="button">Go Back To HomePage</a></p>
+        <p><a class="btn btn-lg btn-success" href="{% url 'home:home' %}" role="button">{% trans "Go Back To HomePage" %}</a></p>
       </div>
       </center>
     </div>

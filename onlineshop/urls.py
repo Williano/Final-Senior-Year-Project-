@@ -1,9 +1,10 @@
 from django.conf.urls import url
+from django.utils.translation import gettext_lazy as _
 from . import views
 
 urlpatterns = [
     url(
-        regex=r'^product_list/$',
+        regex=_(r'^product_list/$'),
         view=views.product_list,
         name='product_list'
     ),

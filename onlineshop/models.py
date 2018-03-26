@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.urlresolvers import reverse
+from django.utils.translation import gettext_lazy as _
 
 # Model for Category of products
 

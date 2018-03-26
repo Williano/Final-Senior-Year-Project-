@@ -1,17 +1,18 @@
 {% extends "onlineshop/base.html" %}
+{% load i18n %}
 
 {% load static %}
 
 {% block title %}
-    Canceled Payment
+    {% trans "Canceled Payment" %}
 {% endblock %}
 
 {% block content %}
        <center>
         <div class="jumbotron">
 
-            <h1 class="display-3">Your payment has not been processed</h1>
-            <p class="lead">There was a problem processing your payment.</p>
+            <h1 class="display-3">{% trans "Your payment has not been processed" %}</h1>
+            <p class="lead">{% trans "There was a problem processing your payment." %}</p>
         </div>
        </center>
 

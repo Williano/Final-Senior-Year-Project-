@@ -1,17 +1,17 @@
 {% extends "onlineshop/base.html" %}
-
+{% load i18n %}
 {% load static %}
 
 {% block title %}
-    Successful Payment
+    {% trans "Successful Payment" %}
 {% endblock %}
 
 {% block content %}
     <center>
         <div class="jumbotron">
 
-            <h1 class="display-3">Your payment was successful</h1>
-            <p class="lead">Your payment has been successfully received.</p>
+            <h1 class="display-3">{% trans "Your payment was successful" %}</h1>
+            <p class="lead">{% trans "Your payment has been successfully received." %}</p>
        </div>
     </center>
 

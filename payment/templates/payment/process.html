@@ -1,15 +1,15 @@
 {% extends "onlineshop/base.html" %}
-
+{% load i18n %}
 {% load static %}
 
-{% block title %}Payment{% endblock %}
+{% block title %}{% trans "Payment" %}{% endblock %}
 
 {% block content %}
     <br /><br />
    <center>
        <div class="jumbotron">
 
-           <h1 class="display-3">Pay using PayPal</h1>
+           <h1 class="display-3">{% trans "Pay using PayPal" %}</h1>
             {{ form.render }}
        </div>
    </center>

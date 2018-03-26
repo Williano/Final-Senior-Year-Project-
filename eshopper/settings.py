@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Third-party apps
+    'rosetta',
     'paypal.standard.ipn',
 
     # my apps
@@ -59,6 +61,7 @@ INSTALLED_APPS = [
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -135,6 +138,32 @@ USE_L10N = True
 
 USE_TZ = True
 
+LANGUAGES = (
+    ('en-gb', _('British English')),
+    ('es', _('Spanish')),
+    ('zh-cn', _('Chinese')),
+    ('pt', _('Portuguese')),
+    ('ru', _('Russian')),
+    ('nl', _('Dutch')),
+    ('ko', _('Korean')),
+    ('it', _('Italian')),
+    ('ja', _('Japanese')),
+    ('he', _('Hebrew')),
+    ('hi', _('Hindi')),
+    ('fr', _('French')),
+    ('de', _('German')),
+    ('el', _('Greek')),
+    ('ca', _('Catalan')),
+    ('af', _('Afrikaans')),
+    ('ar', _('Arabic')),
+    ('tr', _('Turkish')),
+    ('ga', _('Irish')),
+    ('cy', _('Welsh')),
+)
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale/'),
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
@@ -150,10 +179,19 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CART_SESSION_ID = 'cart'
 
 # django-paypal settings
-PAYPAL_RECEIVER_EMAIL = ''
+PAYPAL_RECEIVER_EMAIL = 'daviose@mail.regent.edu'
 PAYPAL_TEST = True
 
-
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# SendGrid email configuration
+SEND_GRID_API_KEY = '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'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'paawilly17@gmail.com'
+EMAIL_HOST_PASSWORD = '@Williano7'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'E-Shopper <admin@eshopper.com>'
+BASE_URL = '127.0.0.1:8080'
 
 
 # Redis settings
@@ -198,4 +236,3 @@ JET_THEMES = [
     }
 ]
 
-#JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(PROJECT_DIR, 'client_secrets.json')

@@ -1,18 +1,18 @@
 {% extends "onlineshop/base.html" %}
-
+{% load i18n %}
 {% load static %}
 
 {% block title %}
-    Checkout
+   {% trans "Checkout" %}
 {% endblock %}
 
 
 {% block content %}
     <div id="content">
-    <h1>Checkout</h1>
+    <h1>{% trans "Checkout" %}</h1>
 
     <div class="order-info">
-        <h3>Your order</h3>
+        <h3>{% trans "Your order" %}</h3>
         <ul>
             {% for item in cart %}
                 <li>
@@ -22,19 +22,20 @@
             {% endfor %}
             {% if cart.coupon %}
             <li>
-                "{{ cart.coupon.code }}" ({{ cart.coupon.discount }}% off)
+                {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
+                        "{{ code }}" ({{ discount }}% off)
+                    {% endblocktrans %}
                 <span>- ${{ cart.get_discount|floatformat:"2" }}</span>
             </li>
         {% endif %}
         </ul>
-             <p>Total: ${{ cart.get_total_price_after_discount|floatformat:"2" }}</p>
+             <p>{% trans "Total" %}: ${{ cart.get_total_price_after_discount|floatformat:"2" }}</p>
     </div>
 
     <form action="." method="post" class="order-form">
         {% csrf_token %}
         {{ form.as_p }}
-        <p><input type="submit" value="Place order"></p>
-        {% csrf_token %}
+        <p><input type="submit" value="{% trans "Place order" %}"></p>
     </form>
     </div>
 

@@ -1,8 +1,9 @@
 {% extends "onlineshop/base.html" %}
+{% load i18n %}
 {% load static %}
 
 {% block title %}
-    {% if category %}{{ category.name }}{% else %}Products{% endif %}
+    {% if category %}{{ category.name }}{% else %}{% trans "Products" %}{% endif %}
 {% endblock %}
 
 {% block content %}
@@ -19,13 +20,13 @@
 			<div class="row">
 				<div class="col-sm-3">
                 	<div class="left-sidebar">
-						<h2>Categories</h2>
+						<h2>{% trans "Categories" %}</h2>
                                 <div class="panel-group category-products" id="accordian"><!--category-productsr-->
             						<div class="panel panel-default">
                                      {% for c in categories %}
 								       <div class="panel-heading">
 									<h4  {% if category.slug == c.slug %}{% endif %} class="panel-title">
-                                        <a href="{{ c.get_absolute_url }}">{{ c.name }}</a></h4>
+                                        <a href="{{ c.get_absolute_url }}">{% blocktrans with category_name = c.name %}{{ category_name }}{% endblocktrans %}</a></h4>
 								</div>
                                      {% endfor %}
 							</div>
@@ -33,7 +34,7 @@
 
 
 						<div class="brands_products"><!--brands_products-->
-							<h2>Brands</h2>
+							<h2>{% trans "Brands" %}</h2>
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
 									<li><a href=""> <span class="pull-right">(50)</span>Acne</a></li>
@@ -48,7 +49,7 @@
 						</div><!--/brands_products-->
 
 						<div class="price-range"><!--price-range-->
-							<h2>Price Range</h2>
+							<h2>{% trans "Price Range" %}</h2>
 							<div class="well">
 								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
 								 <b>$ 0</b> <b class="pull-right">$ 600</b>
@@ -63,7 +64,7 @@
 
             <div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_products-->
-						<h2 class="title text-center">{% if category %}{{ category.name }}{% else %}PRODUCTS{% endif %}</h2>
+						<h2 class="title text-center">{% if category %}{{ category.name }}{% else %}{% trans "PRODUCTS" %}{% endif %}</h2>
 						  {% for product in products %}
                         <div class="col-sm-4">
 							<div class="product-image-wrapper">
@@ -73,16 +74,16 @@
                                               <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
                                           </a>
 										<h2>${{ product.price }}</h2>
-                                        <p><strong><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></strong></p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <p><strong><a href="{{ product.get_absolute_url }}">{% blocktrans with product_name = product.name %}{{ product_name }}{% endblocktrans %}</a></strong></p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>{% trans "Add to cart" %}</a>
 									</div>
 
 								</div>
 
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-										<li><a href=""><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-										<li><a href=""><i class="fa fa-plus-square"></i>Add to compare</a></li>
+										<li><a href=""><i class="fa fa-plus-square"></i>{% trans "Add to wishlist" %}</a></li>
+										<li><a href=""><i class="fa fa-plus-square"></i>{% trans "Add to compare" %}</a></li>
 									</ul>
 								</div>
 							</div>
@@ -90,28 +91,6 @@
                     {% endfor %}
 
              <br />
-            {% if products.has_other_pages %}<!--pagination-->
-                        <ul class="pagination">
-                          {% if products.has_previous %}
-                             <li><a href="?page={{ products.previous_page_number }}">&laquo;</a></li>
-                    {% else %}
-                       <li class="disabled"><span>&laquo;</span></li>
-                    {% endif %}
-                    {% for i in products.paginator.page_range %}
-                       {% if products.number == i %}
-                          <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-                       {% else %}
-                         <li><a href="?page={{ i }}">{{ i }}</a></li>
-                       {% endif %}
-                    {% endfor %}
-                    {% if products.has_next %}
-                       <li><a href="?page={{ products.next_page_number }}">&raquo;</a></li>
-                    {% else %}
-                       <li class="disabled"><span>&raquo;</span></li>
-                    {% endif %}
-                  </ul>
-            {% endif %}<!--pagination-->
-
 
             </div>
         </div>
