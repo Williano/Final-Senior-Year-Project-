@@ -7,26 +7,25 @@
 {% block content %}
     <center><div class="jumbotron">
     <h1 class="display-3">{% trans "Thank you" %}</h1>
-        <p class="lead">{% blocktrans with order_id = order.id %}
-            Your Order has been successfully completed. An email confirmation has been sent to you.
-            Your order number is <strong>{{ order_id }}</strong>.</p>
-            {% endblocktrans %}
+        <p class="lead">
+            {% trans "Your Order has been successfully completed. An email confirmation has been sent to you." %}
+            {% trans "Your order number is" %} <strong>{{ order.id }}</strong>.</p>
         <br />
         <h4>{% blocktrans with total_cost = order.get_total_cost %}The Total amount of your Order is ${{ total_cost }}{% endblocktrans %}</h4>
 
         <br />
-        <p class="lead">{% blocktrans with order_first_name = order.first_name order_last_name = order.last_name order_address = order.address  order_city = order.city  order_state_region = order.state_region order_country = order.country order_postal_code = order.postal_code     %}Your Order will be shipped to:
+        <p class="lead">Your Order will be shipped to:
             <br />
-            { order_first_name }} {{ order_last_name }}
+            { order.first_name }} {{ order.last_name }}
             <br />
-            {{ order_address }},
+            {{ order.address }},
             <br />
-            {{ order_city }},
+            {{ order.city }},
             <br />
-            {{ order_state_region }}
+            {{ order.state_region }}
             <br />
-            {{ order_country }}, {{ order_postal_code }}.
-        {% endblocktrans %}
+            {{ order.country }}, {{ order.postal_code }}.
+
         </p>
     </div>
     </center>

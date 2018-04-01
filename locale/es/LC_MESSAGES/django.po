@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-20 14:02+1200\n"
+"POT-Creation-Date: 2018-03-27 17:25+1200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,49 +20,45 @@ msgstr ""
 
 #: .\cart\forms.py:8 .\cart\templates\cart\detail.html:18
 msgid "Quantity"
-msgstr ""
+msgstr "Cantidad"
 
 #: .\cart\templates\cart\detail.html:6
 #: .\onlineshop\templates\onlineshop\base.html:104
 msgid "Cart"
-msgstr ""
+msgstr "Carro"
 
 #: .\cart\templates\cart\detail.html:12
 msgid "Your shopping cart"
-msgstr ""
+msgstr "Tu carrito de la compra"
 
 #: .\cart\templates\cart\detail.html:16
 msgid "Image"
-msgstr ""
+msgstr "Imagen"
 
 #: .\cart\templates\cart\detail.html:17
 msgid "Product"
-msgstr ""
+msgstr "Producto"
 
 #: .\cart\templates\cart\detail.html:19 .\cart\templates\cart\detail.html:45
 msgid "Remove"
-msgstr ""
+msgstr "Retirar"
 
 #: .\cart\templates\cart\detail.html:20
 msgid "Unit price"
-msgstr ""
+msgstr "Precio unitario"
 
 #: .\cart\templates\cart\detail.html:36 .\cart\templates\cart\detail.html:106
-#: .\onlineshop\templates\onlineshop\product\product-detail.html:16
-#: .\onlineshop\templates\onlineshop\product\product-detail.html:46
-#: .\onlineshop\templates\onlineshop\product\product-detail.html:64
-#: .\onlineshop\templates\onlineshop\product\product-list.html:77
 #, python-format
 msgid "%(product_name)s"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:41
 msgid "Update"
-msgstr ""
+msgstr "Actualizar"
 
 #: .\cart\templates\cart\detail.html:53
 msgid "Subtotal"
-msgstr ""
+msgstr "Total parcial"
 
 #: .\cart\templates\cart\detail.html:58
 #, python-format
@@ -74,28 +70,28 @@ msgstr ""
 
 #: .\cart\templates\cart\detail.html:68
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 #: .\cart\templates\cart\detail.html:76
 msgid "Apply a coupon"
-msgstr ""
+msgstr "Aplicar un cupón"
 
 #: .\cart\templates\cart\detail.html:79
 msgid "Apply"
-msgstr ""
+msgstr "Aplicar"
 
 #: .\cart\templates\cart\detail.html:83
 msgid "Continue shopping"
-msgstr ""
+msgstr "Seguir comprando"
 
 #: .\cart\templates\cart\detail.html:85
 msgid "Proceed To Checkout"
-msgstr ""
+msgstr "Pasar por la caja"
 
 #: .\cart\templates\cart\detail.html:94
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:34
 msgid "People who bought this also bought"
-msgstr ""
+msgstr "Las personas que compraron esto también compraron"
 
 #: .\cart\templates\cart\detail.html:107 .\cart\templates\cart\detail.html:125
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:22
@@ -103,7 +99,7 @@ msgstr ""
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:65
 #: .\onlineshop\templates\onlineshop\product\product-list.html:78
 msgid "Add to cart"
-msgstr ""
+msgstr "Añadir a la cesta"
 
 #: .\cart\templates\cart\detail.html:124
 #, python-format
@@ -114,221 +110,231 @@ msgstr ""
 #: .\onlineshop\templates\onlineshop\base.html:130
 #: .\onlineshop\templates\onlineshop\base.html:245
 msgid "Contact Us"
-msgstr ""
+msgstr "Contáctenos"
 
 #: .\contact\templates\contact\contact.html:14
 msgid "Contact"
-msgstr ""
+msgstr "Contacto"
 
-#: .\contact\templates\contact\contact.html:24
+#: .\contact\templates\contact\contact.html:25
 msgid "Get In Touch"
-msgstr ""
+msgstr "Estar en contacto"
 
-#: .\contact\templates\contact\contact.html:29
+#: .\contact\templates\contact\contact.html:30
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
-#: .\contact\templates\contact\contact.html:32
-#: .\contact\templates\contact\contact.html:54
+#: .\contact\templates\contact\contact.html:33
+#: .\contact\templates\contact\contact.html:55
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
-#: .\contact\templates\contact\contact.html:35
+#: .\contact\templates\contact\contact.html:36
 msgid "Subject"
-msgstr ""
+msgstr "Tema"
 
-#: .\contact\templates\contact\contact.html:38
+#: .\contact\templates\contact\contact.html:39
 msgid "Your Message Here"
-msgstr ""
+msgstr "Su mensaje aquí"
 
-#: .\contact\templates\contact\contact.html:41
+#: .\contact\templates\contact\contact.html:42
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:124
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
-#: .\contact\templates\contact\contact.html:48
+#: .\contact\templates\contact\contact.html:49
 msgid "Contact Info"
-msgstr ""
+msgstr "Datos de contacto"
 
-#: .\contact\templates\contact\contact.html:50
+#: .\contact\templates\contact\contact.html:51
 msgid "E-Shopper Inc."
 msgstr ""
 
-#: .\contact\templates\contact\contact.html:51
+#: .\contact\templates\contact\contact.html:52
 msgid "P.O.Box KS 10731, Kumasi , Ashanti"
 msgstr ""
 
-#: .\contact\templates\contact\contact.html:52
+#: .\contact\templates\contact\contact.html:53
 msgid "Ghana"
 msgstr ""
 
-#: .\contact\templates\contact\contact.html:53
+#: .\contact\templates\contact\contact.html:54
 msgid "Mobile"
 msgstr ""
 
-#: .\contact\templates\contact\contact.html:57
+#: .\contact\templates\contact\contact.html:58
 msgid "Follow Us"
-msgstr ""
+msgstr "Síguenos"
 
-#: .\contact\templates\contact\contact.html:80
+#: .\contact\templates\contact\contact.html:81
 msgid "Ecommerce templates"
 msgstr ""
 
-#: .\contact\templates\contact\contact.html:81
+#: .\contact\templates\contact\contact.html:82
 msgid "Ecommerce themes"
 msgstr ""
 
 #: .\contact\templates\contact\email_success.html:4
 #: .\contact\templates\contact\email_success.html:12
 msgid "Email Sent"
-msgstr ""
+msgstr "Email enviado"
 
 #: .\contact\templates\contact\email_success.html:14
 msgid ""
 "Your Email was sent successfully ! We will get back to you as soon as "
 "possible. Thank You !!"
 msgstr ""
+"Tu correo electrónico fue enviado con éxito ! Nos pondremos en contacto con "
+"usted lo antes posible posible. ¡Gracias!"
 
 #: .\contact\templates\contact\email_success.html:16
 msgid "Go Back To HomePage"
-msgstr ""
+msgstr "Volver a la página principal"
 
 #: .\contact\urls.py:14
 msgid "^email_success/$"
-msgstr ""
+msgstr "^email_success/$"
 
 #: .\coupons\forms.py:6
 msgid "Coupon"
-msgstr ""
+msgstr "Cupón"
 
 #: .\coupons\urls.py:7
 msgid "^apply/$"
-msgstr ""
+msgstr "^aplicar/$"
 
-#: .\eshopper\settings.py:142
+#: .\eshopper\settings.py:143
+#, fuzzy
+#| msgid "British English"
+msgid "American English"
+msgstr "Inglés británico"
+
+#: .\eshopper\settings.py:144
 msgid "British English"
 msgstr "Inglés británico"
 
-#: .\eshopper\settings.py:143
+#: .\eshopper\settings.py:145
 msgid "Spanish"
 msgstr "Español"
 
-#: .\eshopper\settings.py:144
+#: .\eshopper\settings.py:146
 msgid "Chinese"
 msgstr "Chino"
 
-#: .\eshopper\settings.py:145
+#: .\eshopper\settings.py:147
 msgid "Portuguese"
 msgstr "Portugués"
 
-#: .\eshopper\settings.py:146
+#: .\eshopper\settings.py:148
 msgid "Russian"
 msgstr "Ruso"
 
-#: .\eshopper\settings.py:147
+#: .\eshopper\settings.py:149
 msgid "Dutch"
 msgstr "Holandés"
 
-#: .\eshopper\settings.py:148
+#: .\eshopper\settings.py:150
 msgid "Korean"
 msgstr "Coreano"
 
-#: .\eshopper\settings.py:149
+#: .\eshopper\settings.py:151
 msgid "Italian"
 msgstr "Italiano"
 
-#: .\eshopper\settings.py:150
+#: .\eshopper\settings.py:152
 msgid "Japanese"
 msgstr "Japonés"
 
-#: .\eshopper\settings.py:151
+#: .\eshopper\settings.py:153
 msgid "Hebrew"
 msgstr "Hebreo"
 
-#: .\eshopper\settings.py:152
+#: .\eshopper\settings.py:154
 msgid "Hindi"
 msgstr "Hindú"
 
-#: .\eshopper\settings.py:153
+#: .\eshopper\settings.py:155
 msgid "French"
 msgstr "Francés"
 
-#: .\eshopper\settings.py:154
+#: .\eshopper\settings.py:156
 msgid "German"
 msgstr "Alemán"
 
-#: .\eshopper\settings.py:155
+#: .\eshopper\settings.py:157
 msgid "Greek"
 msgstr "Griego"
 
-#: .\eshopper\settings.py:156
+#: .\eshopper\settings.py:158
 msgid "Catalan"
 msgstr "Catalán"
 
-#: .\eshopper\settings.py:157
+#: .\eshopper\settings.py:159
 msgid "Afrikaans"
 msgstr "Africaans"
 
-#: .\eshopper\settings.py:158
+#: .\eshopper\settings.py:160
 msgid "Arabic"
 msgstr "Arábica"
 
-#: .\eshopper\settings.py:159
+#: .\eshopper\settings.py:161
 msgid "Turkish"
 msgstr "Turco"
 
-#: .\eshopper\settings.py:160
+#: .\eshopper\settings.py:162
 msgid "Irish"
 msgstr "Irlandesa"
 
-#: .\eshopper\settings.py:161
+#: .\eshopper\settings.py:163
 msgid "Welsh"
 msgstr "Galés"
 
 #: .\eshopper\urls.py:31
 msgid "^about/"
-msgstr ""
+msgstr "^sobre/"
 
 #: .\eshopper\urls.py:32
 msgid "^contact/"
-msgstr ""
+msgstr "^contacto/"
 
 #: .\eshopper\urls.py:33
+#, fuzzy
+#| msgid "^coupons/"
 msgid "coupons/"
-msgstr ""
+msgstr "^cupones/"
 
 #: .\eshopper\urls.py:34
 msgid "^orders/"
-msgstr ""
+msgstr "^pedidos/"
 
 #: .\eshopper\urls.py:35
 msgid "^cart/"
-msgstr ""
+msgstr "^carro/"
 
 #: .\eshopper\urls.py:37
 msgid "^payment/"
-msgstr ""
+msgstr "^pago/"
 
 #: .\eshopper\urls.py:38
 msgid "^onlineshop/"
-msgstr ""
+msgstr "^onlineshop/"
 
 #: .\home\templates\home\home.html:6
 #: .\onlineshop\templates\onlineshop\base.html:127
 msgid "Home"
-msgstr ""
+msgstr "Casa"
 
 #: .\home\templates\home\home.html:23
 msgid "Software"
-msgstr ""
+msgstr "Software"
 
 #: .\home\templates\home\home.html:23
 msgid "Engineering"
-msgstr ""
+msgstr "Ingenieria"
 
 #: .\home\templates\home\home.html:24
 msgid "Essentials of Software Engineering"
-msgstr ""
+msgstr "Fundamentos de la ingeniería de software"
 
 #: .\home\templates\home\home.html:25
 msgid ""
@@ -339,23 +345,29 @@ msgid ""
 "areas of high interest to computer scientists, including Big Data and "
 "developing in the cloud."
 msgstr ""
+"Escrito para el curso de pregrado, de un solo curso, Essentials of "
+"Software Ingeniería, cuarta edición proporciona a los estudiantes una "
+"ingeniería sistemáticaenfoque a los principios y metodologías de ingeniería "
+"de software.Completa, pero conciso, la Cuarta Edición incluye nueva "
+"información sobreáreas de gran interés para los científicos informáticos, "
+"incluido Big Data ydesarrollándose en la nube."
 
 #: .\home\templates\home\home.html:26 .\home\templates\home\home.html.py:37
 #: .\home\templates\home\home.html:49
 msgid "Get it now"
-msgstr ""
+msgstr "Consiguelo ahora"
 
 #: .\home\templates\home\home.html:34
 msgid "Web"
-msgstr ""
+msgstr "Web"
 
 #: .\home\templates\home\home.html:34
 msgid "Development"
-msgstr ""
+msgstr "Desarrollo"
 
 #: .\home\templates\home\home.html:35
 msgid "Django for Beginners"
-msgstr ""
+msgstr "Django para principiantes"
 
 #: .\home\templates\home\home.html:36
 msgid ""
@@ -365,18 +377,25 @@ msgid ""
 "forms and user accounts. Learn current best practices around class-based "
 "views, templates, urls, user authentication, testing, and deployment."
 msgstr ""
+"Django para principiantes te lleva de principiante total a confiado "
+"Djangodesarrollador. Proceda paso a paso a través de cuatro redes "
+"progresivamente más complejasaplicaciones: desde una aplicación 'Hello "
+"World' hasta una robusta aplicación Blog conformularios y cuentas de "
+"usuario. Aprenda las mejores prácticas actuales en función de las "
+"clasesvistas, plantillas, URL, autenticación de usuarios, pruebas e "
+"implementación."
 
 #: .\home\templates\home\home.html:46
 msgid "Prog"
-msgstr ""
+msgstr "Prog"
 
 #: .\home\templates\home\home.html:46
 msgid "ramming"
-msgstr ""
+msgstr "ramación"
 
 #: .\home\templates\home\home.html:47
 msgid "Starting Out with Python"
-msgstr ""
+msgstr "Comenzando con Python"
 
 #: .\home\templates\home\home.html:48
 msgid ""
@@ -389,30 +408,39 @@ msgid ""
 "acquired using Python, students gain confidence in their skills and learn to "
 "recognize the logic behind developing high-quality programs."
 msgstr ""
+"En Starting Out with Python®, Tercera Edición, Tony Gaddis 'de ritmo "
+"uniformela cobertura accesible introduce a los estudiantes a los principios "
+"básicos de la programación ylos prepara para la transición a lenguajes más "
+"complicados. Python, un fácil ...aprender y cada vez más popular lenguaje "
+"orientado a objetos, permite a los lectoressentirse cómodo con los "
+"fundamentos de la programación sin elsintaxis problemática que puede ser un "
+"desafío para los principiantes. Con el conocimientoadquiridos usando Python, "
+"los estudiantes ganan confianza en sus habilidades y aprenden areconocer la "
+"lógica detrás del desarrollo de programas de alta calidad."
 
 #: .\home\urls.py:7
 msgid "^$"
-msgstr ""
+msgstr "^$"
 
 #: .\onlineshop\templates\onlineshop\base.html:17
 msgid "E-Shopper"
-msgstr ""
+msgstr "E-Shopper"
 
 #: .\onlineshop\templates\onlineshop\base.html:101
 msgid "Account"
-msgstr ""
+msgstr "Cuenta"
 
 #: .\onlineshop\templates\onlineshop\base.html:102
 msgid "Wishlist"
-msgstr ""
+msgstr "Deseados"
 
 #: .\onlineshop\templates\onlineshop\base.html:103
 msgid "Checkout"
-msgstr ""
+msgstr "Revisa"
 
 #: .\onlineshop\templates\onlineshop\base.html:105
 msgid "Login"
-msgstr ""
+msgstr "Iniciar sesión"
 
 #: .\onlineshop\templates\onlineshop\base.html:119
 msgid "Toggle navigation"
@@ -420,19 +448,19 @@ msgstr ""
 
 #: .\onlineshop\templates\onlineshop\base.html:128
 msgid "Shop"
-msgstr ""
+msgstr "Tienda"
 
 #: .\onlineshop\templates\onlineshop\base.html:129
 msgid "About Us"
-msgstr ""
+msgstr "Sobre nosotros"
 
 #: .\onlineshop\templates\onlineshop\base.html:163
 msgid "E"
-msgstr ""
+msgstr "E"
 
 #: .\onlineshop\templates\onlineshop\base.html:163
 msgid "-Shopper"
-msgstr ""
+msgstr "-Shopper"
 
 #: .\onlineshop\templates\onlineshop\base.html:164
 msgid ""
@@ -445,7 +473,7 @@ msgstr ""
 #: .\onlineshop\templates\onlineshop\base.html:208
 #: .\onlineshop\templates\onlineshop\base.html:223
 msgid "Circle of Hands"
-msgstr ""
+msgstr "Círculo de manos"
 
 #: .\onlineshop\templates\onlineshop\base.html:179
 #: .\onlineshop\templates\onlineshop\base.html:194
@@ -454,74 +482,72 @@ msgstr ""
 msgid "24 DEC 2017"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:231
-msgid "P.O.Box KS 10731, Kumasi - Ghana"
-msgstr ""
-
 #: .\onlineshop\templates\onlineshop\base.html:243
 msgid "Service"
-msgstr ""
+msgstr "Servicio"
 
 #: .\onlineshop\templates\onlineshop\base.html:246
 msgid "Order Status"
+msgstr "Estado del pedido"
+
+#: .\onlineshop\templates\onlineshop\base.html:253
+msgid "Support"
 msgstr ""
 
 #: .\onlineshop\templates\onlineshop\base.html:255
 msgid "Change Location"
-msgstr ""
+msgstr "Cambiar locación"
 
 #: .\onlineshop\templates\onlineshop\base.html:256
 msgid "FAQ’s"
-msgstr ""
+msgstr "Preguntas frecuentes"
 
 #: .\onlineshop\templates\onlineshop\base.html:263
 msgid "Policies"
-msgstr ""
+msgstr "Políticas"
 
 #: .\onlineshop\templates\onlineshop\base.html:265
 msgid "Terms of Use"
-msgstr ""
+msgstr "Términos de Uso"
 
 #: .\onlineshop\templates\onlineshop\base.html:266
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Política de privacidad"
 
 #: .\onlineshop\templates\onlineshop\base.html:267
 msgid "Refund Policy"
-msgstr ""
+msgstr "Politica de reembolso"
 
 #: .\onlineshop\templates\onlineshop\base.html:273
 #: .\onlineshop\templates\onlineshop\base.html:283
 msgid "About Shopper"
-msgstr ""
+msgstr "Acerca de Shopper"
 
 #: .\onlineshop\templates\onlineshop\base.html:275
 msgid "Company Information"
-msgstr ""
+msgstr "Información de la compañía"
 
 #: .\onlineshop\templates\onlineshop\base.html:276
 msgid "Careers"
-msgstr ""
+msgstr "Carreras"
 
 #: .\onlineshop\templates\onlineshop\base.html:277
 msgid "Copyright"
-msgstr ""
+msgstr "Derechos de autor"
 
 #: .\onlineshop\templates\onlineshop\base.html:287
 msgid "Get the most recent updates from"
-msgstr ""
+msgstr "Obtenga las actualizaciones más recientes de"
 
 #: .\onlineshop\templates\onlineshop\base.html:287
 msgid "our site and be updated your self..."
-msgstr ""
-
-#: .\onlineshop\templates\onlineshop\base.html:299
-msgid "Copyright © 2017 - 2018 E-Shopper Inc. All rights reserved."
-msgstr ""
+msgstr "nuestro sitio y estar actualizado usted mismo ..."
 
 #: .\onlineshop\templates\onlineshop\base.html:300
-msgid "Designed by"
-msgstr ""
+#, fuzzy
+#| msgid "Development"
+msgid "Developed by"
+msgstr "Desarrollado por"
 
 #: .\onlineshop\templates\onlineshop\base.html:300
 msgid "Williano"
@@ -530,27 +556,27 @@ msgstr ""
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:7
 #: .\onlineshop\templates\onlineshop\product\product-list.html:6
 msgid "Products"
-msgstr ""
+msgstr "Productos"
 
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:25
 msgid "Availability"
-msgstr ""
+msgstr "Disponibilidad"
 
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:26
 msgid "Stock"
-msgstr ""
+msgstr "Valores"
 
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:27
 msgid "Condition"
-msgstr ""
+msgstr "Condición"
 
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:87
 msgid "Product Details"
-msgstr ""
+msgstr "detalles del producto"
 
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:89
 msgid "Product Reviews"
-msgstr ""
+msgstr "Reseñas de productos"
 
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:102
 #, python-format
@@ -567,36 +593,31 @@ msgstr ""
 
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:109
 msgid "There are no reviews yet."
-msgstr ""
+msgstr "No hay comentarios todavía"
 
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:112
 msgid "Your review has been added."
-msgstr ""
+msgstr "Tu opinión ha sido agregada."
 
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:115
 msgid "Write Your Review"
-msgstr ""
+msgstr "Escribe tu reseña"
 
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:120
 msgid "Your Name"
-msgstr ""
+msgstr "Tu nombre"
 
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:121
 msgid "Email Address"
-msgstr ""
+msgstr "Dirección de correo electrónico"
 
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:123
 msgid "Your Review"
-msgstr ""
+msgstr "Tu reseña"
 
 #: .\onlineshop\templates\onlineshop\product\product-list.html:23
 msgid "Categories"
-msgstr ""
-
-#: .\onlineshop\templates\onlineshop\product\product-list.html:29
-#, python-format
-msgid "%(category_name)s"
-msgstr ""
+msgstr "Categorías"
 
 #: .\onlineshop\templates\onlineshop\product\product-list.html:37
 msgid "Brands"
@@ -604,64 +625,64 @@ msgstr ""
 
 #: .\onlineshop\templates\onlineshop\product\product-list.html:52
 msgid "Price Range"
-msgstr ""
+msgstr "Rango de precios"
 
 #: .\onlineshop\templates\onlineshop\product\product-list.html:67
 msgid "PRODUCTS"
-msgstr ""
+msgstr "PRODUCTOS"
 
 #: .\onlineshop\templates\onlineshop\product\product-list.html:85
 msgid "Add to wishlist"
-msgstr ""
+msgstr "Añadir a la lista de deseos"
 
 #: .\onlineshop\templates\onlineshop\product\product-list.html:86
 msgid "Add to compare"
-msgstr ""
+msgstr "Añadir a comparar"
 
 #: .\onlineshop\urls.py:7
 msgid "^product_list/$"
-msgstr ""
+msgstr "^producto_list/$"
 
 #: .\payment\templates\payment\canceled.html:7
 msgid "Canceled Payment"
-msgstr ""
+msgstr "Pago cancelado"
 
 #: .\payment\templates\payment\canceled.html:14
 msgid "Your payment has not been processed"
-msgstr ""
+msgstr "Su pago no ha sido procesado"
 
 #: .\payment\templates\payment\canceled.html:15
 msgid "There was a problem processing your payment."
-msgstr ""
+msgstr "Hubo un problema al procesar su pago."
 
 #: .\payment\templates\payment\done.html:6
 msgid "Successful Payment"
-msgstr ""
+msgstr "Pago exitoso"
 
 #: .\payment\templates\payment\done.html:13
 msgid "Your payment was successful"
-msgstr ""
+msgstr "Su pago fue exitoso"
 
 #: .\payment\templates\payment\done.html:14
 msgid "Your payment has been successfully received."
-msgstr ""
+msgstr "Su pago ha sido recibido con éxito."
 
 #: .\payment\templates\payment\process.html:5
 msgid "Payment"
-msgstr ""
+msgstr "Pago"
 
 #: .\payment\templates\payment\process.html:12
 msgid "Pay using PayPal"
-msgstr ""
+msgstr "Pagar usando PayPal"
 
 #: .\payment\urls.py:7
 msgid "^process/$"
-msgstr ""
+msgstr "^proceso/$"
 
 #: .\payment\urls.py:8
 msgid "^done/$"
-msgstr ""
+msgstr "^hecho/$"
 
 #: .\payment\urls.py:9
 msgid "^canceled/$"
-msgstr ""
+msgstr "^canceló/$"

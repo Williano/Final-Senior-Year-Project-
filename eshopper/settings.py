@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['127.0.0.1', ]
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = (
     'jet.dashboard',
     'jet',
     'django.contrib.admin',
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Third-party apps
+    'parler',
     'rosetta',
     'paypal.standard.ipn',
 
@@ -56,18 +57,19 @@ INSTALLED_APPS = [
     'payment',
     'coupons',
 
-]
+)
 
-MIDDLEWARE_CLASSES = [
-    'django.middleware.security.SecurityMiddleware',
+MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+    'django.middleware.security.SecurityMiddleware',
+)
 
 ROOT_URLCONF = 'eshopper.urls'
 
@@ -101,9 +103,11 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'admin',
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': 5432
+
     }
 }
+
 
 
 # Password validation
@@ -128,7 +132,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'Africa/Accra'
 
@@ -139,6 +143,7 @@ USE_L10N = True
 USE_TZ = True
 
 LANGUAGES = (
+    ('en', _('American English')),
     ('en-gb', _('British English')),
     ('es', _('Spanish')),
     ('zh-cn', _('Chinese')),
@@ -170,6 +175,9 @@ LOCALE_PATHS = (
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIR = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 # Media Files ( User Media Uploads )
 MEDIA_URL = '/media/'
@@ -199,6 +207,35 @@ REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 REDIS_DB = 1
 
+PARLER_LANGUAGES = {
+        None: (
+                {'code': 'en', },
+                {'code': 'en-gb', },
+                {'code': 'es', },
+                {'code': 'zh-cn', },
+                {'code': 'pt', },
+                {'code': 'ru', },
+                {'code': 'nl', },
+                {'code': 'ko', },
+                {'code': 'it', },
+                {'code': 'ja', },
+                {'code': 'he', },
+                {'code': 'hi', },
+                {'code': 'fr', },
+                {'code': 'de', },
+                {'code': 'el', },
+                {'code': 'ca', },
+                {'code': 'af', },
+                {'code': 'ar', },
+                {'code': 'tr', },
+                {'code': 'ga', },
+                {'code': 'cy', },
+        ),
+        'default': {
+                    'fallback': 'en',
+                    'hide_untranslated': False,
+                }
+}
 
 # Django - Jet theme colors for admin backend.
 JET_DEFAULT_THEME = 'light-gray'

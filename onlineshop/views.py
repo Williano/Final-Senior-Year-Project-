@@ -10,30 +10,23 @@ def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
     products = Product.objects.filter(available=True)
-    page_var = 'page'
-    page = request.GET.get(page_var, 1)
-    paginator = Paginator(products, 10)
-    try:
-        products = paginator.page(page)
-    except PageNotAnInteger:
-        products = paginator.page(1)
-    except EmptyPage:
-        products = paginator.page(paginator.num_pages)
-
     if category_slug:
-        category = get_object_or_404(Category, slug=category_slug)
+        language = request.LANGUAGE_CODE
+        category = get_object_or_404(Category, translations__language_code=language,
+                                     translations__slug=category_slug)
         products = products.filter(category=category)
         cart_product_form = CartAddProductForm()
     return render(request, 'onlineshop/product/product-list.html',
                   {'category': category,
                    'categories': categories,
                    'products': products,
-                   }
-                  )
+                   })
 
 
 def product_detail(request, id, slug):
-    product = get_object_or_404(Product, id=id, slug=slug, available=True)
+    language = request.LANGUAGE_CODE
+    product = get_object_or_404(Product, id=id, translations__language_code=language,
+                                translations__slug=slug, available=True)
     # List of active comments for this product.
     reviews = product.reviews.filter(active=True)
 

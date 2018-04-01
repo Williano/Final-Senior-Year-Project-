@@ -72,7 +72,7 @@
 						<div class="btn-group pull-right">
 							<div class="btn-group">
 								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									USA
+									English
 									<span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
@@ -80,17 +80,6 @@
 									<li><a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>{{ language.name_local }}</a>
                                     </li>
                                     {% endfor %}
-								</ul>
-							</div>
-
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									DOLLAR
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Canadian Dollar</a></li>
-									<li><a href="#">Pound</a></li>
 								</ul>
 							</div>
 						</div>
@@ -228,7 +217,7 @@
 					<div class="col-sm-3">
 						<div class="address">
 							<img src="{% static 'img/map.png' %}" alt="" />
-							<p>{% trans "P.O.Box KS 10731, Kumasi - Ghana" %}</p>
+							<p>P.O.Box KS 10731, Kumasi - Ghana</p>
 						</div>
 					</div>
 				</div>
@@ -250,7 +239,7 @@
 					</div>
 					<div class="col-sm-2">
 						<div class="single-widget">
-							<h2>{% trans "Support" %</h2>
+							<h2>{% trans "Support" %}</h2>
 							<ul class="nav nav-pills nav-stacked">
 								<li><a href="#">{% trans "Change Location" %}</a></li>
 								<li><a href="#">{% trans "FAQ’s" %}</a></li>
@@ -296,8 +285,8 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">{%  trans "Copyright © 2017 - 2018 E-Shopper Inc. All rights reserved." %}</p>
-					<p class="pull-right">{% trans "Designed by" %} <span><a target="_blank" href="https://paawillysite.wordpress.com/">{% trans "Williano" %}</a></span></p>
+					<p class="pull-left">Copyright © 2017 - 2018 E-Shopper Inc. All rights reserved.</p>
+					<p class="pull-right">{% trans "Developed by" %} <span><a target="_blank" href="https://paawillysite.wordpress.com/">{% trans "Williano" %}</a></span></p>
 				</div>
 			</div>
 		</div>

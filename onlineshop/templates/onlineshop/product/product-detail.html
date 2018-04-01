@@ -13,7 +13,7 @@
         <img src="{% if product.image %}{{ product.image.url }}{% else %}
                         {% static "img/no_image.png" %}
                   {% endif %}">
-        <h1>{% blocktrans with product_name = product.name %}{{ product_name }}{% endblocktrans %}</h1>
+        <h1>{{ product.name }}</h1>
         <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
         <p class="price">${{ product.price }}</p>
         <form action="{% url "cart:cart_add" product.id %}" method="post">
@@ -43,7 +43,7 @@
 													 <a href="{{ p.get_absolute_url }}">
                                                          <img src="{% if p.image %}{{ p.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"></a>
 													<h2>${{ product.price }}</h2>
-													<p><a href="{{ p.get_absolute_url }}">{% blocktrans  with product_name = p.name %}{{ product_name }}{% endblocktrans %}</a></p>
+													<p><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>{% trans "Add to cart" %}</a>
 												</div>
 											</div>
@@ -61,7 +61,7 @@
 													 <a href="{{ p.get_absolute_url }}">
                                                         <img src="{% if p.image %}{{ p.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"></a>
 													<h2>${{ product.price }}</h2>
-													<p><a href="{{ p.get_absolute_url }}">{% blocktrans with product_name = p.name %}{{ product_name }}{% endblocktrans %}</a></p>
+													<p><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>{% trans "Add to cart" %}</a>
 												</div>
 											</div>
@@ -99,11 +99,11 @@
 							<div class="tab-pane fade active in" id="reviews" >
 								<div class="col-sm-12">
 									{% for review in reviews %}
-                                    <ul>{% blocktrans with name = review.name time = review.created.time date = review.created.date %}
-										<li><a href=""><i class="fa fa-user"></i>{{ name }}</a></li>
-										<li><a href=""><i class="fa fa-clock-o"></i>{{ time }}</a></li>
-										<li><a href=""><i class="fa fa-calendar-o"></i>{{ date }}</a></li>
-									</ul>{% endblocktrans %}
+                                    <ul>
+										<li><a href=""><i class="fa fa-user"></i>{{ review.name }}</a></li>
+										<li><a href=""><i class="fa fa-clock-o"></i>{{ review.time }}</a></li>
+										<li><a href=""><i class="fa fa-calendar-o"></i>{{ review.date }}</a></li>
+									</ul>
 									<p>{{ review.body|linebreaks }}</p>
                                       {% empty %}
                                         <p>{% trans "There are no reviews yet." %}</p>
@@ -128,7 +128,7 @@
 							</div>
 
 						</div>
-                    </div></div><!--/category-tab-->
+                    </div><!--/category-tab-->
 </center>
 
 

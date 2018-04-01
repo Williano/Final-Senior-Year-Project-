@@ -26,7 +26,7 @@
                                      {% for c in categories %}
 								       <div class="panel-heading">
 									<h4  {% if category.slug == c.slug %}{% endif %} class="panel-title">
-                                        <a href="{{ c.get_absolute_url }}">{% blocktrans with category_name = c.name %}{{ category_name }}{% endblocktrans %}</a></h4>
+                                        <a href="{{ c.get_absolute_url }}">{{ c.name }}</a></h4>
 								</div>
                                      {% endfor %}
 							</div>
@@ -74,7 +74,7 @@
                                               <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
                                           </a>
 										<h2>${{ product.price }}</h2>
-                                        <p><strong><a href="{{ product.get_absolute_url }}">{% blocktrans with product_name = product.name %}{{ product_name }}{% endblocktrans %}</a></strong></p>
+                                        <p><strong><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></strong></p>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>{% trans "Add to cart" %}</a>
 									</div>
 

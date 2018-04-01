@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-20 14:02+1200\n"
+"POT-Creation-Date: 2018-03-27 17:36+1200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,72 +19,68 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: .\orders\models.py:14
+#: .\models.py:14
 msgid "first name"
 msgstr "имя"
 
-#: .\orders\models.py:15
+#: .\models.py:15
 msgid "last name"
 msgstr "Фамилия"
 
-#: .\orders\models.py:16
+#: .\models.py:16
 msgid "e-mail"
 msgstr "Эл. адрес"
 
-#: .\orders\models.py:17
+#: .\models.py:17
 msgid "phone number"
 msgstr "номер телефона"
 
-#: .\orders\models.py:18
+#: .\models.py:18
 msgid "address"
 msgstr "адрес"
 
-#: .\orders\models.py:19
+#: .\models.py:19
 msgid "city"
 msgstr "город"
 
-#: .\orders\models.py:20
+#: .\models.py:20
 msgid "state or region"
 msgstr "государство или регион"
 
-#: .\orders\models.py:21
+#: .\models.py:21
 msgid "postal code"
 msgstr "Почтовый индекс"
 
-#: .\orders\models.py:22
+#: .\models.py:22
 msgid "country"
 msgstr "страна"
 
-#: .\orders\models.py:23
+#: .\models.py:23
 msgid "created"
 msgstr ""
 
-#: .\orders\models.py:24
+#: .\models.py:24
 msgid "updated"
 msgstr ""
 
-#: .\orders\models.py:25
+#: .\models.py:25
 msgid "paid"
 msgstr ""
 
-#: .\orders\models.py:26
-msgid "coupon"
-msgstr "купон"
-
-#: .\orders\models.py:27
+#: .\models.py:27
 msgid "discount"
 msgstr "скидка"
 
-#: .\orders\templates\orders\order\create.html:6
-#: .\orders\templates\orders\order\create.html:12
+#: .\templates\orders\order\create.html:6
+#: .\templates\orders\order\create.html:12
 msgid "Checkout"
 msgstr ""
 
-#: .\orders\templates\orders\order\create.html:15
+#: .\templates\orders\order\create.html:15
 msgid "Your order"
 msgstr ""
 
-#: .\orders\templates\orders\order\create.html:25
+#: .\templates\orders\order\create.html:25
 #, python-format
 msgid ""
 "\n"
@@ -92,51 +88,37 @@ msgid ""
 "                    "
 msgstr ""
 
-#: .\orders\templates\orders\order\create.html:32
+#: .\templates\orders\order\create.html:32
 msgid "Total"
 msgstr ""
 
-#: .\orders\templates\orders\order\create.html:38
+#: .\templates\orders\order\create.html:38
 msgid "Place order"
 msgstr ""
 
-#: .\orders\templates\orders\order\created.html:4
-#: .\orders\templates\orders\order\created.html:9
+#: .\templates\orders\order\created.html:4
+#: .\templates\orders\order\created.html:9
 msgid "Thank you"
 msgstr ""
 
-#: .\orders\templates\orders\order\created.html:10
-#, python-format
+#: .\templates\orders\order\created.html:11
 msgid ""
-"\n"
-"            Your Order has been successfully completed. An email "
-"confirmation has been sent to you.\n"
-"            Your order number is <strong>%(order_id)s</strong>.</p>\n"
-"            "
+"Your Order has been successfully completed. An email confirmation has been "
+"sent to you."
 msgstr ""
 
-#: .\orders\templates\orders\order\created.html:15
+#: .\templates\orders\order\created.html:12
+msgid "Your order number is"
+msgstr ""
+
+#: .\templates\orders\order\created.html:14
 #, python-format
 msgid "The Total amount of your Order is $%(total_cost)s"
 msgstr ""
 
-#: .\orders\templates\orders\order\created.html:18
-#, python-format
-msgid ""
-"Your Order will be shipped to:\n"
-"            <br />\n"
-"            { order_first_name }} %(order_last_name)s\n"
-"            <br />\n"
-"            %(order_address)s,\n"
-"            <br />\n"
-"            %(order_city)s,\n"
-"            <br />\n"
-"            %(order_state_region)s\n"
-"            <br />\n"
-"            %(order_country)s, %(order_postal_code)s.\n"
-"        "
-msgstr ""
-
-#: .\orders\urls.py:7
+#: .\urls.py:7
 msgid "^create/$"
 msgstr ""
+
+#~ msgid "coupon"
+#~ msgstr "купон"

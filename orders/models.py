@@ -23,7 +23,7 @@ class Order(models.Model):
     created = models.DateTimeField(_('created'), auto_now_add=True)
     updated = models.DateTimeField(_('updated'), auto_now=True)
     paid = models.BooleanField(_('paid'), default=False)
-    coupon = models.ForeignKey(_('coupon'), Coupon, related_name='orders', null=True, blank=True)
+    coupon = models.ForeignKey(Coupon, related_name='orders', null=True, blank=True)
     discount = models.IntegerField(_('discount'), default=0,
                                    validators=[MinValueValidator(0),
                                                MaxValueValidator(100)])
