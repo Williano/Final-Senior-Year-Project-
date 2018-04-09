@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     # Third-party apps
+    'sorl.thumbnail',
     'parler',
     'rosetta',
     'paypal.standard.ipn',
