@@ -193,10 +193,10 @@ PAYPAL_TEST = True
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # SendGrid email configuration
-SEND_GRID_API_KEY = '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'
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'paawilly17@gmail.com'
-EMAIL_HOST_PASSWORD = '@Williano7'
+SEND_GRID_API_KEY = ''
+EMAIL_HOST = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'E-Shopper <admin@eshopper.com>'
