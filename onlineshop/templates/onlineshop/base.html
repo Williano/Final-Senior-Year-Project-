@@ -39,8 +39,8 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i>+233 20 18 75 333</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i>info@eshopper.com</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> +233 20 18 75 333</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> info@eshopper.com</a></li>
 							</ul>
 						</div>
 					</div>
@@ -77,7 +77,7 @@
 								</button>
 								<ul class="dropdown-menu">
                                     {% for language in languages %}
-									<li><a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>{{ language.name_local }}</a>
+									<li><a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>{{ language.name }}</a>
                                     </li>
                                     {% endfor %}
 								</ul>
@@ -122,7 +122,9 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right" >
-							<input type="text" placeholder="Search"/>
+							<form method="GET" action="">
+                            <input type="text" name="q" placeholder="{% trans "Search Products" %}"/>
+                            </form>
 						</div>
 					</div>
 				</div>

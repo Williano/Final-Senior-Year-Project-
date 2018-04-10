@@ -110,7 +110,6 @@ DATABASES = {
 }
 
 
-
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
@@ -196,7 +195,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 SEND_GRID_API_KEY = ''
 EMAIL_HOST = ''
 EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_PASSWORD = 's'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'E-Shopper <admin@eshopper.com>'

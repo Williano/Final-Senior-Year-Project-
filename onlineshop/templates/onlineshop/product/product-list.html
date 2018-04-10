@@ -22,7 +22,10 @@
                 	<div class="left-sidebar">
 						<h2>{% trans "Categories" %}</h2>
                                 <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-            						<div class="panel panel-default">
+                                    <div class="panel panel-default">
+                                     <div class="panel-heading">
+                                            <h4 {% if not category %}{% endif %} class="panel-title"><a href="{% url "onlineshop:product_list" %}">{% trans "All Products" %}</a></h4>
+                                        </div>
                                      {% for c in categories %}
 								       <div class="panel-heading">
 									<h4  {% if category.slug == c.slug %}{% endif %} class="panel-title">
@@ -32,21 +35,6 @@
 							</div>
                         </div><!--/category-productsr-->
 
-
-						<div class="brands_products"><!--brands_products-->
-							<h2>{% trans "Brands" %}</h2>
-							<div class="brands-name">
-								<ul class="nav nav-pills nav-stacked">
-									<li><a href=""> <span class="pull-right">(50)</span>Acne</a></li>
-									<li><a href=""> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-									<li><a href=""> <span class="pull-right">(27)</span>Albiro</a></li>
-									<li><a href=""> <span class="pull-right">(32)</span>Ronhill</a></li>
-									<li><a href=""> <span class="pull-right">(5)</span>Oddmolly</a></li>
-									<li><a href=""> <span class="pull-right">(9)</span>Boudestijn</a></li>
-									<li><a href=""> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
-								</ul>
-							</div>
-						</div><!--/brands_products-->
 
 						<div class="price-range"><!--price-range-->
 							<h2>{% trans "Price Range" %}</h2>
@@ -64,7 +52,7 @@
 
             <div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_products-->
-						<h2 class="title text-center">{% if category %}{{ category.name }}{% else %}{% trans "PRODUCTS" %}{% endif %}</h2>
+						<h2 class="title text-center">{% if category %}{{ category.name }}{% else %}{% trans "ALL PRODUCTS" %}{% endif %}</h2>
 						  {% for product in products %}
                         <div class="col-sm-4">
 							<div class="product-image-wrapper">
@@ -80,12 +68,7 @@
 
 								</div>
 
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<li><a href=""><i class="fa fa-plus-square"></i>{% trans "Add to wishlist" %}</a></li>
-										<li><a href=""><i class="fa fa-plus-square"></i>{% trans "Add to compare" %}</a></li>
-									</ul>
-								</div>
+
 							</div>
 						</div>
                     {% endfor %}

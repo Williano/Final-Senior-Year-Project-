@@ -868,6 +868,14 @@ h2.title {
 	margin-bottom:30px;
 }
 
+.product-image-wrapper1{
+  border:0px solid #F7F7F5;
+  overflow: hidden;
+  margin-bottom:30px;
+  padding-right:130px;
+  padding-left:130px
+}
+
 .single-products {
   position: relative;
 }
@@ -1302,8 +1310,8 @@ h2.title {
 .shop-details-tab {
   border: 1px solid #F7F7F0;
   margin-bottom: 75px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
   padding-bottom: 10px;
 }
 .shop-details-tab .col-sm-12 {

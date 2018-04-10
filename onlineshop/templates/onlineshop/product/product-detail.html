@@ -3,6 +3,7 @@
 {% load static %}
 
 
+
 {% block title %}
     {% if category %}{{ category.title }}{% else %}{% trans "Products" %}{% endif %}
 {% endblock %}
@@ -25,6 +26,8 @@
         <p><b>{% trans "Availability" %}:</b> {{ product.available }}</p>
         <p><b>{% trans "Stock" %}:</b> {{ product.stock }}</p>
         <p><b>{% trans "Condition" %}:</b> New</p>
+        <br />
+        <p><b>{% trans "Product Details" %}:</b>{{ product.description|linebreaks }}</p>
     </div>
     </div>
 
@@ -37,7 +40,7 @@
 								<div class="item active">
                                  {% for p in recommended_products %}
 									<div class="col-sm-4">
-										<div class="product-image-wrapper">
+										<div class="product-image-wrapper1">
 											<div class="single-products">
 												<div class="productinfo text-center">
 													 <a href="{{ p.get_absolute_url }}">
@@ -55,11 +58,11 @@
 								<div class="item">
                                 {% for p in recommended_products %}
 									<div class="col-sm-4">
-										<div class="product-image-wrapper">
+										<div class="product-image-wrapper1">
 											<div class="single-products">
 												<div class="productinfo text-center">
 													 <a href="{{ p.get_absolute_url }}">
-                                                        <img src="{% if p.image %}{{ p.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"></a>
+                                                         <img src="{% if p.image %}{{ p.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"></a>
 													<h2>${{ product.price }}</h2>
 													<p><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>{% trans "Add to cart" %}</a>
@@ -84,16 +87,11 @@
     <center><div class="category-tab shop-details-tab"><!--category-tab-->
 						<div class="col-sm-12">
 							<ul class="nav nav-tabs">
-								<li><a href="#details" data-toggle="tab">{% trans "Product Details" %}</a></li>
                                 {% with reviews.count as total_reviews %}
 								<li class="active"><a href="#reviews" data-toggle="tab">{% trans "Product Reviews" %}({{ total_reviews }})</a></li>
                                 {% endwith %}
 							</ul>
 						</div>
-						<div class="tab-content">
-							<div class="tab-pane fade" id="details" >
-                                <p>{{ product.description|linebreaks }}</p>
-                            </div>
 
 
 							<div class="tab-pane fade active in" id="reviews" >

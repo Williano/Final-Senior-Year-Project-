@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-27 17:25+1200\n"
+"POT-Creation-Date: 2018-04-10 15:08+1200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgid "Quantity"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:6
-#: .\onlineshop\templates\onlineshop\base.html:104
+#: .\onlineshop\templates\onlineshop\base.html:93
 msgid "Cart"
 msgstr ""
 
@@ -46,11 +46,6 @@ msgstr ""
 
 #: .\cart\templates\cart\detail.html:20
 msgid "Unit price"
-msgstr ""
-
-#: .\cart\templates\cart\detail.html:36 .\cart\templates\cart\detail.html:106
-#, python-format
-msgid "%(product_name)s"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:41
@@ -98,18 +93,13 @@ msgstr ""
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:22
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:47
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:65
-#: .\onlineshop\templates\onlineshop\product\product-list.html:78
+#: .\onlineshop\templates\onlineshop\product\product-list.html:81
 msgid "Add to cart"
 msgstr ""
 
-#: .\cart\templates\cart\detail.html:124
-#, python-format
-msgid "%(product_name)s</a>"
-msgstr ""
-
 #: .\contact\templates\contact\contact.html:6
-#: .\onlineshop\templates\onlineshop\base.html:130
-#: .\onlineshop\templates\onlineshop\base.html:245
+#: .\onlineshop\templates\onlineshop\base.html:119
+#: .\onlineshop\templates\onlineshop\base.html:234
 msgid "Contact Us"
 msgstr ""
 
@@ -202,89 +192,89 @@ msgstr ""
 msgid "^apply/$"
 msgstr ""
 
-#: .\eshopper\settings.py:143
+#: .\eshopper\settings.py:147
 #, fuzzy
 #| msgid "British English"
 msgid "American English"
 msgstr "Британский английский"
 
-#: .\eshopper\settings.py:144
+#: .\eshopper\settings.py:148
 msgid "British English"
 msgstr "Британский английский"
 
-#: .\eshopper\settings.py:145
+#: .\eshopper\settings.py:149
 msgid "Spanish"
 msgstr "испанский"
 
-#: .\eshopper\settings.py:146
+#: .\eshopper\settings.py:150
 msgid "Chinese"
 msgstr "Китайский"
 
-#: .\eshopper\settings.py:147
+#: .\eshopper\settings.py:151
 msgid "Portuguese"
 msgstr "португальский"
 
-#: .\eshopper\settings.py:148
+#: .\eshopper\settings.py:152
 msgid "Russian"
 msgstr "русский"
 
-#: .\eshopper\settings.py:149
+#: .\eshopper\settings.py:153
 msgid "Dutch"
 msgstr "Голландский"
 
-#: .\eshopper\settings.py:150
+#: .\eshopper\settings.py:154
 msgid "Korean"
 msgstr "Корейский"
 
-#: .\eshopper\settings.py:151
+#: .\eshopper\settings.py:155
 msgid "Italian"
 msgstr "итальянский"
 
-#: .\eshopper\settings.py:152
+#: .\eshopper\settings.py:156
 msgid "Japanese"
 msgstr "Японский"
 
-#: .\eshopper\settings.py:153
+#: .\eshopper\settings.py:157
 msgid "Hebrew"
 msgstr "иврит"
 
-#: .\eshopper\settings.py:154
+#: .\eshopper\settings.py:158
 msgid "Hindi"
 msgstr "хинди"
 
-#: .\eshopper\settings.py:155
+#: .\eshopper\settings.py:159
 msgid "French"
 msgstr "Французский"
 
-#: .\eshopper\settings.py:156
+#: .\eshopper\settings.py:160
 msgid "German"
 msgstr "Немецкий"
 
-#: .\eshopper\settings.py:157
+#: .\eshopper\settings.py:161
 msgid "Greek"
 msgstr "греческий"
 
-#: .\eshopper\settings.py:158
+#: .\eshopper\settings.py:162
 msgid "Catalan"
 msgstr "каталонский"
 
-#: .\eshopper\settings.py:159
+#: .\eshopper\settings.py:163
 msgid "Afrikaans"
 msgstr "африкаанс"
 
-#: .\eshopper\settings.py:160
+#: .\eshopper\settings.py:164
 msgid "Arabic"
 msgstr "арабский"
 
-#: .\eshopper\settings.py:161
+#: .\eshopper\settings.py:165
 msgid "Turkish"
 msgstr "турецкий"
 
-#: .\eshopper\settings.py:162
+#: .\eshopper\settings.py:166
 msgid "Irish"
 msgstr "ирландский"
 
-#: .\eshopper\settings.py:163
+#: .\eshopper\settings.py:167
 msgid "Welsh"
 msgstr "валлийский"
 
@@ -317,7 +307,7 @@ msgid "^onlineshop/"
 msgstr ""
 
 #: .\home\templates\home\home.html:6
-#: .\onlineshop\templates\onlineshop\base.html:127
+#: .\onlineshop\templates\onlineshop\base.html:116
 msgid "Home"
 msgstr ""
 
@@ -401,128 +391,128 @@ msgstr ""
 msgid "E-Shopper"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:101
+#: .\onlineshop\templates\onlineshop\base.html:90
 msgid "Account"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:102
+#: .\onlineshop\templates\onlineshop\base.html:91
 msgid "Wishlist"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:103
+#: .\onlineshop\templates\onlineshop\base.html:92
 msgid "Checkout"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:105
+#: .\onlineshop\templates\onlineshop\base.html:94
 msgid "Login"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:119
+#: .\onlineshop\templates\onlineshop\base.html:108
 msgid "Toggle navigation"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:128
+#: .\onlineshop\templates\onlineshop\base.html:117
 msgid "Shop"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:129
+#: .\onlineshop\templates\onlineshop\base.html:118
 msgid "About Us"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:163
+#: .\onlineshop\templates\onlineshop\base.html:152
 msgid "E"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:163
+#: .\onlineshop\templates\onlineshop\base.html:152
 msgid "-Shopper"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:164
+#: .\onlineshop\templates\onlineshop\base.html:153
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod "
 "tempor"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:178
-#: .\onlineshop\templates\onlineshop\base.html:193
-#: .\onlineshop\templates\onlineshop\base.html:208
-#: .\onlineshop\templates\onlineshop\base.html:223
+#: .\onlineshop\templates\onlineshop\base.html:167
+#: .\onlineshop\templates\onlineshop\base.html:182
+#: .\onlineshop\templates\onlineshop\base.html:197
+#: .\onlineshop\templates\onlineshop\base.html:212
 msgid "Circle of Hands"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:179
-#: .\onlineshop\templates\onlineshop\base.html:194
-#: .\onlineshop\templates\onlineshop\base.html:209
-#: .\onlineshop\templates\onlineshop\base.html:224
+#: .\onlineshop\templates\onlineshop\base.html:168
+#: .\onlineshop\templates\onlineshop\base.html:183
+#: .\onlineshop\templates\onlineshop\base.html:198
+#: .\onlineshop\templates\onlineshop\base.html:213
 msgid "24 DEC 2017"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:243
+#: .\onlineshop\templates\onlineshop\base.html:232
 msgid "Service"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:246
+#: .\onlineshop\templates\onlineshop\base.html:235
 msgid "Order Status"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:253
+#: .\onlineshop\templates\onlineshop\base.html:242
 msgid "Support"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:255
+#: .\onlineshop\templates\onlineshop\base.html:244
 msgid "Change Location"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:256
+#: .\onlineshop\templates\onlineshop\base.html:245
 msgid "FAQ’s"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:263
+#: .\onlineshop\templates\onlineshop\base.html:252
 msgid "Policies"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:265
+#: .\onlineshop\templates\onlineshop\base.html:254
 msgid "Terms of Use"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:266
+#: .\onlineshop\templates\onlineshop\base.html:255
 msgid "Privacy Policy"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:267
+#: .\onlineshop\templates\onlineshop\base.html:256
 msgid "Refund Policy"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:273
-#: .\onlineshop\templates\onlineshop\base.html:283
+#: .\onlineshop\templates\onlineshop\base.html:262
+#: .\onlineshop\templates\onlineshop\base.html:272
 msgid "About Shopper"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:275
+#: .\onlineshop\templates\onlineshop\base.html:264
 msgid "Company Information"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:276
+#: .\onlineshop\templates\onlineshop\base.html:265
 msgid "Careers"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:277
+#: .\onlineshop\templates\onlineshop\base.html:266
 msgid "Copyright"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:287
+#: .\onlineshop\templates\onlineshop\base.html:276
 msgid "Get the most recent updates from"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:287
+#: .\onlineshop\templates\onlineshop\base.html:276
 msgid "our site and be updated your self..."
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:300
+#: .\onlineshop\templates\onlineshop\base.html:289
 msgid "Developed by"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:300
+#: .\onlineshop\templates\onlineshop\base.html:289
 msgid "Williano"
 msgstr ""
 
@@ -549,19 +539,6 @@ msgstr ""
 
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:89
 msgid "Product Reviews"
-msgstr ""
-
-#: .\onlineshop\templates\onlineshop\product\product-detail.html:102
-#, python-format
-msgid ""
-"\n"
-"\t\t\t\t\t\t\t\t\t\t<li><a href=\"\"><i class=\"fa fa-user\"></i>%(name)s</"
-"a></li>\n"
-"\t\t\t\t\t\t\t\t\t\t<li><a href=\"\"><i class=\"fa fa-clock-o\"></i>"
-"%(time)s</a></li>\n"
-"\t\t\t\t\t\t\t\t\t\t<li><a href=\"\"><i class=\"fa fa-calendar-o\"></i>"
-"%(date)s</a></li>\n"
-"\t\t\t\t\t\t\t\t\t</ul>"
 msgstr ""
 
 #: .\onlineshop\templates\onlineshop\product\product-detail.html:109
@@ -592,23 +569,27 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\product\product-list.html:37
+#: .\onlineshop\templates\onlineshop\product\product-list.html:27
+msgid "All Products"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-list.html:40
 msgid "Brands"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\product\product-list.html:52
+#: .\onlineshop\templates\onlineshop\product\product-list.html:55
 msgid "Price Range"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\product\product-list.html:67
-msgid "PRODUCTS"
+#: .\onlineshop\templates\onlineshop\product\product-list.html:70
+msgid "ALL PRODUCTS"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\product\product-list.html:85
+#: .\onlineshop\templates\onlineshop\product\product-list.html:88
 msgid "Add to wishlist"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\product\product-list.html:86
+#: .\onlineshop\templates\onlineshop\product\product-list.html:89
 msgid "Add to compare"
 msgstr ""
 
