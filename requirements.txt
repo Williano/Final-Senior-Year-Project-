@@ -9,14 +9,15 @@ django-decouple==2.1
 django-jet==1.0.7
 django-parler==1.5.1
 django-paypal==0.2.5
+django-registration-redux==1.10
 django-rosetta==0.8.1
 feedparser==5.2.1
-google-api-python-client==1.6.5
+google-api-python-client==1.4.1
 httplib2==0.10.3
 idna==2.6
 kombu==3.0.37
 microsofttranslator==0.8
-oauth2client==4.1.2
+oauth2client==2.2.0
 Pillow==5.0.0
 polib==1.1.0
 psycopg2==2.7.3.2
@@ -27,7 +28,6 @@ redis==2.10.3
 requests==2.18.4
 rsa==3.4.2
 six==1.11.0
-sorl-thumbnail==12.3
 South==1.0.2
 uritemplate==3.0.0
 urllib3==1.22

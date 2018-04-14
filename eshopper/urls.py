@@ -20,6 +20,7 @@ from django.conf.urls import include, url
 from django.utils.translation import gettext_lazy as _
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
+from jet.dashboard.dashboard_modules import google_analytics_views
 
 
 urlpatterns = i18n_patterns(

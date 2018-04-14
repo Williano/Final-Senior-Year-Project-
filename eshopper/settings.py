@@ -43,7 +43,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     # Third-party apps
-    'sorl.thumbnail',
     'parler',
     'rosetta',
     'paypal.standard.ipn',
@@ -237,6 +236,8 @@ PARLER_LANGUAGES = {
                 }
 }
 
+JET_INDEX_DASHBOARD = 'dashboard.CustomIndexDashboard'
+
 # Django - Jet theme colors for admin backend.
 JET_DEFAULT_THEME = 'light-gray'
 
@@ -272,4 +273,6 @@ JET_THEMES = [
         'title': 'Light Gray'
     }
 ]
+
+JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(BASE_DIR, 'client_secrets.json')
 
