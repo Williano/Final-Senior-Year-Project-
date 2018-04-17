@@ -48,6 +48,10 @@ class Migration(migrations.Migration):
             name='category',
             options={'verbose_name': 'category', 'verbose_name_plural': 'categories'},
         ),
+        migrations.AlterModelOptions(
+            name='product',
+            options={'ordering': ('available',)},
+        ),
         migrations.AlterIndexTogether(
             name='product',
             index_together=set([]),

@@ -1,0 +1,35 @@
+{% extends "registration/registration_base.html" %}
+{% load crispy_forms_tags i18n %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Update Profile | Pycon Ghana 2018" %}{% endif %}{% endblock %}
+
+{% block content %}
+<br/><br/><br/><br/><br/><br/><br/>
+<header id="top" class="sub-header">
+        <div class="container">
+            <h3 class="page-title wow fadeInDown">Update your Profile  {% firstof user.get_short_name user.get_username %}<br></h3>
+        </div>
+        <!-- end .container -->
+</header><br><br>
+
+<section>
+        <div class="container"> 
+            <div class="nav-center bottom-space-lg">
+              
+                             </div>
+                                    <div class="thumbnail wow fadeInUp">
+                                        <div class="caption">
+                                           <div class="row">
+                                                    <div class="col-md-3">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                <br>
+                                                <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+                                                        {% crispy form form.helper %}
+                                                </form>
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+</section>
+{% endblock %}

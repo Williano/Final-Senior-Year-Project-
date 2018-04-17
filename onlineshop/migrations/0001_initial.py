@@ -29,8 +29,8 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
                 ('name', models.CharField(max_length=200, db_index=True)),
                 ('slug', models.SlugField(max_length=200)),
-                ('description', models.TextField(blank=True)),
                 ('image', models.ImageField(blank=True, upload_to='products/%Y/%m/%d')),
+                ('description', models.TextField(blank=True)),
                 ('price', models.DecimalField(max_digits=10, decimal_places=2)),
                 ('stock', models.PositiveIntegerField()),
                 ('available', models.BooleanField(default=True)),
@@ -39,7 +39,7 @@ class Migration(migrations.Migration):
                 ('category', models.ForeignKey(related_name='products', to='onlineshop.Category')),
             ],
             options={
-                'ordering': ('available',),
+                'ordering': ('-created',),
             },
         ),
         migrations.CreateModel(

@@ -65,7 +65,7 @@
                                           </a>
 										<h2>${{ product.price }}</h2>
                                         <p><strong><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></strong></p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>{% trans "Add to cart" %}</a>
+										<a href="{% url 'cart:cart_add' product.id %}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>{% trans "Add to cart" %}</a>
 									</div>
 
 								</div>

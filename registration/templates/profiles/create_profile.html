@@ -1,0 +1,23 @@
+{% extends "registration/registration_base.html" %}
+{% load crispy_forms_tags i18n %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Create Profile | E-Shopper " %}{% endif %}{% endblock %}
+
+{% block content %}
+    <br/><br/><br/><br/>
+<header id="top" class="sub-header">
+        <div class="container">
+            <center><h3 class="page-title wow fadeInDown">Create your Profile {% firstof user.get_short_name user.get_username %}<br></h3></center>
+        </div>
+        <!-- end .container -->
+    </header><br><br>
+<section>
+        <div class="container"> 
+			<form action="{% url 'profiles:create_profile' %}" enctype='multipart/form-data' method='Post'>{% csrf_token %}
+			    {% crispy form form.helper %}
+			         
+			</form>
+      </div>
+</section>
+    <br /><br /><br />
+
+{% endblock %}

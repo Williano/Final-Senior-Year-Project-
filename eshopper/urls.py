@@ -24,8 +24,10 @@ from jet.dashboard.dashboard_modules import google_analytics_views
 
 
 urlpatterns = i18n_patterns(
-    url(r'^jet/', include('jet.urls', 'jet')), # Django JET URLS
-    url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')), # Django JET dashboard URLS
+    url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
+    url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
+    url(r'^accounts/', include('registration.backends.default.urls')),
+    url(r'^profile/', include('registration.urls', namespace='profiles')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^rosetta/', include('rosetta.urls')),
     url(r'^', include('home.urls', namespace='home')),

@@ -36,6 +36,8 @@ INSTALLED_APPS = (
     'jet.dashboard',
     'jet',
     'django.contrib.admin',
+    'django.contrib.sites',
+    'registration',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -46,6 +48,7 @@ INSTALLED_APPS = (
     'parler',
     'rosetta',
     'paypal.standard.ipn',
+    'crispy_forms',
 
     # my apps
     'home',
@@ -189,13 +192,13 @@ CART_SESSION_ID = 'cart'
 PAYPAL_RECEIVER_EMAIL = 'daviose@mail.regent.edu'
 PAYPAL_TEST = True
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 # SendGrid email configuration
-SEND_GRID_API_KEY = ''
-EMAIL_HOST = ''
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
+EMAIL_HOST_USER = 'testsite_app'
+EMAIL_HOST_PASSWORD = 'mys3cr3tp4ssw0rd'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'E-Shopper <admin@eshopper.com>'
 BASE_URL = '127.0.0.1:8080'
@@ -207,7 +210,7 @@ REDIS_PORT = 6379
 REDIS_DB = 1
 
 PARLER_LANGUAGES = {
-        None: (
+        1: (
                 {'code': 'en', },
                 {'code': 'en-gb', },
                 {'code': 'es', },
@@ -274,5 +277,25 @@ JET_THEMES = [
     }
 ]
 
+# Path to Google Analytics client_secrets.json
 JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(BASE_DIR, 'client_secrets.json')
+
+
+# Registration App account settings
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_EMAIL_SUBJECT_PREFIX = '[E-Shopper]'
+SEND_ACTIVATION_EMAIL = True
+REGISTRATION_AUTO_LOGIN = False
+
+# Sets the default site
+SITE_ID = 1
+
+# After successful login direct user to the profile page
+LOGIN_REDIRECT_URL = '/profile'
+
+# After successful logout direct user to the homepage
+LOGOUT_REDIRECT_URL = '/'
+
+# Sets the default template pack for the project
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

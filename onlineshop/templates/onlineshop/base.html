@@ -87,10 +87,10 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i>{% trans "Account" %}</a></li>
+								<li><a href="{% url 'profiles:profile_home' %}"><i class="fa fa-user"></i>{% trans "Account" %}</a></li>
 								<li><a href="{% url 'orders:order_create' %}"><i class="fa fa-crosshairs"></i>{% trans "Checkout" %}</a></li>
 								<li><a href="{% url "cart:cart_detail" %}">{{ total_items }}<i class="fa fa-shopping-cart"></i>{% trans "Cart" %}</a></li>
-								<li><a href=""><i class="fa fa-lock"></i>{% trans "Login" %}</a></li>
+								<li><a href="{% url 'auth_login' %}"><i class="fa fa-lock"></i>{% trans "Login" %}</a></li>
 							</ul>
 						</div>
 					</div>

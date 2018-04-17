@@ -1,9 +1,6 @@
 from django.db import models
-from django.core.urlresolvers import reverse
 from parler.models import TranslatableModel, TranslatedFields
-
-
-# Model for Category of products
+from django.core.urlresolvers import reverse
 
 
 class Category(TranslatableModel):
@@ -22,9 +19,6 @@ class Category(TranslatableModel):
 
     def get_absolute_url(self):
         return reverse('onlineshop:product_list_by_category', args=[self.slug])
-
-
-# Model for Product
 
 
 class Product(TranslatableModel):
@@ -51,6 +45,7 @@ class Product(TranslatableModel):
     def get_absolute_url(self):
         return reverse('onlineshop:product_detail', args=[self.id, self.slug])
 
+
 # Model for Product Reviews
 
 
@@ -68,4 +63,6 @@ class Review(models.Model):
 
     def __str__(self):
         return 'Review by {} on {}'.format(self.name, self.product)
+
+
 

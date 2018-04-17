@@ -1,0 +1,46 @@
+{% extends "registration/registration_base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Register for an account" %}{% endblock %}
+
+{% block content %}
+    <br/><br/><br/><br/><br/><br/><br/>
+    <section>
+
+                            <div class="col-md-6 col-md-offset-3">
+                                <center><h3>Register your Account</h3></center>
+                                    <div class="thumbnail wow fadeInUp">
+                                        <div class="caption">
+                                           <div class="row">
+                                                    <div class="col-md-3">
+
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                <br>
+                                                  <form method="post" action="">
+                                                    {% csrf_token %}
+                                                    {{ form|crispy }}
+                                                    <center><input class="btn btn-success btn-lg" type="submit" value="{% trans 'Submit' %}" /></center>
+                                                    <strong><center><p>{% trans "Already have an account?" %} <a href="{% url 'auth_login' %}">{% trans "Login" %}</a>.</p></center></strong>
+                                                </form>
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+    </section>
+{% endblock %}
+
+
+{% comment %}
+**registration/registration_form.html**
+Used to show the form users will fill out to register. By default, has
+the following context:
+
+``form``
+    The registration form. This will be an instance of some subclass
+    of ``django.forms.Form``; consult `Django's forms documentation
+    <http://docs.djangoproject.com/en/dev/topics/forms/>`_ for
+    information on how to display this in a template.
+{% endcomment %}

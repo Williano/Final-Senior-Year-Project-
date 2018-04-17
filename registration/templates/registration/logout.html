@@ -1,0 +1,34 @@
+{% extends "registration/registration_base.html" %}
+{% load i18n %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Logged out" %}{% endblock %}
+
+{% block content %}
+    <br/><br/><br/><br/><br/><br/><br/> <br/><br/><br/><br/><br/><br/><br/>
+       <section>
+        <div class="container">
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="login">
+                    <div class="container" align="center">
+                        <br>
+                            <div class="row"><h5>You are logged out</h5>
+                                 <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                    <div class="form-group col-md-12">
+                                        <a href="/"><button  type="" class="btn btn-success btn-lg icon icon-home-house-streamline" value="">   Home</button></a>
+                                    </div>
+                                </div>
+                                <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                    <div class="form-group col-md-12">
+                                        <a href="{% url 'auth_login' %}"><button  type="" class="btn btn-success btn-lg icon icon-man-people-streamline-user" value="">   Login</button></a>
+                                    </div>
+                                 </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

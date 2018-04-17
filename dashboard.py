@@ -32,7 +32,7 @@ class CustomIndexDashboard(Dashboard):
                  reverse('%s:password_change' % site_name)],
                 [_('Log out'), reverse('%s:logout' % site_name)],
             ],
-            column=0,
+            column=2,
             order=0
         ))
 
@@ -56,7 +56,7 @@ class CustomIndexDashboard(Dashboard):
         self.children.append(modules.RecentActions(
             _('Recent Actions'),
             10,
-            column=0,
+            column=2,
             order=1
         ))
 
@@ -65,7 +65,7 @@ class CustomIndexDashboard(Dashboard):
             _('Latest Django News'),
             feed_url='http://www.djangoproject.com/rss/weblog/',
             limit=5,
-            column=1,
+            column=2,
             order=1
         ))
 

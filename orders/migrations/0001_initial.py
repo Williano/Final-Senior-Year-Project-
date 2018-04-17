@@ -8,8 +8,8 @@ import django.core.validators
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('coupons', '0001_initial'),
         ('onlineshop', '0001_initial'),
+        ('coupons', '0001_initial'),
     ]
 
     operations = [

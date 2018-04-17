@@ -1,0 +1,114 @@
+{% extends "registration/registration_base.html" %}
+{% load i18n static %}
+{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans " Profile | E-Shopper " %}{% endif %}{% endblock %}
+
+{% block content %}
+  <br/><br/><br/><br/><br/><br/><br/>
+<header id="top" class="sub-header">
+        <div class="container">
+            <center><h3 class="page-title wow fadeInDown">{% firstof user.get_short_name user.get_username %}'s Profile<br><small>You are Welcome</small></h3></center>
+        </div>
+        <!-- end .container -->
+    </header>
+
+<section class="speakers" id="speakers">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                    <div class="section-title wow fadeInUp">
+                        <h4>   </h4>
+                    </div>
+                    <div class="panel panel-warning wow fadeInRight">   
+                            <div class="panel-body">
+                               <div class="row">
+                                        <div class="col-md-10">
+                                            <ul>
+                                                <p><a href="{% url 'cart:cart_detail' %}"class="btn warn">Your Orders</a></p>
+                                                <p><a href="{% url 'profiles:update' pk=user.id %}"class="btn warn">Update my Profile</a></p>
+                                                <p><a href="{% url 'onlineshop:product_list' %}"class="btn warn">Go To Shop</a></p>
+                                            </ul>
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                 <div class="section-title wow fadeInUp">
+                    <h4>  </h4>
+                 </div>
+                <div class="panel panel-danger wow fadeInLeft">      
+                        <div class="panel-body">
+                            {% if user_profile %}
+
+                        <div class="row">
+                            
+                            {% for user_p in user_profile %}
+                                {% for detail in details %}
+                                <div class="speaker-info wow fadeIn" data-wow-delay="0.1s">
+                                    
+                                    <img src="{{ user.profile.image.url }}" alt="avatar" style="width:140px;height:140px;" class="img-responsive center-block">
+                                    
+                                </div>
+
+                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="first_name" placeholder=" {{ user_p.first_name }}  {{ user_p.last_name }}" readonly></strong></h5>
+
+                                </div>
+
+                            </div>
+                            
+                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <label>Email Address</label>
+                                    <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="Email" placeholder="{{ detail.email }}" readonly></strong></h5>
+                                </div>
+                            </div>
+                             {% endfor %}
+                            
+                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                        <label>Phone Number</label>
+                                        <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="Nos" placeholder="{{ user_p.phone_number }}" readonly></strong></h5>
+                                    </div>
+                            </div>
+                            
+                            <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                        <label>Location</label>
+                                        <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="DOB" placeholder="{{ user_p.address }}, {{ user_p.city }},{{ user_p.state_or_region}}, {{ user_p.postal_code }}, {{ user_p.country }}" readonly></strong></h5>
+                                    </div>
+                            </div>
+                          <br>
+                             <div class=" form-group">
+                                    <div class="thumbnail wow fadeInUp">
+                                        <div class="caption">
+                                            <h6>Biography</h6>
+                                            <p class="text-center">{{ user_p.bio }}</p>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                        {% endfor %}
+                        {% else %}
+
+                                <p>You have not created a profile yet. Please click the button below to create your profile.</p>
+                                <br>
+                                <p><a class="btn btn-success" href="{% url 'profiles:create_profile' %}">Create Your Profile Now &raquo;</a></p>
+                    </div>
+                     {% endif %}
+                        </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- end .container -->
+    </section>
+    <!-- end section.speakers -->
+
+
+                         
+{% endblock %}
