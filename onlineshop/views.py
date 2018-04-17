@@ -15,11 +15,12 @@ def product_list(request, category_slug=None):
         category = get_object_or_404(Category, translations__language_code=language,
                                      translations__slug=category_slug)
         products = products.filter(category=category)
-        cart_product_form = CartAddProductForm()
+    cart_product_form = CartAddProductForm()
     return render(request, 'onlineshop/product/product-list.html',
                   {'category': category,
                    'categories': categories,
                    'products': products,
+                   'cart_product_form': cart_product_form,
                    })
 
 
