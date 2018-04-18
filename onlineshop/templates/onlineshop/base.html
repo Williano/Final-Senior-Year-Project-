@@ -232,7 +232,7 @@
 						<div class="single-widget">
 							<h2>{% trans "Service" %}</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">{% trans "Contact Us" %}</a></li>
+								<li><a href="{% url 'contact:contact' %}">{% trans "Contact Us" %}</a></li>
 								<li><a href="#">{% trans "Order Status" %}</a></li>
 
 							</ul>
@@ -242,7 +242,7 @@
 						<div class="single-widget">
 							<h2>{% trans "Support" %}</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">{% trans "Change Location" %}</a></li>
+								<li><a href="#">{% trans "Copyright" %}</a></li>
 								<li><a href="#">{% trans "FAQ’s" %}</a></li>
 
 							</ul>
@@ -252,7 +252,6 @@
 						<div class="single-widget">
 							<h2>{% trans "Policies" %}</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">{% trans "Terms of Use" %}</a></li>
 								<li><a href="#">{% trans "Privacy Policy" %}</a></li>
 								<li><a href="#">{% trans "Refund Policy" %}</a></li>
 							</ul>
@@ -262,9 +261,8 @@
 						<div class="single-widget">
 							<h2>{% trans "About Shopper" %}</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">{% trans "Company Information" %}</a></li>
+								<li><a href="{% url 'about:about' %}">{% trans "About Us" %}</a></li>
 								<li><a href="#">{% trans "Careers" %}</a></li>
-								<li><a href="#">{% trans "Copyright" %}</a></li>
 							</ul>
 						</div>
 					</div>

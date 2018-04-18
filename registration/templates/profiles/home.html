@@ -3,7 +3,7 @@
 {% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans " Profile | E-Shopper " %}{% endif %}{% endblock %}
 
 {% block content %}
-  <br/><br/><br/><br/><br/><br/><br/>
+  <br/><br/><br/>
 <header id="top" class="sub-header">
         <div class="container">
             <center><h3 class="page-title wow fadeInDown">{% firstof user.get_short_name user.get_username %}'s Profile<br><small>You are Welcome</small></h3></center>
@@ -49,7 +49,7 @@
                                     <img src="{{ user.profile.image.url }}" alt="avatar" style="width:140px;height:140px;" class="img-responsive center-block">
                                     
                                 </div>
-
+                            <br />
                             <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                 <div class="form-group">
                                     <label>Full Name</label>
@@ -62,7 +62,7 @@
                             <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                 <div class="form-group">
                                     <label>Email Address</label>
-                                    <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="Email" placeholder="{{ detail.email }}" readonly></strong></h5>
+                                    <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="Email" placeholder="{{ user_p.email }}" readonly></strong></h5>
                                 </div>
                             </div>
                              {% endfor %}
@@ -84,7 +84,7 @@
                              <div class=" form-group">
                                     <div class="thumbnail wow fadeInUp">
                                         <div class="caption">
-                                            <h6>Biography</h6>
+                                            <label>Biography</label>
                                             <p class="text-center">{{ user_p.bio }}</p>
                                         </div>
                                     </div>
@@ -108,7 +108,7 @@
         <!-- end .container -->
     </section>
     <!-- end section.speakers -->
-
+<br /><br /><br /><br /><br /><br />
 
                          
 {% endblock %}

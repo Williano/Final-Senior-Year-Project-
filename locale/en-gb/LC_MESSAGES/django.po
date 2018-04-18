@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 17:06+1200\n"
+"POT-Creation-Date: 2018-04-17 21:51+1200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -164,13 +164,16 @@ msgid "Ecommerce themes"
 msgstr ""
 
 #: .\contact\templates\contact\email_success.html:4
-#: .\contact\templates\contact\email_success.html:12
 msgid "Email Sent"
+msgstr ""
+
+#: .\contact\templates\contact\email_success.html:12
+msgid "Message Sent"
 msgstr ""
 
 #: .\contact\templates\contact\email_success.html:14
 msgid ""
-"Your Email was sent successfully ! We will get back to you as soon as "
+"Your Message was sent successfully ! We will get back to you as soon as "
 "possible. Thank You !!"
 msgstr ""
 
@@ -460,6 +463,7 @@ msgid "Shop"
 msgstr ""
 
 #: .\onlineshop\templates\onlineshop\base.html:117
+#: .\onlineshop\templates\onlineshop\base.html:245
 msgid "About Us"
 msgstr ""
 
@@ -503,10 +507,6 @@ msgstr ""
 msgid "Order Status"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:245
-msgid "Change Location"
-msgstr ""
-
 #: .\onlineshop\templates\onlineshop\base.html:246
 msgid "FAQ’s"
 msgstr ""
@@ -516,47 +516,39 @@ msgid "Policies"
 msgstr ""
 
 #: .\onlineshop\templates\onlineshop\base.html:255
-msgid "Terms of Use"
-msgstr ""
-
-#: .\onlineshop\templates\onlineshop\base.html:256
 msgid "Privacy Policy"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:257
+#: .\onlineshop\templates\onlineshop\base.html:256
 msgid "Refund Policy"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:263
-#: .\onlineshop\templates\onlineshop\base.html:273
+#: .\onlineshop\templates\onlineshop\base.html:262
+#: .\onlineshop\templates\onlineshop\base.html:271
 msgid "About Shopper"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:265
+#: .\onlineshop\templates\onlineshop\base.html:264
 msgid "Company Information"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:266
+#: .\onlineshop\templates\onlineshop\base.html:265
 msgid "Careers"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:267
-msgid "Copyright"
-msgstr ""
-
-#: .\onlineshop\templates\onlineshop\base.html:277
+#: .\onlineshop\templates\onlineshop\base.html:275
 msgid "Get the most recent updates from"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:277
+#: .\onlineshop\templates\onlineshop\base.html:275
 msgid "our site and be updated your self..."
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:290
+#: .\onlineshop\templates\onlineshop\base.html:288
 msgid "Developed by"
 msgstr ""
 
-#: .\onlineshop\templates\onlineshop\base.html:290
+#: .\onlineshop\templates\onlineshop\base.html:288
 msgid "Williano"
 msgstr ""
 
