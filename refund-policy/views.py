@@ -1,9 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
 
-
-def faq(request):
+def refund(request):
     context = {}
-    template = "faq/faq.html"
+    template = 'refund-policy/refund-policy.html'
     return render(request, template, context)

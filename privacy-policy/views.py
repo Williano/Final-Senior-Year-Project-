@@ -1,9 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
 
-
-def faq(request):
+def privacy(request):
     context = {}
-    template = "faq/faq.html"
+    template = 'privacy-policy/privacy-policy.html'
     return render(request, template, context)

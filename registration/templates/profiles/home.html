@@ -1,6 +1,6 @@
 {% extends "registration/registration_base.html" %}
 {% load i18n static %}
-{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans " Profile | E-Shopper " %}{% endif %}{% endblock %}
+{% block title %}Dashboard{% endblock %}
 
 {% block content %}
   <br/><br/><br/>
@@ -25,6 +25,7 @@
                                             <ul>
                                                 <p><a href="{% url 'cart:cart_detail' %}"class="btn warn">Your Orders</a></p>
                                                 <p><a href="{% url 'profiles:update' pk=user.id %}"class="btn warn">Update my Profile</a></p>
+                                                <p><a href="{% url 'profiles:password_change' user.pk %}"class="btn warn">Change Password</a></p>
                                                 <p><a href="{% url 'onlineshop:product_list' %}"class="btn warn">Go To Shop</a></p>
                                             </ul>
                                         </div>
@@ -84,7 +85,7 @@
                              <div class=" form-group">
                                     <div class="thumbnail wow fadeInUp">
                                         <div class="caption">
-                                            <label>Biography</label>
+                                            <center><label>Biography</label></center>
                                             <p class="text-center">{{ user_p.bio }}</p>
                                         </div>
                                     </div>
