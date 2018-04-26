@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Q
 from cart.forms import CartAddProductForm
 from .models import Category, Product, Review
 from .forms import ReviewForm
@@ -15,6 +16,12 @@ def product_list(request, category_slug=None):
         category = get_object_or_404(Category, translations__language_code=language,
                                      translations__slug=category_slug)
         products = products.filter(category=category)
+        query = request.GET.get("q")
+        if query:
+            products = products.filter(Q(translations__name=query) |
+                                       Q(translations__description=query) |
+                                       Q(translations__category=query)
+                                       ).distinct()
     cart_product_form = CartAddProductForm()
     return render(request, 'onlineshop/product/product-list.html',
                   {'category': category,

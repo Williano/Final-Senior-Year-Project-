@@ -269,10 +269,11 @@
 					<div class="col-sm-3 col-sm-offset-1">
 						<div class="single-widget">
 							<h2>{% trans "About Shopper" %}</h2>
-							<form action="#" class="searchform">
-								<input type="text" placeholder="Your email address" />
-								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-								<p>{% trans "Get the most recent updates from" %} <br />{% trans "our site and be updated your self..."%}</p>
+							<form enctype="multipart/form-data" method="post" action="/newsletter/e-shopper/subscribe/" class="searchform">
+								{% csrf_token %}
+								<input type="email" name="email_field" required="" id="id_email_field" placeholder="Your email address">
+								<button id="id_submit" name="submit" value="Subscribe" class="btn btn-default" type="submit"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<p>{% trans "Get the most recent updates from" %} <br />{% trans "E-Shopper and be updated your self..."%}</p>
 							</form>
 						</div>
 					</div>

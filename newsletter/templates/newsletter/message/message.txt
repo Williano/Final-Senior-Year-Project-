@@ -1,0 +1,15 @@
+++++++++++++++++++++
+
+{{ newsletter.title }}: {{ message.title }}
+
+++++++++++++++++++++
+
+{% for article in message.articles.all %}
+{{ article.title }}
+{{ article.text|striptags|safe }}
+
+{% endfor %}
+
+++++++++++++++++++++
+
+Unsubscribe: http://{{ site }}{% url "newsletter_unsubscribe_request" newsletter.slug %}

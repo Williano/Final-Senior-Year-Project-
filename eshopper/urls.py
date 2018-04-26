@@ -30,6 +30,8 @@ urlpatterns = i18n_patterns(
     url(r'^profile/', include('registration.urls', namespace='profiles')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^rosetta/', include('rosetta.urls')),
+    url(r'^newsletter/', include('newsletter.urls')),
+    url(r'^tinymce/', include('tinymce.urls')),
     url(r'^', include('home.urls', namespace='home')),
     url(_(r'^faq/'), include('faq.urls', namespace='faq')),
     url(_(r'^privacy/'), include('privacy-policy.urls', namespace='privacy')),

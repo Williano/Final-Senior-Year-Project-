@@ -46,8 +46,7 @@
 													 <a href="{{ p.get_absolute_url }}">
                                                          <img src="{% if p.image %}{{ p.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"></a>
 													<h2>${{ product.price }}</h2>
-													<p><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>{% trans "Add to cart" %}</a>
+													<p><strong><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></strong></p>
 												</div>
 											</div>
 										</div>
@@ -64,8 +63,7 @@
 													 <a href="{{ p.get_absolute_url }}">
                                                          <img src="{% if p.image %}{{ p.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"></a>
 													<h2>${{ product.price }}</h2>
-													<p><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>{% trans "Add to cart" %}</a>
+													<p><strong><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></strong></p>
 												</div>
 											</div>
 										</div>

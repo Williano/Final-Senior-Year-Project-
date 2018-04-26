@@ -1,0 +1,27 @@
+{% extends "newsletter/common.html" %}
+{% load static crispy_forms_tags %}
+{% load i18n %}
+
+{% block title %}{% trans "Newsletter unsubscribe" %}{% endblock title %}
+
+{% block body %}
+    <h1>{% trans "Newsletter unsubscribe" %} {{ newsletter.title }}</h1>
+
+    {% if error %}
+        <p>{% trans "Due to a technical error we were not able to submit your confirmation email. This could be because your email address is invalid." %}</p>
+
+        {% comment %} Replace the the following dummy with a valid email address and remove this comment.
+
+        <p>{% trans "If the error persists, please don't hesitate to contact us at the following email address:" %} <a href="mailto:paawilly17@gmail.com">paawilly17@gmail.com</a></p>
+
+
+        {% endcomment %}
+    {% else %}
+        <form enctype="multipart/form-data" method="post" action=".">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <p><input id="id_submit" name="submit" class="btn btn btn-success" value="{% trans "Unsubscribe" %}" type="submit" /></p>
+        </form>
+    {% endif %}
+    <br /><br /><br /><br />
+{% endblock body %}

@@ -49,6 +49,10 @@ INSTALLED_APPS = (
     'rosetta',
     'paypal.standard.ipn',
     'crispy_forms',
+    'sorl.thumbnail',
+    'newsletter',
+    'tinymce',
+    'django_extensions',
 
     # my apps
     'home',
@@ -192,19 +196,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CART_SESSION_ID = 'cart'
 
 # django-paypal settings
-PAYPAL_RECEIVER_EMAIL = 'daviose@mail.regent.edu'
+PAYPAL_RECEIVER_EMAIL = ''
 PAYPAL_TEST = True
 
 
-# SendGrid email configuration
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'testsite_app'
-EMAIL_HOST_PASSWORD = 'mys3cr3tp4ssw0rd'
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'E-Shopper <admin@eshopper.com>'
-BASE_URL = '127.0.0.1:8080'
+# Django Email configuration
+EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+SENDGRID_API_KEY = ""
+SENDGRID_SANDBOX_MODE_IN_DEBUG = False
+DEFAULT_FROM_EMAIL = 'E-Shopper <noreply@eshopper.com>'
 
 
 # Redis settings
@@ -299,6 +299,20 @@ LOGIN_REDIRECT_URL = '/profile'
 # After successful logout direct user to the homepage
 LOGOUT_REDIRECT_URL = '/'
 
+# After successful registrations directs user to the profile homepage
+SIGNUP_REDIRECT_URL = '/profile'
+
 # Sets the default template pack for the project
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+# Amount of seconds to wait between each email. Here 100ms is used.
+NEWSLETTER_EMAIL_DELAY = 0.1
+
+# Amount of seconds to wait between each batch. Here one minute is used.
+NEWSLETTER_BATCH_DELAY = 60
+
+# Number of emails in one batch
+NEWSLETTER_BATCH_SIZE = 100
+
+# Using django-tinymce
+NEWSLETTER_RICHTEXT_WIDGET = "tinymce.widgets.TinyMCE"

@@ -1,0 +1,153 @@
+{% load static crispy_forms_tags %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{% static 'img/favi.gif' %}">
+
+    <!-- Title -->
+    <title>{% trans "E-Shopper" %} | {% block title %}{% endblock %}</title>
+
+    <!-- Bootstrap Files and Plugins -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/prettyPhoto.css' %}" rel="stylesheet">
+    <link href="{% static 'css/price-range.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+
+   <!-- Crisp Live Chat -->
+   <script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="38d6144c-67a0-4b31-8cfb-2ee97bf4c905";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
+      
+        {% block header %}
+<header id="header"><!--header-->
+        <div class="header_top"><!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contactinfo">
+                            <ul class="nav nav-pills">
+                                <li><a href="#"><i class="fa fa-phone"></i> +233 20 18 75 333</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i> info@eshopper.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="social-icons pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header_top-->
+
+        <div class="header-middle"><!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="logo pull-left">
+                            <a href="{% url 'home:home' %}"><img src="{% static 'img/logo.png' %}" alt="" /></a>
+                        </div>
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        <div class="btn-group pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                    English
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    {% for language in languages %}
+                                    <li><a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>{{ language.name }}</a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="shop-menu pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="{% url 'profiles:profile_home' %}"><i class="fa fa-user"></i>{% trans "Account" %}</a></li>
+                                <li><a href="{% url 'orders:order_create' %}"><i class="fa fa-crosshairs"></i>{% trans "Checkout" %}</a></li>
+                                <li><a href="{% url "cart:cart_detail" %}">{{ total_items }}<i class="fa fa-shopping-cart"></i>{% trans "Cart" %}</a></li>
+                                <li><a href="{% url 'auth_login' %}"><i class="fa fa-lock"></i>{% trans "Login" %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-middle-->
+
+        <div class="header-bottom"><!--header-bottom-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">{% trans "Toggle navigation" %}</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="mainmenu pull-left">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li><a href="{% url 'home:home' %}" class="active">{% trans "Home" %}</a></li>
+                                <li><a href="{% url 'onlineshop:product_list' %}">{% trans "Shop" %}</a></li>
+                                <li><a href="{% url 'about:about' %}">{% trans "About Us" %}</a></li>
+                                <li><a href="{% url 'contact:contact' %}">{% trans "Contact Us" %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="search_box pull-right" >
+                            <form method="GET" action="">
+                            <input type="text" name="q" placeholder="{% trans "Search Products" %}"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-bottom-->
+    </header><!--/header-->
+
+
+        {% endblock header %}
+    </head>
+
+<body class="animate-page" data-spy="scroll" data-target="#navbar" data-offset="100">
+    <!--Preloader div-->
+    <div class="preloader"></div>
+
+<div class="container">
+ <font color="black">
+ <center>
+
+        {% block body %}
+        {% endblock body %}
+
+ </center>
+  </font>
+</div>
+
+<br />
+     <center><p><a class="btn btn-lg btn-success" href="{% url 'home:home' %}" role="button">Go Back To E-Shopper Website</a></p></center>
+<br />
+    </body>
+</html>

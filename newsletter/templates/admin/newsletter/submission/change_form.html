@@ -1,0 +1,29 @@
+{% extends "admin/change_form.html" %}
+
+{% load i18n %}
+{% load static from staticfiles %}
+
+{% block extrahead %}
+{{ block.super }}
+<script src="{% url "admin:newsletter_js18n" %}" type="text/javascript"></script>
+<script src="{% static "newsletter/admin/js/subscriber_lookup.js" %}" type="text/javascript"></script>
+<script src="{% static "newsletter/admin/js/submit_interface.js" %}" type="text/javascript"></script>
+{% endblock %}
+
+{% block object-tools %}
+{% if change %}{% if not is_popup %}
+  <ul class="object-tools">
+    <li><a href="{% url 'admin:newsletter_submission_history' object_id %}" class="historylink">{% trans "History" %}</a></li>
+    {% if has_absolute_url %}<li><a href="{{ absolute_url }}" class="viewsitelink">{% trans "View on site" %}</a></li>{% endif %}
+    <li><a href="{% url 'admin:newsletter_submission_submit' object_id %}" id="submitlink">{% trans "Submit" %}</a></li>
+  </ul>
+{% endif %}{% endif %}
+{% endblock %}
+
+
+{% block after_related_objects %}{{ block.super }}<script type="text/javascript">
+django.jQuery(window).load(function() {
+    JsonSubscribers.init('id_message'{% if add %}, add=true{% endif %});
+    SubmitInterface.init('#submitlink');
+});
+</script>{% endblock %}
