@@ -1,23 +1,58 @@
 {% extends "registration/registration_base.html" %}
 {% load crispy_forms_tags i18n %}
-{% block meta_title %}{% if page %}{{ page.meta_title }}{% else %}{% trans "Create Profile | E-Shopper " %}{% endif %}{% endblock %}
+{% block title %}Create Profile{% endblock %}
 
 {% block content %}
     <br/><br/><br/><br/>
 <header id="top" class="sub-header">
-        <div class="container">
-            <center><h3 class="page-title wow fadeInDown">Create your Profile {% firstof user.get_short_name user.get_username %}<br></h3></center>
+          <div class="container">
+            <h3 class="page-title wow fadeInDown">Center your Profile  {% firstof user.get_short_name user.get_username %}<br></h3>
         </div>
         <!-- end .container -->
     </header><br><br>
-<section>
-        <div class="container"> 
-			<form action="{% url 'profiles:create_profile' %}" enctype='multipart/form-data' method='Post'>{% csrf_token %}
-			    {% crispy form form.helper %}
-			         
-			</form>
-      </div>
-</section>
+    <section class="speakers" id="speakers">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                        <div class="section-title wow fadeInUp">
+                            <h4>   </h4>
+                        </div>
+                        <div class="panel panel-warning wow fadeInRight">
+                                <div class="panel-body">
+                                   <div class="row">
+                                            <div class="col-md-10">
+                                                <ul>
+                                                    <p><a href="/profile" class="btn warn">Back to My Profile</a></p>
+                                                    <p><a href="{% url 'onlineshop:product_list' %}" class="btn warn">Go Back To Shop</a></p>
+                                                </ul>
+                                            </div>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="col-sm-12 col-md-8">
+                     <div class="section-title wow fadeInUp">
+                        <h4>  </h4>
+                     </div>
+                    <div class="panel panel-danger wow fadeInLeft">
+                          <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="col-md-10">
+                                                    <h5 class="page-title wow fadeInDown">Create your Profile below, {% firstof user.get_short_name user.get_username %}<br></h5>
+                                                    <form action="{% url 'profiles:create_profile' %}" enctype='multipart/form-data' method='Post'>{% csrf_token %}
+                                                        {% crispy form form.helper %}
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- end .container -->
+    </section>
     <br /><br /><br />
 
 {% endblock %}

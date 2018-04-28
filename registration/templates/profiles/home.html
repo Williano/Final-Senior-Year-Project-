@@ -3,10 +3,9 @@
 {% block title %}Dashboard{% endblock %}
 
 {% block content %}
-  <br/><br/><br/>
+  <br/><br/><br/><br />
 <header id="top" class="sub-header">
         <div class="container">
-            <center><h3 class="page-title wow fadeInDown">{% firstof user.get_short_name user.get_username %}'s Profile<br><small>You are Welcome</small></h3></center>
         </div>
         <!-- end .container -->
     </header>
@@ -23,10 +22,14 @@
                                <div class="row">
                                         <div class="col-md-10">
                                             <ul>
+                                                {% if user_profile %}
                                                 <p><a href="{% url 'cart:cart_detail' %}"class="btn warn">Your Orders</a></p>
                                                 <p><a href="{% url 'profiles:update' pk=user.id %}"class="btn warn">Update my Profile</a></p>
-                                                <p><a href="{% url 'profiles:password_change' user.pk %}"class="btn warn">Change Password</a></p>
+                                                <p><a href="/accounts/password/change/"class="btn warn">Change Password</a></p>
                                                 <p><a href="{% url 'onlineshop:product_list' %}"class="btn warn">Go To Shop</a></p>
+                                                {% else %}
+                                                <p>Welcome!</p>
+                                                {% endif %}
                                             </ul>
                                         </div>
                                 </div>
@@ -40,6 +43,7 @@
                 <div class="panel panel-danger wow fadeInLeft">      
                         <div class="panel-body">
                             {% if user_profile %}
+                            <center><h4 class="page-title wow fadeInDown"><strong>{% firstof user.get_short_name user.get_username %}'s Profile</h4></strong></center><br/>
 
                         <div class="row">
                             
@@ -94,6 +98,7 @@
 
                         {% endfor %}
                         {% else %}
+                        <h5 class="page-title wow fadeInDown">Thanks for Signing up! {% firstof user.get_short_name user.get_username %}</h5>
 
                                 <p>You have not created a profile yet. Please click the button below to create your profile.</p>
                                 <br>

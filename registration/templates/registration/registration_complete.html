@@ -4,9 +4,25 @@
 {% block title %}{% trans "Activation email sent" %}{% endblock %}
 
 {% block content %}
-<div class="container">
-    {% trans "Please check your email to complete the registration process." %}
-</div>
+<div class="col-md-6 col-md-offset-3"><h3>Activate your account</h3>
+                                    <div class="thumbnail wow fadeInUp">
+                                        <div class="caption">
+                                           <div class="row">
+                                                    <div class="col-md-3">
+
+                                                    </div>
+                                                    <div>
+                                                <br>
+                                                 <p>{% trans "Please check your email/spam to complete the registration process." %}</p>
+                                                 <p>
+                                                     <a href="/accounts/activate/resend" >Resend activation code</a>
+                                                 </p>
+
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
 {% endblock %}
 
 
