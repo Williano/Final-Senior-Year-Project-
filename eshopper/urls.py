@@ -29,7 +29,6 @@ urlpatterns = i18n_patterns(
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^profile/', include('registration.urls', namespace='profiles')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^rosetta/', include('rosetta.urls')),
     url(r'^newsletter/', include('newsletter.urls')),
     url(r'^tinymce/', include('tinymce.urls')),
     url(r'^', include('home.urls', namespace='home')),
@@ -43,6 +42,7 @@ urlpatterns = i18n_patterns(
     url(_(r'^cart/'), include('cart.urls', namespace='cart')),
     url(r'^paypal/', include('paypal.standard.ipn.urls')),
     url(_(r'^payment/'), include('payment.urls', namespace='payment')),
+    url(r"^search/", include("watson.urls", namespace="watson")),
     url(_(r'^onlineshop/'), include('onlineshop.urls', namespace='onlineshop')),
 )
 

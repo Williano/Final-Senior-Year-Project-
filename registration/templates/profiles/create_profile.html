@@ -1,6 +1,6 @@
 {% extends "registration/registration_base.html" %}
 {% load crispy_forms_tags i18n %}
-{% block title %}Create Profile{% endblock %}
+{% block title %}{%trans "Create Profile" %}{% endblock %}
 
 {% block content %}
     <br/><br/><br/><br/>
@@ -22,8 +22,8 @@
                                    <div class="row">
                                             <div class="col-md-10">
                                                 <ul>
-                                                    <p><a href="/profile" class="btn warn">Back to My Profile</a></p>
-                                                    <p><a href="{% url 'onlineshop:product_list' %}" class="btn warn">Go Back To Shop</a></p>
+                                                    <p><a href="/profile" class="btn warn">{% trans "Back to My Profile" %}</a></p>
+                                                    <p><a href="{% url 'onlineshop:product_list' %}" class="btn warn">{% trans "Go Back To Shop" %}</a></p>
                                                 </ul>
                                             </div>
                                     </div>
@@ -38,7 +38,7 @@
                           <div class="row">
                                             <div class="col-md-12">
                                                 <div class="col-md-10">
-                                                    <h5 class="page-title wow fadeInDown">Create your Profile below, {% firstof user.get_short_name user.get_username %}<br></h5>
+                                                    <h5 class="page-title wow fadeInDown">{% trans "Create your Profile below" %}, {% firstof user.get_short_name user.get_username %}<br></h5>
                                                     <form action="{% url 'profiles:create_profile' %}" enctype='multipart/form-data' method='Post'>{% csrf_token %}
                                                         {% crispy form form.helper %}
 

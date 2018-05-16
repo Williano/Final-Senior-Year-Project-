@@ -1,6 +1,6 @@
 {% extends "registration/registration_base.html" %}
 {% load i18n static %}
-{% block title %}Dashboard{% endblock %}
+{% block title %}{% trans "Dashboard" %}{% endblock %}
 
 {% block content %}
   <br/><br/><br/><br />
@@ -23,12 +23,12 @@
                                         <div class="col-md-10">
                                             <ul>
                                                 {% if user_profile %}
-                                                <p><a href="{% url 'cart:cart_detail' %}"class="btn warn">Your Orders</a></p>
-                                                <p><a href="{% url 'profiles:update' pk=user.id %}"class="btn warn">Update my Profile</a></p>
-                                                <p><a href="/accounts/password/change/"class="btn warn">Change Password</a></p>
-                                                <p><a href="{% url 'onlineshop:product_list' %}"class="btn warn">Go To Shop</a></p>
+                                                <p><a href="{% url 'cart:cart_detail' %}"class="btn warn">{% trans "Your Orders" %}</a></p>
+                                                <p><a href="{% url 'profiles:update' pk=user.id %}"class="btn warn">{% trans "Update my Profile" %}</a></p>
+                                                <p><a href="/accounts/password/change/"class="btn warn">{% trans "Change Password" %}</a></p>
+                                                <p><a href="{% url 'onlineshop:product_list' %}"class="btn warn">{% trans "Go To Shop" %}</a></p>
                                                 {% else %}
-                                                <p>Welcome!</p>
+                                                <p>{% trans "Welcome" %}!</p>
                                                 {% endif %}
                                             </ul>
                                         </div>
@@ -43,7 +43,7 @@
                 <div class="panel panel-danger wow fadeInLeft">      
                         <div class="panel-body">
                             {% if user_profile %}
-                            <center><h4 class="page-title wow fadeInDown"><strong>{% firstof user.get_short_name user.get_username %}'s Profile</h4></strong></center><br/>
+                            <center><h4 class="page-title wow fadeInDown"><strong>{% firstof user.get_short_name user.get_username %}'s {% trans "Profile" %}</h4></strong></center><br/>
 
                         <div class="row">
                             
@@ -57,7 +57,7 @@
                             <br />
                             <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                 <div class="form-group">
-                                    <label>Full Name</label>
+                                    <label>{% trans "Full Name" %}</label>
                                     <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="first_name" placeholder=" {{ user_p.first_name }}  {{ user_p.last_name }}" readonly></strong></h5>
 
                                 </div>
@@ -66,7 +66,7 @@
                             
                             <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                 <div class="form-group">
-                                    <label>Email Address</label>
+                                    <label>{% trans "Email Address" %}</label>
                                     <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="Email" placeholder="{{ user_p.email }}" readonly></strong></h5>
                                 </div>
                             </div>
@@ -74,14 +74,14 @@
                             
                             <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                 <div class="form-group">
-                                        <label>Phone Number</label>
+                                        <label>{% trans "Phone Number" %}</label>
                                         <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="Nos" placeholder="{{ user_p.phone_number }}" readonly></strong></h5>
                                     </div>
                             </div>
                             
                             <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                 <div class="form-group">
-                                        <label>Location</label>
+                                        <label>{% trans "Location" %}</label>
                                         <h5><strong><input type="text" class="form-control" style="background-color:White; color:Black;" name="DOB" placeholder="{{ user_p.address }}, {{ user_p.city }},{{ user_p.state_or_region}}, {{ user_p.postal_code }}, {{ user_p.country }}" readonly></strong></h5>
                                     </div>
                             </div>
@@ -89,7 +89,7 @@
                              <div class=" form-group">
                                     <div class="thumbnail wow fadeInUp">
                                         <div class="caption">
-                                            <center><label>Biography</label></center>
+                                            <center><label>{% trans "Biography" %}</label></center>
                                             <p class="text-center">{{ user_p.bio }}</p>
                                         </div>
                                     </div>
@@ -98,11 +98,11 @@
 
                         {% endfor %}
                         {% else %}
-                        <h5 class="page-title wow fadeInDown">Thanks for Signing up! {% firstof user.get_short_name user.get_username %}</h5>
+                        <h5 class="page-title wow fadeInDown">{% trans "Thanks for Signing up" %}! {% firstof user.get_short_name user.get_username %}</h5>
 
-                                <p>You have not created a profile yet. Please click the button below to create your profile.</p>
+                                <p>{% trans "You have not created a profile yet. Please click the button below to create your profile" %}.</p>
                                 <br>
-                                <p><a class="btn btn-success" href="{% url 'profiles:create_profile' %}">Create Your Profile Now &raquo;</a></p>
+                                <p><a class="btn btn-success" href="{% url 'profiles:create_profile' %}">{% trans "Create Your Profile Now" %} &raquo;</a></p>
                     </div>
                      {% endif %}
                         </div>

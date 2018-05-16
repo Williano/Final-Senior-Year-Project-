@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-registration 0.8 alpha-1 \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 21:51+1200\n"
+"POT-Creation-Date: 2018-05-14 02:40+1200\n"
 "PO-Revision-Date: 2010-07-01 14:30+0200\n"
 "Last-Translator: Jean-Marc Porcherot <jmarc.porcherot@free.fr>\n"
 "Language-Team: Français <fr@li.org>\n"
@@ -17,40 +17,40 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\registration\admin.py:26
+#: .\admin.py:28
 msgid "Activate users"
 msgstr "Activer les utilisateurs"
 
-#: .\registration\admin.py:44
+#: .\admin.py:46
 #, fuzzy
 #| msgid "Activation email sent"
 msgid "Re-send activation emails"
 msgstr "Le mail d'activation a été envoyé"
 
-#: .\registration\forms.py:41 .\registration\forms.py:119
+#: .\forms.py:41 .\forms.py:119
 msgid "E-mail"
 msgstr ""
 
-#: .\registration\forms.py:57
+#: .\forms.py:57
 msgid "A user with that username already exists."
 msgstr "Ce nom d'utilisateur est déjà utilisé."
 
-#: .\registration\forms.py:69
+#: .\forms.py:69
 msgid "I have read and agree to the Terms of Service"
 msgstr "J'ai lu et accepté les Conditions Générales d'Utilisation"
 
-#: .\registration\forms.py:70
+#: .\forms.py:70
 msgid "You must agree to the terms to register"
 msgstr "Vous devez accepter les conditions d'utilisation pour vous inscrire"
 
-#: .\registration\forms.py:86
+#: .\forms.py:86
 msgid ""
 "This email address is already in use. Please supply a different email "
 "address."
 msgstr ""
 "Cette adresse courriel est déjà utilisée. Veuillez en indiquer une autre."
 
-#: .\registration\forms.py:113
+#: .\forms.py:113
 msgid ""
 "Registration using free email addresses is prohibited. Please supply a "
 "different email address."
@@ -58,110 +58,216 @@ msgstr ""
 "L'inscription avec adresse courriel de compte gratuit est interdite. "
 "Veuillez en indiquer une autre."
 
-#: .\registration\models.py:307
+#: .\models.py:307
 msgid "user"
 msgstr "utilisateur"
 
-#: .\registration\models.py:309
+#: .\models.py:309
 #, fuzzy
 #| msgid "Account activation on"
 msgid "activation key"
 msgstr "Activation du compte sur"
 
-#: .\registration\models.py:315
+#: .\models.py:315
 #, fuzzy
 #| msgid "registration profiles"
 msgid "registration profile"
 msgstr "profils d'inscription"
 
-#: .\registration\models.py:316
+#: .\models.py:316
 msgid "registration profiles"
 msgstr "profils d'inscription"
 
-#: .\registration\models.py:703
+#: .\models.py:703
 msgid "first name"
 msgstr ""
 
-#: .\registration\models.py:704
+#: .\models.py:704
 msgid "last name"
 msgstr ""
 
-#: .\registration\models.py:709
+#: .\models.py:709
 msgid "e-mail"
 msgstr ""
 
-#: .\registration\models.py:710
+#: .\models.py:710
 msgid "phone number"
 msgstr ""
 
-#: .\registration\models.py:712
+#: .\models.py:712
 #, fuzzy
 #| msgid "Email address"
 msgid "address"
 msgstr "Adresse courriel"
 
-#: .\registration\models.py:713
+#: .\models.py:713
 msgid "city"
 msgstr ""
 
-#: .\registration\models.py:714
+#: .\models.py:714
 msgid "state or region"
 msgstr ""
 
-#: .\registration\models.py:715
+#: .\models.py:715
 msgid "postal code"
 msgstr ""
 
-#: .\registration\models.py:716
+#: .\models.py:716
 msgid "country"
 msgstr ""
 
-#: .\registration\templates\profiles\create_profile.html:3
-msgid "Create Profile | E-Shopper "
+#: .\templates\profiles\create_profile.html:3
+#, fuzzy
+#| msgid "registration profiles"
+msgid "Create Profile"
+msgstr "profils d'inscription"
+
+#: .\templates\profiles\create_profile.html:25
+#: .\templates\profiles\update.html:25
+msgid "Back to My Profile"
 msgstr ""
 
-#: .\registration\templates\profiles\home.html:3
-msgid " Profile | E-Shopper "
+#: .\templates\profiles\create_profile.html:26
+msgid "Go Back To Shop"
 msgstr ""
 
-#: .\registration\templates\profiles\update.html:3
-msgid "Update Profile | Pycon Ghana 2018"
+#: .\templates\profiles\create_profile.html:41
+msgid "Create your Profile below"
 msgstr ""
 
-#: .\registration\templates\registration\activate.html:4
+#: .\templates\profiles\home.html:3
+msgid "Dashboard"
+msgstr ""
+
+#: .\templates\profiles\home.html:26
+msgid "Your Orders"
+msgstr ""
+
+#: .\templates\profiles\home.html:27
+msgid "Update my Profile"
+msgstr ""
+
+#: .\templates\profiles\home.html:28
+#: .\templates\profiles\password_change.html:4
+#, fuzzy
+#| msgid "Change password"
+msgid "Change Password"
+msgstr "Mot de passe"
+
+#: .\templates\profiles\home.html:29 .\templates\profiles\update.html:26
+msgid "Go To Shop"
+msgstr ""
+
+#: .\templates\profiles\home.html:31
+msgid "Welcome"
+msgstr ""
+
+#: .\templates\profiles\home.html:46
+msgid "Profile"
+msgstr ""
+
+#: .\templates\profiles\home.html:60
+msgid "Full Name"
+msgstr ""
+
+#: .\templates\profiles\home.html:69
+#, fuzzy
+#| msgid "Email address"
+msgid "Email Address"
+msgstr "Adresse courriel"
+
+#: .\templates\profiles\home.html:77
+msgid "Phone Number"
+msgstr ""
+
+#: .\templates\profiles\home.html:84
+msgid "Location"
+msgstr ""
+
+#: .\templates\profiles\home.html:92
+msgid "Biography"
+msgstr ""
+
+#: .\templates\profiles\home.html:101
+msgid "Thanks for Signing up"
+msgstr ""
+
+#: .\templates\profiles\home.html:103
+msgid ""
+"You have not created a profile yet. Please click the button below to create "
+"your profile"
+msgstr ""
+
+#: .\templates\profiles\home.html:105
+msgid "Create Your Profile Now"
+msgstr ""
+
+#: .\templates\profiles\login_details.html:11
+msgid "Update your login details"
+msgstr ""
+
+#: .\templates\profiles\password_change.html:12
+#, fuzzy
+#| msgid "Change password"
+msgid "Change your password"
+msgstr "Mot de passe"
+
+#: .\templates\profiles\success.html:2
+#, fuzzy
+#| msgid "Successfully logged out"
+msgid "Successful Profile Update"
+msgstr "Déconnecté avec succès"
+
+#: .\templates\profiles\success.html:11
+msgid "Profile Update Successful"
+msgstr ""
+
+#: .\templates\profiles\success.html:13
+msgid "Your changes have been updated successfully"
+msgstr ""
+
+#: .\templates\profiles\update.html:3
+msgid "Update Profile"
+msgstr ""
+
+#: .\templates\profiles\update.html:9 .\templates\profiles\update.html.py:42
+msgid "Update your Profile"
+msgstr ""
+
+#: .\templates\registration\activate.html:4
 #, fuzzy
 #| msgid "Activation email sent"
 msgid "Activation Failure"
 msgstr "Le mail d'activation a été envoyé"
 
-#: .\registration\templates\registration\activate.html:7
+#: .\templates\registration\activate.html:7
 msgid "Account activation failed."
 msgstr "Erreur lors de l'activation du compte"
 
-#: .\registration\templates\registration\activation_complete.html:4
-#: .\registration\templates\registration\activation_complete_admin_pending.html:4
+#: .\templates\registration\activation_complete.html:4
+#: .\templates\registration\activation_complete_admin_pending.html:4
 msgid "Account Activated"
 msgstr "Compte activé"
 
-#: .\registration\templates\registration\activation_complete.html:8
-#: .\registration\templates\registration\activation_complete_admin_pending.html:8
+#: .\templates\registration\activation_complete.html:8
+#: .\templates\registration\activation_complete_admin_pending.html:8
 msgid "Your account is now activated."
 msgstr "Votre compte est activé"
 
-#: .\registration\templates\registration\activation_complete.html:10
+#: .\templates\registration\activation_complete.html:10
 msgid "You can log in."
 msgstr "Vous pouvez vous connecter."
 
-#: .\registration\templates\registration\activation_complete_admin_pending.html:10
+#: .\templates\registration\activation_complete_admin_pending.html:10
 msgid "Once a site administrator activates your account you can login."
 msgstr ""
 
-#: .\registration\templates\registration\activation_email.html:6
-#: .\registration\templates\registration\admin_approve_email.html:6
+#: .\templates\registration\activation_email.html:6
+#: .\templates\registration\admin_approve_email.html:6
 msgid "registration"
 msgstr "profil d'inscription"
 
-#: .\registration\templates\registration\activation_email.html:11
+#: .\templates\registration\activation_email.html:11
 #, fuzzy, python-format
 #| msgid ""
 #| "\n"
@@ -185,7 +291,7 @@ msgstr ""
 "    et votre adresse sera retirée de notre base.\n"
 "    "
 
-#: .\registration\templates\registration\activation_email.html:18
+#: .\templates\registration\activation_email.html:18
 #, python-format
 msgid ""
 "\n"
@@ -199,8 +305,8 @@ msgstr ""
 "    %(expiration_days)s jours:\n"
 "    "
 
-#: .\registration\templates\registration\activation_email.html:30
-#: .\registration\templates\registration\admin_approve_email.html:23
+#: .\templates\registration\activation_email.html:30
+#: .\templates\registration\admin_approve_email.html:23
 #, fuzzy, python-format
 #| msgid ""
 #| "\n"
@@ -217,7 +323,7 @@ msgstr ""
 "    Cordialement,\n"
 "    "
 
-#: .\registration\templates\registration\activation_email.txt:2
+#: .\templates\registration\activation_email.txt:2
 #, fuzzy, python-format
 #| msgid ""
 #| "\n"
@@ -237,7 +343,7 @@ msgstr ""
 "    %(site.name)s.  Si ce n'étais pas vous, veuillez ignorer cet email\n"
 "    et votre adresse sera retirée de notre base.\n"
 
-#: .\registration\templates\registration\activation_email.txt:7
+#: .\templates\registration\activation_email.txt:7
 #, python-format
 msgid ""
 "\n"
@@ -248,7 +354,7 @@ msgstr ""
 "    Pour activer votre compte, cliquez sur ce lien avant\n"
 "    %(expiration_days)s jours:\n"
 
-#: .\registration\templates\registration\activation_email.txt:14
+#: .\templates\registration\activation_email.txt:14
 #, fuzzy, python-format
 #| msgid ""
 #| "\n"
@@ -262,38 +368,38 @@ msgstr ""
 "\n"
 "    Cordialement,\n"
 
-#: .\registration\templates\registration\activation_email_subject.txt:1
-#: .\registration\templates\registration\admin_approve_complete_email_subject.txt:1
+#: .\templates\registration\activation_email_subject.txt:1
+#: .\templates\registration\admin_approve_complete_email_subject.txt:1
 msgid "Account activation on"
 msgstr "Activation du compte sur"
 
-#: .\registration\templates\registration\admin_approve.html:4
+#: .\templates\registration\admin_approve.html:4
 msgid "Approval Failure"
 msgstr ""
 
-#: .\registration\templates\registration\admin_approve.html:7
+#: .\templates\registration\admin_approve.html:7
 #, fuzzy
 #| msgid "Account activation failed."
 msgid "Account Approval failed."
 msgstr "Erreur lors de l'activation du compte"
 
-#: .\registration\templates\registration\admin_approve_complete.html:4
+#: .\templates\registration\admin_approve_complete.html:4
 #, fuzzy
 #| msgid "Account Activated"
 msgid "Account Approved"
 msgstr "Compte activé"
 
-#: .\registration\templates\registration\admin_approve_complete.html:8
+#: .\templates\registration\admin_approve_complete.html:8
 #, fuzzy
 #| msgid "Your account is now activated."
 msgid "The user's account is now approved."
 msgstr "Votre compte est activé"
 
-#: .\registration\templates\registration\admin_approve_complete_email.html:6
+#: .\templates\registration\admin_approve_complete_email.html:6
 msgid "admin approval"
 msgstr ""
 
-#: .\registration\templates\registration\admin_approve_complete_email.html:11
+#: .\templates\registration\admin_approve_complete_email.html:11
 #, fuzzy
 #| msgid "Your account is now activated."
 msgid ""
@@ -302,19 +408,19 @@ msgid ""
 "    "
 msgstr "Votre compte est activé"
 
-#: .\registration\templates\registration\admin_approve_complete_email.html:14
+#: .\templates\registration\admin_approve_complete_email.html:14
 #, fuzzy
 #| msgid "log in"
 msgid "log in."
 msgstr "vous connecter"
 
-#: .\registration\templates\registration\admin_approve_complete_email.txt:2
+#: .\templates\registration\admin_approve_complete_email.txt:2
 msgid ""
 "\n"
 "Your account is now approved. You can log in using the following link\n"
 msgstr ""
 
-#: .\registration\templates\registration\admin_approve_email.html:11
+#: .\templates\registration\admin_approve_email.html:11
 #, python-format
 msgid ""
 "\n"
@@ -323,18 +429,18 @@ msgid ""
 "    "
 msgstr ""
 
-#: .\registration\templates\registration\admin_approve_email.html:17
+#: .\templates\registration\admin_approve_email.html:17
 msgid ""
 "\n"
 "    To approve this, please\n"
 "    "
 msgstr ""
 
-#: .\registration\templates\registration\admin_approve_email.html:20
+#: .\templates\registration\admin_approve_email.html:20
 msgid "click here"
 msgstr ""
 
-#: .\registration\templates\registration\admin_approve_email.txt:2
+#: .\templates\registration\admin_approve_email.txt:2
 #, python-format
 msgid ""
 "\n"
@@ -342,7 +448,7 @@ msgid ""
 "%(site_name)s.\n"
 msgstr ""
 
-#: .\registration\templates\registration\admin_approve_email.txt:6
+#: .\templates\registration\admin_approve_email.txt:6
 #, fuzzy
 #| msgid ""
 #| "\n"
@@ -357,80 +463,94 @@ msgstr ""
 "    Pour activer votre compte, cliquez sur ce lien avant\n"
 "    %(expiration_days)s jours:\n"
 
-#: .\registration\templates\registration\admin_approve_email_subject.txt:1
+#: .\templates\registration\admin_approve_email_subject.txt:1
 #, fuzzy
 #| msgid "Account activation on"
 msgid "Account approval on"
 msgstr "Activation du compte sur"
 
-#: .\registration\templates\registration\login.html:6
-#: .\registration\templates\registration\login.html:29
+#: .\templates\registration\login.html:6 .\templates\registration\login.html:29
 msgid "Log in"
 msgstr "Se connecter"
 
-#: .\registration\templates\registration\login.html:31
+#: .\templates\registration\login.html:31
 #, fuzzy
 #| msgid "Register"
 msgid "Not Registered?"
 msgstr "Vous enregistrer"
 
-#: .\registration\templates\registration\login.html:31
+#: .\templates\registration\login.html:31
 msgid "SIGNUP"
 msgstr ""
 
-#: .\registration\templates\registration\login.html:32
+#: .\templates\registration\login.html:32
 #, fuzzy
 #| msgid "Reset password"
 msgid "reset my password"
 msgstr "Renouveler le mot de passe"
 
-#: .\registration\templates\registration\logout.html:6
+#: .\templates\registration\logout.html:6
 msgid "Logged out"
 msgstr "Déconnecté"
 
-#: .\registration\templates\registration\password_change_done.html:4
+#: .\templates\registration\logout.html:17
+#, fuzzy
+#| msgid "Logged out"
+msgid "You are logged out"
+msgstr "Déconnecté"
+
+#: .\templates\registration\logout.html:20
+msgid "Home"
+msgstr ""
+
+#: .\templates\registration\logout.html:25
+#: .\templates\registration\registration_form.html:25
+msgid "Login"
+msgstr ""
+
+#: .\templates\registration\password_change_done.html:4
 msgid "Password changed"
 msgstr "Mot de passe changé"
 
-#: .\registration\templates\registration\password_change_done.html:7
+#: .\templates\registration\password_change_done.html:7
 msgid "Password successfully changed!"
 msgstr "Mot de passe changé avec succès"
 
-#: .\registration\templates\registration\password_change_form.html:4
-#: .\registration\templates\registration\password_change_form.html:10
+#: .\templates\registration\password_change_form.html:4
+#: .\templates\registration\password_change_form.html:10
 msgid "Change password"
 msgstr "Mot de passe"
 
-#: .\registration\templates\registration\password_reset_complete.html:4
+#: .\templates\registration\password_reset_complete.html:4
 msgid "Password reset complete"
 msgstr "Changement du mot de passe effectué"
 
-#: .\registration\templates\registration\password_reset_complete.html:8
+#: .\templates\registration\password_reset_complete.html:8
 msgid "Your password has been reset!"
 msgstr "Votre mot de passe a été changé"
 
-#: .\registration\templates\registration\password_reset_complete.html:9
+#: .\templates\registration\password_reset_complete.html:9
 #, python-format
 msgid "You may now <a href=\"%(login_url)s\">log in</a>"
 msgstr ""
 
-#: .\registration\templates\registration\password_reset_confirm.html:10
+#: .\templates\registration\password_reset_confirm.html:10
 msgid "Confirm password reset"
 msgstr "Confirmer le renouvellement du mot de passe"
 
-#: .\registration\templates\registration\password_reset_confirm.html:14
+#: .\templates\registration\password_reset_confirm.html:14
 msgid "Enter your new password below to reset your password:"
 msgstr "Saisissez votre nouveau mot de passe"
 
-#: .\registration\templates\registration\password_reset_confirm.html:18
+#: .\templates\registration\password_reset_confirm.html:18
 msgid "Set password"
 msgstr "Modifiez votre mot de passe"
 
-#: .\registration\templates\registration\password_reset_done.html:4
+#: .\templates\registration\password_reset_done.html:4
 msgid "Password reset"
 msgstr "Mot de passe modifié"
 
-#: .\registration\templates\registration\password_reset_done.html:8
+#: .\templates\registration\password_reset_done.html:8
 msgid ""
 "\n"
 "    We have sent you an email with a link to reset your password. Please "
@@ -444,11 +564,11 @@ msgstr ""
 "    votre boîte mail et cliquer sur le lien pour continuer.\n"
 "    "
 
-#: .\registration\templates\registration\password_reset_email.html:3
+#: .\templates\registration\password_reset_email.html:3
 msgid "Greetings"
 msgstr "Cher"
 
-#: .\registration\templates\registration\password_reset_email.html:5
+#: .\templates\registration\password_reset_email.html:5
 #, fuzzy, python-format
 #| msgid ""
 #| "\n"
@@ -470,7 +590,7 @@ msgstr ""
 "Si vous ne souhaitez pas renouveler votre mot de passe, veuillez ignorer ce "
 "message.\n"
 
-#: .\registration\templates\registration\password_reset_email.html:11
+#: .\templates\registration\password_reset_email.html:11
 msgid ""
 "\n"
 "To reset your password, please click the following link, or copy and paste "
@@ -482,24 +602,24 @@ msgstr ""
 "dessous,\n"
 "ou le copier/coller dans la barre d'adresse de votre navigateur :\n"
 
-#: .\registration\templates\registration\password_reset_email.html:20
+#: .\templates\registration\password_reset_email.html:20
 msgid "Your username, in case you've forgotten:"
 msgstr "Rappel de votre nom d'utilisateur, si vous l'avez oublié :"
 
-#: .\registration\templates\registration\password_reset_email.html:23
+#: .\templates\registration\password_reset_email.html:23
 msgid "Best regards"
 msgstr "Cordialement"
 
-#: .\registration\templates\registration\password_reset_email.html:24
+#: .\templates\registration\password_reset_email.html:24
 msgid "Management"
 msgstr ""
 
-#: .\registration\templates\registration\password_reset_form.html:4
-#: .\registration\templates\registration\password_reset_form.html:15
+#: .\templates\registration\password_reset_form.html:4
+#: .\templates\registration\password_reset_form.html:15
 msgid "Reset password"
 msgstr "Renouveler le mot de passe"
 
-#: .\registration\templates\registration\password_reset_form.html:8
+#: .\templates\registration\password_reset_form.html:8
 msgid ""
 "\n"
 "    Forgot your password? Enter your email in the form below and we'll send "
@@ -511,54 +631,52 @@ msgstr ""
 "nous vous envoyions les instructions pour que vous puissiez le renouveler.\n"
 "    "
 
-#: .\registration\templates\registration\registration_base.html:17
+#: .\templates\registration\registration_base.html:17
 msgid "E-Shopper"
 msgstr ""
 
-#: .\registration\templates\registration\registration_closed.html:4
+#: .\templates\registration\registration_closed.html:4
 msgid "Registration is closed"
 msgstr "L'inscription est indisponible"
 
-#: .\registration\templates\registration\registration_closed.html:7
+#: .\templates\registration\registration_closed.html:7
 msgid "Sorry, but registration is closed at this moment. Come back later."
 msgstr ""
 "Désolé, l'inscription est indisponible pour le moment. Veuillez réessayer "
 "plus tard"
 
-#: .\registration\templates\registration\registration_complete.html:4
+#: .\templates\registration\registration_complete.html:4
 msgid "Activation email sent"
 msgstr "Le mail d'activation a été envoyé"
 
-#: .\registration\templates\registration\registration_complete.html:7
-msgid "Please check your email to complete the registration process."
+#: .\templates\registration\registration_complete.html:16
+#, fuzzy
+#| msgid "Please check your email to complete the registration process."
+msgid "Please check your email/spam to complete the registration process."
 msgstr ""
 "Veuillez consulter votre boîte mail pour terminer le processus "
 "d'enregistrement"
 
-#: .\registration\templates\registration\registration_form.html:5
+#: .\templates\registration\registration_form.html:5
 msgid "Register for an account"
 msgstr "Créer un compte"
 
-#: .\registration\templates\registration\registration_form.html:24
-#: .\registration\templates\registration\resend_activation_form.html:10
+#: .\templates\registration\registration_form.html:24
+#: .\templates\registration\resend_activation_form.html:19
 msgid "Submit"
 msgstr "Envoyer"
 
-#: .\registration\templates\registration\registration_form.html:25
+#: .\templates\registration\registration_form.html:25
 msgid "Already have an account?"
 msgstr ""
 
-#: .\registration\templates\registration\registration_form.html:25
-msgid "Login"
-msgstr ""
-
-#: .\registration\templates\registration\resend_activation_complete.html:4
+#: .\templates\registration\resend_activation_complete.html:4
 #, fuzzy
 #| msgid "Account activation on"
 msgid "Account Activation Resent"
 msgstr "Activation du compte sur"
 
-#: .\registration\templates\registration\resend_activation_complete.html:8
+#: .\templates\registration\resend_activation_complete.html:8
 #, python-format
 msgid ""
 "\n"
@@ -566,7 +684,7 @@ msgid ""
 "  "
 msgstr ""
 
-#: .\registration\templates\registration\resend_activation_form.html:4
+#: .\templates\registration\resend_activation_form.html:4
 #, fuzzy
 #| msgid "Activation email sent"
 msgid "Resend Activation Email"
@@ -580,9 +698,6 @@ msgstr "Le mail d'activation a été envoyé"
 
 #~ msgid "Not a member?"
 #~ msgstr "Vous n'êtes pas membre ?"
-
-#~ msgid "Successfully logged out"
-#~ msgstr "Déconnecté avec succès"
 
 #~ msgid "You may now"
 #~ msgstr "Vous pouvez maintenant"

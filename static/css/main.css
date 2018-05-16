@@ -269,7 +269,7 @@ a#scrollUp i{
   outline: medium none;
   padding-left: 10px;
   width: 155px;
-  background-image: url('/static/imgsearchicon.png');
+  background-image: url('/static/img/searchicon.png');
   background-repeat: no-repeat;
   background-position: 130px;
 }
@@ -868,6 +868,14 @@ h2.title {
 	margin-bottom:30px;
 }
 
+.product-image-wrapper1{
+  border:0px solid #F7F7F5;
+  overflow: hidden;
+  margin-bottom:30px;
+  padding-right:130px;
+  padding-left:130px
+}
+
 .single-products {
   position: relative;
 }
@@ -1298,6 +1306,7 @@ h2.title {
 }
 
 
+
 .shop-details-tab {
   border: 1px solid #F7F7F0;
   margin-bottom: 75px;
@@ -1424,6 +1433,7 @@ h2.title {
   font-weight: 300;
   padding: 8px 40px;
 }
+
 
 /*************************
 ******* Contact CSS ********
@@ -1567,3 +1577,5 @@ h2.title {
 .logo{
 	font-size: 23px;
 }
+
+

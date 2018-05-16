@@ -14,15 +14,15 @@
                 <div role="tabpanel" class="tab-pane active" id="login">
                     <div class="container" align="center">
                         <br>
-                            <div class="row"><h5>You are logged out</h5>
+                            <div class="row"><h5>{% trans "You are logged out" %}</h5>
                                  <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                     <div class="form-group col-md-12">
-                                        <a href="/"><button  type="" class="btn btn-success btn-lg icon icon-home-house-streamline" value="">   Home</button></a>
+                                        <a href="/"><button  type="" class="btn btn-success btn-lg icon icon-home-house-streamline" value="">   {% trans "Home" %}</button></a>
                                     </div>
                                 </div>
                                 <div class="class=col-lg-6 col-md-6 col-xs-12 col-sm-12">
                                     <div class="form-group col-md-12">
-                                        <a href="{% url 'auth_login' %}"><button  type="" class="btn btn-success btn-lg icon icon-man-people-streamline-user" value="">   Login</button></a>
+                                        <a href="{% url 'auth_login' %}"><button  type="" class="btn btn-success btn-lg icon icon-man-people-streamline-user" value="">   {% trans "Login" %}</button></a>
                                     </div>
                                  </div>
                             </div>

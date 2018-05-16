@@ -40,7 +40,7 @@
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
 								<li><a href="#"><i class="fa fa-phone"></i> +233 20 18 75 333</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> info@eshopper.com</a></li>
+								<li><a href="mailto:info@eshopper.com"><i class="fa fa-envelope"></i> info@eshopper.com</a></li>
 							</ul>
 						</div>
 					</div>
@@ -72,12 +72,12 @@
 						<div class="btn-group pull-right">
 							<div class="btn-group">
 								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									English
+									Choose Your Language
 									<span class="caret"></span>
 								</button>
-								<ul class="dropdown-menu">
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuLink">
                                     {% for language in languages %}
-									<li><a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>{{ language.name }}</a>
+									<li><a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="dropdown-item"{% endif %}>{{ language.name }}</a>
                                     </li>
                                     {% endfor %}
 								</ul>
@@ -121,8 +121,8 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right" >
-							<form method="GET" action="">
-                            <input type="text" name="q" placeholder="{% trans "Search Products" %}"/>
+							<form method="GET" action="{% url 'watson:search' %}">
+                            <input type="text" name="q" value="{{request.GET.q}}" placeholder="{% trans "Search Products" %}"/>
                             </form>
 						</div>
 					</div>

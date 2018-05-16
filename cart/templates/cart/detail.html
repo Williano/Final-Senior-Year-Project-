@@ -91,7 +91,7 @@
 
     <br /><br /><br /><br/>
 
-    {% if recommended_products %}
+   {% if recommended_products %}
     <div class="recommended_items"><!--recommended_items-->
 						<h2 class="title text-center">{% trans "People who bought this also bought" %}</h2>
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
@@ -104,9 +104,8 @@
 												<div class="productinfo text-center">
 													 <a href="{{ p.get_absolute_url }}">
                                                          <img src="{% if p.image %}{{ p.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"></a>
-													<h2></h2>
-													<p><a href="{{ p.get_absolute_url }}">{{ product.name }}</a></p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>{% trans "Add to cart" %}</a>
+													<br />
+													<p><strong><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></strong></p>
 												</div>
 											</div>
 										</div>
@@ -121,10 +120,9 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													 <a href="{{ p.get_absolute_url }}">
-                                                        <img src="{% if p.image %}{{ p.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"></a>
-													<h2></h2>
-													<p><a href="{{ p.get_absolute_url }}">{{ product.name }}</a></p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>{% trans "Add to cart" %}</a>
+                                                         <img src="{% if p.image %}{{ p.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"></a>
+													<br />
+													<p><strong><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></strong></p>
 												</div>
 											</div>
 										</div>
@@ -142,4 +140,5 @@
 						</div>
 					</div><!--/recommended_items-->
 {% endif %}
-    {% endblock %}
+
+{% endblock %}

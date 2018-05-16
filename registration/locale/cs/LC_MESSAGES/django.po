@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 17:07+1200\n"
+"POT-Creation-Date: 2018-05-14 02:40+1200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Implayo s.r.o. <michal.pilar@implayo.cz>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\admin.py:26
+#: .\admin.py:28
 msgid "Activate users"
 msgstr "Aktivovat uživatele"
 
-#: .\admin.py:44
+#: .\admin.py:46
 msgid "Re-send activation emails"
 msgstr "Znovu odeslat aktivační e-maily"
 
@@ -111,15 +111,119 @@ msgid "country"
 msgstr ""
 
 #: .\templates\profiles\create_profile.html:3
-msgid "Create Profile | E-Shopper "
+#, fuzzy
+#| msgid "registration profile"
+msgid "Create Profile"
+msgstr "registrační profil"
+
+#: .\templates\profiles\create_profile.html:25
+#: .\templates\profiles\update.html:25
+msgid "Back to My Profile"
+msgstr ""
+
+#: .\templates\profiles\create_profile.html:26
+msgid "Go Back To Shop"
+msgstr ""
+
+#: .\templates\profiles\create_profile.html:41
+msgid "Create your Profile below"
 msgstr ""
 
 #: .\templates\profiles\home.html:3
-msgid " Profile | E-Shopper "
+msgid "Dashboard"
+msgstr ""
+
+#: .\templates\profiles\home.html:26
+msgid "Your Orders"
+msgstr ""
+
+#: .\templates\profiles\home.html:27
+msgid "Update my Profile"
+msgstr ""
+
+#: .\templates\profiles\home.html:28
+#: .\templates\profiles\password_change.html:4
+#, fuzzy
+#| msgid "Password"
+msgid "Change Password"
+msgstr "Heslo"
+
+#: .\templates\profiles\home.html:29 .\templates\profiles\update.html:26
+msgid "Go To Shop"
+msgstr ""
+
+#: .\templates\profiles\home.html:31
+msgid "Welcome"
+msgstr ""
+
+#: .\templates\profiles\home.html:46
+msgid "Profile"
+msgstr ""
+
+#: .\templates\profiles\home.html:60
+msgid "Full Name"
+msgstr ""
+
+#: .\templates\profiles\home.html:69
+#, fuzzy
+#| msgid "Email address"
+msgid "Email Address"
+msgstr "E-mailová adresa"
+
+#: .\templates\profiles\home.html:77
+msgid "Phone Number"
+msgstr ""
+
+#: .\templates\profiles\home.html:84
+msgid "Location"
+msgstr ""
+
+#: .\templates\profiles\home.html:92
+msgid "Biography"
+msgstr ""
+
+#: .\templates\profiles\home.html:101
+msgid "Thanks for Signing up"
+msgstr ""
+
+#: .\templates\profiles\home.html:103
+msgid ""
+"You have not created a profile yet. Please click the button below to create "
+"your profile"
+msgstr ""
+
+#: .\templates\profiles\home.html:105
+msgid "Create Your Profile Now"
+msgstr ""
+
+#: .\templates\profiles\login_details.html:11
+msgid "Update your login details"
+msgstr ""
+
+#: .\templates\profiles\password_change.html:12
+#, fuzzy
+#| msgid "Password"
+msgid "Change your password"
+msgstr "Heslo"
+
+#: .\templates\profiles\success.html:2
+msgid "Successful Profile Update"
+msgstr ""
+
+#: .\templates\profiles\success.html:11
+msgid "Profile Update Successful"
+msgstr ""
+
+#: .\templates\profiles\success.html:13
+msgid "Your changes have been updated successfully"
 msgstr ""
 
 #: .\templates\profiles\update.html:3
-msgid "Update Profile | Pycon Ghana 2018"
+msgid "Update Profile"
+msgstr ""
+
+#: .\templates\profiles\update.html:9 .\templates\profiles\update.html.py:42
+msgid "Update your Profile"
 msgstr ""
 
 #: .\templates\registration\activate.html:4
@@ -319,6 +423,19 @@ msgstr "Heslo"
 msgid "Logged out"
 msgstr ""
 
+#: .\templates\registration\logout.html:17
+msgid "You are logged out"
+msgstr ""
+
+#: .\templates\registration\logout.html:20
+msgid "Home"
+msgstr ""
+
+#: .\templates\registration\logout.html:25
+#: .\templates\registration\registration_form.html:25
+msgid "Login"
+msgstr ""
+
 #: .\templates\registration\password_change_done.html:4
 #, fuzzy
 #| msgid "Password (again)"
@@ -446,8 +563,8 @@ msgstr ""
 msgid "Activation email sent"
 msgstr "Znovu odeslat aktivační e-maily"
 
-#: .\templates\registration\registration_complete.html:7
-msgid "Please check your email to complete the registration process."
+#: .\templates\registration\registration_complete.html:16
+msgid "Please check your email/spam to complete the registration process."
 msgstr ""
 
 #: .\templates\registration\registration_form.html:5
@@ -455,16 +572,12 @@ msgid "Register for an account"
 msgstr ""
 
 #: .\templates\registration\registration_form.html:24
-#: .\templates\registration\resend_activation_form.html:10
+#: .\templates\registration\resend_activation_form.html:19
 msgid "Submit"
 msgstr ""
 
 #: .\templates\registration\registration_form.html:25
 msgid "Already have an account?"
-msgstr ""
-
-#: .\templates\registration\registration_form.html:25
-msgid "Login"
 msgstr ""
 
 #: .\templates\registration\resend_activation_complete.html:4

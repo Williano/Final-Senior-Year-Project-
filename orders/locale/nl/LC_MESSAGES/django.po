@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-17 21:51+1200\n"
+"POT-Creation-Date: 2018-05-14 01:28+1200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,68 +18,68 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\orders\models.py:14
+#: .\models.py:14
 msgid "first name"
 msgstr "Voornaam"
 
-#: .\orders\models.py:15
+#: .\models.py:15
 msgid "last name"
 msgstr "achternaam"
 
-#: .\orders\models.py:16
+#: .\models.py:16
 msgid "e-mail"
 msgstr "e-mail"
 
-#: .\orders\models.py:17
+#: .\models.py:17
 msgid "phone number"
 msgstr "telefoonnummer"
 
-#: .\orders\models.py:18
+#: .\models.py:18
 msgid "address"
 msgstr "adres"
 
-#: .\orders\models.py:19
+#: .\models.py:19
 msgid "city"
 msgstr "stad"
 
-#: .\orders\models.py:20
+#: .\models.py:20
 msgid "state or region"
 msgstr "staat of regio"
 
-#: .\orders\models.py:21
+#: .\models.py:21
 msgid "postal code"
 msgstr "Postcode"
 
-#: .\orders\models.py:22
+#: .\models.py:22
 msgid "country"
 msgstr "land"
 
-#: .\orders\models.py:23
+#: .\models.py:23
 msgid "created"
-msgstr ""
+msgstr "aangemaakt"
 
-#: .\orders\models.py:24
+#: .\models.py:24
 msgid "updated"
-msgstr ""
+msgstr "bijgewerkt"
 
-#: .\orders\models.py:25
+#: .\models.py:25
 msgid "paid"
-msgstr ""
+msgstr "betaald"
 
-#: .\orders\models.py:27
+#: .\models.py:27
 msgid "discount"
 msgstr "korting"
 
-#: .\orders\templates\orders\order\create.html:6
-#: .\orders\templates\orders\order\create.html:12
+#: .\templates\orders\order\create.html:6
+#: .\templates\orders\order\create.html:12
 msgid "Checkout"
-msgstr ""
+msgstr "Uitchecken"
 
-#: .\orders\templates\orders\order\create.html:15
+#: .\templates\orders\order\create.html:15
 msgid "Your order"
-msgstr ""
+msgstr "Jouw bestelling"
 
-#: .\orders\templates\orders\order\create.html:25
+#: .\templates\orders\order\create.html:25
 #, python-format
 msgid ""
 "\n"
@@ -87,37 +87,39 @@ msgid ""
 "                    "
 msgstr ""
 
-#: .\orders\templates\orders\order\create.html:32
+#: .\templates\orders\order\create.html:32
 msgid "Total"
-msgstr ""
+msgstr "Totaal"
 
-#: .\orders\templates\orders\order\create.html:38
+#: .\templates\orders\order\create.html:38
 msgid "Place order"
-msgstr ""
+msgstr "Plaats bestelling"
 
-#: .\orders\templates\orders\order\created.html:4
-#: .\orders\templates\orders\order\created.html:9
+#: .\templates\orders\order\created.html:4
+#: .\templates\orders\order\created.html:9
 msgid "Thank you"
-msgstr ""
+msgstr "Dank je"
 
-#: .\orders\templates\orders\order\created.html:11
+#: .\templates\orders\order\created.html:11
 msgid ""
 "Your Order has been successfully completed. An email confirmation has been "
 "sent to you."
 msgstr ""
+"Uw bestelling is succesvol afgerond. Een e-mailbevestiging is"
+"gestuurd naar jou."
 
-#: .\orders\templates\orders\order\created.html:12
+#: .\templates\orders\order\created.html:12
 msgid "Your order number is"
-msgstr ""
+msgstr "Uw bestelnummer is"
 
-#: .\orders\templates\orders\order\created.html:14
+#: .\templates\orders\order\created.html:14
 #, python-format
 msgid "The Total amount of your Order is $%(total_cost)s"
-msgstr ""
+msgstr "Het totale bedrag van uw bestelling is $%(total_cost)s"
 
-#: .\orders\urls.py:7
+#: .\urls.py:7
 msgid "^create/$"
-msgstr ""
+msgstr "^Creëren/$"
 
 #~ msgid "coupon"
 #~ msgstr "coupon"

@@ -5,8 +5,10 @@ from django.utils.translation import ugettext_lazy as _
 from .models import RegistrationProfile, Profile
 from .users import UsernameField
 
+from import_export.admin import ImportExportModelAdmin
 
-class RegistrationAdmin(admin.ModelAdmin):
+
+class RegistrationAdmin(ImportExportModelAdmin):
     actions = ['activate_users', 'resend_activation_email']
     list_display = ('user', 'activation_key_expired')
     raw_id_fields = ['user']
@@ -47,7 +49,7 @@ class RegistrationAdmin(admin.ModelAdmin):
 admin.site.register(RegistrationProfile, RegistrationAdmin)
 
 
-class PersonalAdmin(admin.ModelAdmin):
+class PersonalAdmin(ImportExportModelAdmin):
     list_display = ('user', 'first_name', 'last_name', 'image', 'bio', 'email', 'phone_number', 'address', 'city', 'state_or_region', 'postal_code', 'country')
 
 admin.site.register(Profile, PersonalAdmin)

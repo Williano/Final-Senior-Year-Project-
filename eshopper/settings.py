@@ -46,13 +46,14 @@ INSTALLED_APPS = (
 
     # Third-party apps
     'parler',
-    'rosetta',
     'paypal.standard.ipn',
     'crispy_forms',
     'sorl.thumbnail',
     'newsletter',
     'tinymce',
     'django_extensions',
+    'watson',
+    'import_export',
 
     # my apps
     'home',
@@ -152,8 +153,8 @@ USE_L10N = True
 USE_TZ = True
 
 LANGUAGES = (
-    ('en', _('American English')),
-    ('en-gb', _('British English')),
+    ('en', _('English')),
+    # ('en-gb', _('British English')),
     ('es', _('Spanish')),
     ('zh-cn', _('Chinese')),
     ('pt', _('Portuguese')),
@@ -162,17 +163,17 @@ LANGUAGES = (
     ('ko', _('Korean')),
     ('it', _('Italian')),
     ('ja', _('Japanese')),
-    ('he', _('Hebrew')),
-    ('hi', _('Hindi')),
+    # ('he', _('Hebrew')),
+    # ('hi', _('Hindi')),
     ('fr', _('French')),
     ('de', _('German')),
-    ('el', _('Greek')),
-    ('ca', _('Catalan')),
-    ('af', _('Afrikaans')),
-    ('ar', _('Arabic')),
-    ('tr', _('Turkish')),
-    ('ga', _('Irish')),
-    ('cy', _('Welsh')),
+    # ('el', _('Greek')),
+    # ('ca', _('Catalan')),
+    # ('af', _('Afrikaans')),
+    # ('ar', _('Arabic')),
+    # ('tr', _('Turkish')),
+    # ('ga', _('Irish')),
+    # ('cy', _('Welsh')),
 )
 
 LOCALE_PATHS = (
@@ -196,7 +197,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CART_SESSION_ID = 'cart'
 
 # django-paypal settings
-PAYPAL_RECEIVER_EMAIL = 'daviose@mail.regent.edu'
+PAYPAL_RECEIVER_EMAIL = ''
 PAYPAL_TEST = True
 
 
@@ -215,7 +216,7 @@ REDIS_DB = 1
 PARLER_LANGUAGES = {
         1: (
                 {'code': 'en', },
-                {'code': 'en-gb', },
+                # {'code': 'en-gb', },
                 {'code': 'es', },
                 {'code': 'zh-cn', },
                 {'code': 'pt', },
@@ -224,17 +225,17 @@ PARLER_LANGUAGES = {
                 {'code': 'ko', },
                 {'code': 'it', },
                 {'code': 'ja', },
-                {'code': 'he', },
-                {'code': 'hi', },
+                # {'code': 'he', },
+                # {'code': 'hi', },
                 {'code': 'fr', },
                 {'code': 'de', },
-                {'code': 'el', },
-                {'code': 'ca', },
-                {'code': 'af', },
-                {'code': 'ar', },
-                {'code': 'tr', },
-                {'code': 'ga', },
-                {'code': 'cy', },
+                # {'code': 'el', },
+                # {'code': 'ca', },
+                # {'code': 'af', },
+                # {'code': 'ar', },
+                # {'code': 'tr', },
+                # {'code': 'ga', },
+                # {'code': 'cy', },
         ),
         'default': {
                     'fallback': 'en',
@@ -316,3 +317,8 @@ NEWSLETTER_BATCH_SIZE = 100
 
 # Using django-tinymce
 NEWSLETTER_RICHTEXT_WIDGET = "tinymce.widgets.TinyMCE"
+
+# Remote URL of TRM which will be synced to local TRM
+TRANSLATIONS_SYNC_REMOTE_URL = '127.0.0.1:8080/translations/sync/'
+
+

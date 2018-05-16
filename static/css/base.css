@@ -113,11 +113,24 @@ ul.errorlist {
 
 
 
-.content {
+#content {
     padding:0 100px;
     overflow:hidden;
 }
 
+
+.product-list .item {
+    width:25%;
+    padding:10px 20px 10px 0;
+    float:left;
+    text-align:center;
+    line-height:1.2;
+}
+
+.product-list .item img {
+    width:100%;
+    margin-bottom:8px;
+}
 
 .product-detail {
     text-align:justify;
@@ -176,7 +189,7 @@ ul.errorlist {
 }
 
 .neg {
-    color:#172431;
+    color:#dc1616;
 }
 
 .languages {
@@ -203,3 +216,37 @@ ul.errorlist {
     margin:0;
 }
 
+
+.recommendations {
+    clear:both;
+}
+
+.recommendations div {
+    float:left;
+}
+
+.recommendations img {
+    width:200px
+}
+
+.recommendations p {
+    clear:both;
+}
+
+.recommendations.cart {
+    width:60%;
+    float:left;
+    overflow:auto;
+}
+
+.recommendations.cart h3 {
+    margin-top:0;
+}
+
+.recommendations.cart .item {
+    margin-right:10px;
+}
+
+.recommendations.cart img {
+    width:120px;
+}

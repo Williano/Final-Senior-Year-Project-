@@ -1,0 +1,638 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-13 21:02+1200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\cart\forms.py:8 .\cart\templates\cart\detail.html:19
+msgid "Quantity"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:7
+#: .\onlineshop\templates\onlineshop\base.html:92
+msgid "Cart"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:13
+msgid "Your shopping cart"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:17
+msgid "Image"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:18
+msgid "Product"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:20 .\cart\templates\cart\detail.html:46
+msgid "Remove"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:21
+msgid "Unit price"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:22
+msgid "Price"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:42
+msgid "Update"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:55
+msgid "Subtotal"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:60
+#, python-format
+msgid ""
+"\n"
+"                    <td>\"%(code)s\" coupon (%(discount)s%% off)</td>\n"
+"                "
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:70
+msgid "Total"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:78
+msgid "Apply a coupon"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:81
+msgid "Apply"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:85
+msgid "Continue shopping"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:87
+msgid "Proceed To Checkout"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:96
+#: .\onlineshop\templates\onlineshop\product\product-detail.html:37
+msgid "People who bought this also bought"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:6
+#: .\onlineshop\templates\onlineshop\base.html:118
+#: .\onlineshop\templates\onlineshop\base.html:235
+msgid "Contact Us"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:14
+msgid "Contact"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:25
+msgid "Get In Touch"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:30
+msgid "Name"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:33
+#: .\contact\templates\contact\contact.html:55
+msgid "Email"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:36
+msgid "Subject"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:39
+msgid "Your Message Here"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:42
+#: .\onlineshop\templates\onlineshop\product\product-detail.html:120
+msgid "Submit"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:49
+msgid "Contact Info"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:51
+msgid "E-Shopper Inc."
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:52
+msgid "P.O.Box KS 10731, Kumasi , Ashanti"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:53
+msgid "Ghana"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:54
+msgid "Mobile"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:58
+msgid "Follow Us"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:81
+msgid "Ecommerce templates"
+msgstr ""
+
+#: .\contact\templates\contact\contact.html:82
+msgid "Ecommerce themes"
+msgstr ""
+
+#: .\contact\templates\contact\email_success.html:4
+msgid "Email Sent"
+msgstr ""
+
+#: .\contact\templates\contact\email_success.html:12
+msgid "Message Sent"
+msgstr ""
+
+#: .\contact\templates\contact\email_success.html:14
+msgid ""
+"Your Message was sent successfully ! We will get back to you as soon as "
+"possible. Thank You !!"
+msgstr ""
+
+#: .\contact\templates\contact\email_success.html:16
+msgid "Go Back To HomePage"
+msgstr ""
+
+#: .\contact\urls.py:14
+msgid "^email_success/$"
+msgstr ""
+
+#: .\coupons\forms.py:6
+msgid "Coupon"
+msgstr ""
+
+#: .\coupons\urls.py:7
+msgid "^apply/$"
+msgstr ""
+
+#: .\dashboard.py:24
+msgid "Quick links"
+msgstr ""
+
+#: .\dashboard.py:30
+msgid "Return to site"
+msgstr ""
+
+#: .\dashboard.py:31
+msgid "Change password"
+msgstr ""
+
+#: .\dashboard.py:33
+msgid "Log out"
+msgstr ""
+
+#: .\dashboard.py:41
+msgid "Applications"
+msgstr ""
+
+#: .\dashboard.py:49
+msgid "Administration"
+msgstr ""
+
+#: .\dashboard.py:57
+msgid "Recent Actions"
+msgstr ""
+
+#: .\dashboard.py:65
+msgid "Latest Django News"
+msgstr ""
+
+#: .\dashboard.py:74 .\onlineshop\templates\onlineshop\base.html:243
+msgid "Support"
+msgstr ""
+
+#: .\dashboard.py:77
+msgid "Django documentation"
+msgstr ""
+
+#: .\dashboard.py:82
+msgid "Django \"django-users\" mailing list"
+msgstr ""
+
+#: .\dashboard.py:87
+msgid "Django irc channel"
+msgstr ""
+
+#: .\dashboard.py:102
+msgid "Application models"
+msgstr ""
+
+#: .\eshopper\settings.py:157
+msgid "English"
+msgstr ""
+
+#: .\eshopper\settings.py:159
+msgid "Spanish"
+msgstr ""
+
+#: .\eshopper\settings.py:160
+msgid "Chinese"
+msgstr ""
+
+#: .\eshopper\settings.py:161
+msgid "Portuguese"
+msgstr ""
+
+#: .\eshopper\settings.py:162
+msgid "Russian"
+msgstr ""
+
+#: .\eshopper\settings.py:163
+msgid "Dutch"
+msgstr ""
+
+#: .\eshopper\settings.py:164
+msgid "Korean"
+msgstr ""
+
+#: .\eshopper\settings.py:165
+msgid "Italian"
+msgstr ""
+
+#: .\eshopper\settings.py:166
+msgid "Japanese"
+msgstr ""
+
+#: .\eshopper\settings.py:169
+msgid "French"
+msgstr ""
+
+#: .\eshopper\settings.py:170
+msgid "German"
+msgstr ""
+
+#: .\eshopper\urls.py:36
+msgid "^faq/"
+msgstr ""
+
+#: .\eshopper\urls.py:37
+msgid "^privacy/"
+msgstr ""
+
+#: .\eshopper\urls.py:38
+msgid "^refund/"
+msgstr ""
+
+#: .\eshopper\urls.py:39
+msgid "^about/"
+msgstr ""
+
+#: .\eshopper\urls.py:40
+msgid "^contact/"
+msgstr ""
+
+#: .\eshopper\urls.py:41
+msgid "coupons/"
+msgstr ""
+
+#: .\eshopper\urls.py:42
+msgid "^orders/"
+msgstr ""
+
+#: .\eshopper\urls.py:43
+msgid "^cart/"
+msgstr ""
+
+#: .\eshopper\urls.py:45
+msgid "^payment/"
+msgstr ""
+
+#: .\eshopper\urls.py:47
+msgid "^onlineshop/"
+msgstr ""
+
+#: .\home\templates\home\home.html:6
+#: .\onlineshop\templates\onlineshop\base.html:115
+msgid "Home"
+msgstr ""
+
+#: .\home\templates\home\home.html:23
+msgid "Software"
+msgstr ""
+
+#: .\home\templates\home\home.html:23
+msgid "Engineering"
+msgstr ""
+
+#: .\home\templates\home\home.html:24
+msgid "Essentials of Software Engineering"
+msgstr ""
+
+#: .\home\templates\home\home.html:25
+msgid ""
+"Written for the undergraduate, one-term course, Essentials of Software "
+"Engineering, Fourth Edition provides students with a systematic engineering "
+"approach to software engineering principles and methodologies. "
+"Comprehensive, yet concise, the Fourth Edition includes new information on "
+"areas of high interest to computer scientists, including Big Data and "
+"developing in the cloud."
+msgstr ""
+
+#: .\home\templates\home\home.html:26 .\home\templates\home\home.html.py:37
+#: .\home\templates\home\home.html:49
+msgid "Get it now"
+msgstr ""
+
+#: .\home\templates\home\home.html:34
+msgid "Web"
+msgstr ""
+
+#: .\home\templates\home\home.html:34
+msgid "Development"
+msgstr ""
+
+#: .\home\templates\home\home.html:35
+msgid "Django for Beginners"
+msgstr ""
+
+#: .\home\templates\home\home.html:36
+msgid ""
+"Django for Beginners takes you from total beginner to confident Django "
+"developer. Proceed step-by-step through four progressively more complex web "
+"applications: from a 'Hello World' app all the way to a robust Blog app with "
+"forms and user accounts. Learn current best practices around class-based "
+"views, templates, urls, user authentication, testing, and deployment."
+msgstr ""
+
+#: .\home\templates\home\home.html:46
+msgid "Prog"
+msgstr ""
+
+#: .\home\templates\home\home.html:46
+msgid "ramming"
+msgstr ""
+
+#: .\home\templates\home\home.html:47
+msgid "Starting Out with Python"
+msgstr ""
+
+#: .\home\templates\home\home.html:48
+msgid ""
+"In Starting Out with Python®, Third Edition Tony Gaddis’ evenly-paced, "
+"accessible coverage introduces students to the basics of programming and "
+"prepares them to transition into more complicated languages. Python, an easy-"
+"to-learn and increasingly popular object-oriented language, allows readers "
+"to become comfortable with the fundamentals of programming without the "
+"troublesome syntax that can be challenging for novices. With the knowledge "
+"acquired using Python, students gain confidence in their skills and learn to "
+"recognize the logic behind developing high-quality programs."
+msgstr ""
+
+#: .\home\urls.py:7
+msgid "^$"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:17
+msgid "E-Shopper"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:90
+msgid "Account"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:91
+msgid "Checkout"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:93
+msgid "Login"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:107
+msgid "Toggle navigation"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:116
+msgid "Shop"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:117
+#: .\onlineshop\templates\onlineshop\base.html:264
+msgid "About Us"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:125
+msgid "Search Products"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:153
+msgid "E"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:153
+msgid "-Shopper"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:154
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod "
+"tempor"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:168
+#: .\onlineshop\templates\onlineshop\base.html:183
+#: .\onlineshop\templates\onlineshop\base.html:198
+#: .\onlineshop\templates\onlineshop\base.html:213
+msgid "Circle of Hands"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:169
+#: .\onlineshop\templates\onlineshop\base.html:184
+#: .\onlineshop\templates\onlineshop\base.html:199
+#: .\onlineshop\templates\onlineshop\base.html:214
+msgid "24 DEC 2017"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:233
+msgid "Service"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:236
+msgid "Order Status"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:245
+msgid "Copyright"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:246
+msgid "FAQ’s"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:253
+msgid "Policies"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:255
+msgid "Privacy Policy"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:256
+msgid "Refund Policy"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:262
+#: .\onlineshop\templates\onlineshop\base.html:271
+msgid "About Shopper"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:265
+msgid "Careers"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:276
+msgid "Get the most recent updates from"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:276
+msgid "E-Shopper and be updated your self..."
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:289
+msgid "Developed by"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\base.html:289
+msgid "Williano"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-detail.html:8
+#: .\onlineshop\templates\onlineshop\product\product-list.html:6
+msgid "Products"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-detail.html:23
+msgid "Add to cart"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-detail.html:26
+msgid "Availability"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-detail.html:27
+msgid "Stock"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-detail.html:28
+msgid "Condition"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-detail.html:30
+msgid "Product Details"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-detail.html:89
+msgid "Product Reviews"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-detail.html:105
+msgid "There are no reviews yet."
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-detail.html:108
+msgid "Your review has been added."
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-detail.html:111
+msgid "Write Your Review"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-detail.html:116
+msgid "Your Name"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-detail.html:117
+msgid "Email Address"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-detail.html:119
+msgid "Your Review"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-list.html:23
+msgid "Categories"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-list.html:27
+msgid "All Products"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-list.html:43
+msgid "Price Range"
+msgstr ""
+
+#: .\onlineshop\templates\onlineshop\product\product-list.html:60
+msgid "ALL PRODUCTS"
+msgstr ""
+
+#: .\onlineshop\urls.py:7
+msgid "^product_list/$"
+msgstr ""
+
+#: .\payment\templates\payment\canceled.html:7
+msgid "Canceled Payment"
+msgstr ""
+
+#: .\payment\templates\payment\canceled.html:14
+msgid "Your payment has not been processed"
+msgstr ""
+
+#: .\payment\templates\payment\canceled.html:15
+msgid "There was a problem processing your payment."
+msgstr ""
+
+#: .\payment\templates\payment\done.html:6
+msgid "Successful Payment"
+msgstr ""
+
+#: .\payment\templates\payment\done.html:13
+msgid "Your payment was successful"
+msgstr ""
+
+#: .\payment\templates\payment\done.html:14
+msgid "Your payment has been successfully received."
+msgstr ""
+
+#: .\payment\templates\payment\process.html:5
+msgid "Payment"
+msgstr ""
+
+#: .\payment\templates\payment\process.html:12
+msgid "Pay using PayPal"
+msgstr ""
+
+#: .\payment\urls.py:7
+msgid "^process/$"
+msgstr ""
+
+#: .\payment\urls.py:8
+msgid "^done/$"
+msgstr ""
+
+#: .\payment\urls.py:9
+msgid "^canceled/$"
+msgstr ""

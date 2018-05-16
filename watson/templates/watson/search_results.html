@@ -1,0 +1,19 @@
+{% extends 'onlineshop/base.html' %}
+{% load watson %}
+
+{% block title %}Search results{% if query %} for &ldquo;{{query}}&rdquo;{% endif %}{% endblock %}
+
+{% block content %}
+        <center><h1>Search results{% if query %} for &ldquo;{{query}}&rdquo;{% endif %}</h1>
+        {% if search_results %}
+            {% search_results search_results %}
+        {% else %}
+            {% if query %}
+                <p><em>There are no results to display.</em></p>
+                <p><em>Try entering a less specific search term.</em></p>
+            {% else %}
+                <p><em>Please enter a query in the search form.</em></p>
+            {% endif %}
+        {% endif %}</center>
+    <br /><br /><br /><br /><br /><br /><br />
+{% endblock %}

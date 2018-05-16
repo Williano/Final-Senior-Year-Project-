@@ -42,6 +42,8 @@ from .admin_utils import ExtendibleModelAdminMixin, make_subscription
 
 from .settings import newsletter_settings
 
+from import_export.admin import ImportExportModelAdmin
+
 # Contsruct URL's for icons
 ICON_URLS = {
     'yes': '%snewsletter/admin/img/icon-yes.gif' % settings.STATIC_URL,
@@ -51,7 +53,7 @@ ICON_URLS = {
 }
 
 
-class NewsletterAdmin(admin.ModelAdmin):
+class NewsletterAdmin(ImportExportModelAdmin):
     list_display = (
         'title', 'admin_subscriptions', 'admin_messages', 'admin_submissions'
     )
@@ -80,7 +82,7 @@ class NewsletterAdmin(admin.ModelAdmin):
     admin_submissions.short_description = ''
 
 
-class SubmissionAdmin(admin.ModelAdmin, ExtendibleModelAdminMixin):
+class SubmissionAdmin(ImportExportModelAdmin, ExtendibleModelAdminMixin):
     form = SubmissionAdminForm
     list_display = (
         'admin_message', 'admin_newsletter', 'admin_publish_date', 'publish',
@@ -217,7 +219,7 @@ class ArticleInline(AdminImageMixin, StackedInline):
         }
 
 
-class MessageAdmin(admin.ModelAdmin, ExtendibleModelAdminMixin):
+class MessageAdmin(ImportExportModelAdmin, ExtendibleModelAdminMixin):
     save_as = True
     list_display = (
         'admin_title', 'admin_newsletter', 'admin_preview', 'date_create',
@@ -336,7 +338,7 @@ class MessageAdmin(admin.ModelAdmin, ExtendibleModelAdminMixin):
         return my_urls + urls
 
 
-class SubscriptionAdmin(admin.ModelAdmin, ExtendibleModelAdminMixin):
+class SubscriptionAdmin(ImportExportModelAdmin, ExtendibleModelAdminMixin):
     form = SubscriptionAdminForm
     list_display = (
         'name', 'email', 'admin_newsletter', 'admin_subscribe_date',

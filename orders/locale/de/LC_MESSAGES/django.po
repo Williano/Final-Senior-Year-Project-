@@ -73,11 +73,11 @@ msgstr "Rabatt"
 #: .\orders\templates\orders\order\create.html:6
 #: .\orders\templates\orders\order\create.html:12
 msgid "Checkout"
-msgstr ""
+msgstr "Auschecken"
 
 #: .\orders\templates\orders\order\create.html:15
 msgid "Your order"
-msgstr ""
+msgstr "Deine Bestellung"
 
 #: .\orders\templates\orders\order\create.html:25
 #, python-format
@@ -89,11 +89,11 @@ msgstr ""
 
 #: .\orders\templates\orders\order\create.html:32
 msgid "Total"
-msgstr ""
+msgstr "Gesamt"
 
 #: .\orders\templates\orders\order\create.html:38
 msgid "Place order"
-msgstr ""
+msgstr "Bestellung aufgeben"
 
 #: .\orders\templates\orders\order\created.html:4
 #: .\orders\templates\orders\order\created.html:9
@@ -117,7 +117,7 @@ msgstr ""
 
 #: .\orders\urls.py:7
 msgid "^create/$"
-msgstr ""
+msgstr "^Erstelle/$"
 
 #~ msgid "coupon"
 #~ msgstr "Coupon"

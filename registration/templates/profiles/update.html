@@ -1,12 +1,12 @@
 {% extends "registration/registration_base.html" %}
 {% load crispy_forms_tags i18n %}
-{% block title %}Update Profile{% endblock %}
+{% block title %}{% trans "Update Profile" %}{% endblock %}
 
 {% block content %}
 <br/><br/><br/>
 <header id="top" class="sub-header">
         <div class="container">
-            <center><h3 class="page-title wow fadeInDown">Update your Profile  {% firstof user.get_short_name user.get_username %}</h3></center>
+            <center><h3 class="page-title wow fadeInDown">{% trans "Update your Profile" %}  {% firstof user.get_short_name user.get_username %}</h3></center>
         </div>
         <!-- end .container -->
 </header><
@@ -22,8 +22,8 @@
                                <div class="row">
                                         <div class="col-md-10">
                                             <ul>
-                                                <p><a href="/profile" class="btn warn">Back to My Profile</a></p>
-                                                <p><a href="{% url 'onlineshop:product_list' %}" class="btn warn">Go To Shop</a></p>
+                                                <p><a href="/profile" class="btn warn">{% trans "Back to My Profile" %}</a></p>
+                                                <p><a href="{% url 'onlineshop:product_list' %}" class="btn warn">{% trans "Go To Shop" %}</a></p>
                                             </ul>
                                         </div>
                                 </div>
@@ -39,7 +39,7 @@
                                   <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="col-md-10">
-                                                        <h5 class="page-title wow fadeInDown">Update your Profile  {% firstof user.get_short_name user.get_username %}<br></h5>
+                                                        <h5 class="page-title wow fadeInDown">{% trans "Update your Profile" %}  {% firstof user.get_short_name user.get_username %}<br></h5>
                                                             <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
                                                                     {% crispy form form.helper %}
                                                             </form>

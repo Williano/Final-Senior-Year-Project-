@@ -4,6 +4,7 @@ from django.contrib import admin
 from django.http import HttpResponse
 from django.core.urlresolvers import reverse
 from .models import Order, OrderItem
+from import_export.admin import ImportExportModelAdmin
 
 # Customizes the admin backend for the project.
 
@@ -49,7 +50,7 @@ class OrderItemInline(admin.TabularInline):
     raw_id_fields = ['product']
 
 
-class OrderAdmin(admin.ModelAdmin):
+class OrderAdmin(ImportExportModelAdmin):
     list_display = ['id',
                     'first_name',
                     'last_name',
@@ -65,6 +66,5 @@ class OrderAdmin(admin.ModelAdmin):
     list_filter = ['paid', 'created', 'updated']
     inlines = [OrderItemInline]
     actions = [export_to_csv]
-
 
 admin.site.register(Order, OrderAdmin)
