@@ -318,7 +318,6 @@ NEWSLETTER_BATCH_SIZE = 100
 # Using django-tinymce
 NEWSLETTER_RICHTEXT_WIDGET = "tinymce.widgets.TinyMCE"
 
-# Remote URL of TRM which will be synced to local TRM
-TRANSLATIONS_SYNC_REMOTE_URL = '127.0.0.1:8080/translations/sync/'
+
 
 
