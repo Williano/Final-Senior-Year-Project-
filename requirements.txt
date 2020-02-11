@@ -6,7 +6,7 @@ celery==3.1.18
 certifi==2017.11.5
 chardet==3.0.4
 diff-match-patch==20121119
-Django==1.8.7
+Django==1.11.28
 django-crispy-forms==1.7.2
 django-decouple==2.1
 django-extensions==2.0.7
