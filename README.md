@@ -1,78 +1,148 @@
-# Final-Senior-Year-Project-
-My College Final(Senior) Year Project
+# E-Shopper
+A Multi-lingual e-commerce website.
 
-# Running the site locally
 
-## Requirments
+## Table of contents
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [Features](#features)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Status](#status)
+* [Contact](#contact)
+* [License](#license)
+* [Contributing](#contributing)
 
-* [Python 3.6.3](https://python.org)
-* [Django 1.8.7](https://www.djangoproject.com/)
-* [virtualenv](https://virtualenv.pypa.io/en/stable/) or [Virtualenvwrapper](https://virtualenvwrapper.readthedocs.io)
+
+## General info
+A multi-lingual e-commerce website I built with Python and Django for my final (senior) year project. It supports 10 international languages and has a lot of features a standard online shop needs.
+
+## Screenshots
+
+Home Page
+:-------------------------:
+![HomePage](https://user-images.githubusercontent.com/19711677/86519243-7a55af00-bdfe-11ea-8a43-a9850710bd82.JPG)
+
+
+Language Dropdown Page
+:-------------------------:
+![HomePage language dropdown](https://user-images.githubusercontent.com/19711677/86519338-79714d00-bdff-11ea-8780-a09ec73ef9d4.JPG)
+
+
+ Shop Owner Dashboard Page
+:-------------------------:
+![Shop Owner or Manger Page with Google Analytics](https://user-images.githubusercontent.com/19711677/86519242-79bd1880-bdfe-11ea-8681-a613f0e77faf.JPG)
+
+
+Customer Dashboard Page
+:-------------------------:
+![customer dashboard](https://user-images.githubusercontent.com/19711677/86519241-79bd1880-bdfe-11ea-946c-27d0adf8745b.JPG)
+
+
+Live Chat Support           
+:-------------------------:
+![live chat support](https://user-images.githubusercontent.com/19711677/86519249-7b86dc00-bdfe-11ea-8809-cb1e7c304637.JPG)
+
+ 
+Product List Page       |  Product Detail Page
+:-------------------------:|:-------------------------:
+![shop](https://user-images.githubusercontent.com/19711677/86519337-79714d00-bdff-11ea-88a0-4001d8ab386a.JPG) | ![Product Detail Page](https://user-images.githubusercontent.com/19711677/86519245-7aee4580-bdfe-11ea-802f-154ad56b80ff.JPG)
+
+Checkout Page 
+:-------------------------:
+![Checkout page](https://user-images.githubusercontent.com/19711677/86519248-7b86dc00-bdfe-11ea-9df0-4b1113de6938.JPG)
+
+
+PayPal Payment Page
+:-------------------------:
+![Payment Page](https://user-images.githubusercontent.com/19711677/86519247-7b86dc00-bdfe-11ea-81f5-6a32aa760d7d.JPG)
+
+ 
+
+
+## Features
+
+* Multi-language support (10 international language)
+* PayPal payment
+* Customer Dashboard
+* Owner Dashboard
+* Google Analytics
+* Product Reviews
+* Product Recommendations
+* Ad support
+* Live Chat Support
+
+
+## Technologies
+* Python 3
+* Javascript
+* Jquery 
+* Ajax
+* Django 1.11
+* HTML5
+* CSS3 
+* Bootstrap 4
+* Font awesome
+* PostgreSQL
 * Celery
-* Ngrok
 * Redis
+* Ngrok
 
-## Installation on Linux
+## Setup
 
-* [Follow the guide here](https://help.github.com/articles/fork-a-repo) on how to clone or fork a repo
-* [Follow the guide here](http://simononsoftware.com/virtualenv-tutorial/) on how to create virtualenv
+To run this app, you will need to follow these 3 steps:
 
-* To create a normal virtualenv (example _myvenv_) and activate it (see Code below).
+#### 1. Requirements
+  - a Laptop
+
+  - Text Editor or IDE (eg. vscode, PyCharm)
+
+  - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed on your Laptop.
+
+
+#### 2. Install Python and Pipenv
+  - [Python3](https://www.python.org/downloads/)
+  
+
+  - [Pipenv](https://pipenv-es.readthedocs.io/es/stable/)
+
+#### 3. Local Setup and Running on Windows, Linux and Mac OS
 
   ```
-  sudo apt-get install python-virtualenv
+  # Clone this repository into the directory of your choice
+  $ git clone https://github.com/Williano/Final-Senior-Year-Project-.git
+
+  # Move into project folder
+  $ cd Final-Senior-Year-Project-
+
+  # Install from Pipfile
+  $ pipenv install -r requirements.txt 
+
+  # Activate the Pipenv shell
+  $ pipenv shell
+
+  # Create database tables
+  (Final-Senior-Year-Project-XXXX) $ python manage.py migrate
   
-  virtualenv --python=python3.6.3 myvenv
+  # Create superuser account
+  (Final-Senior-Year-Project-XXXX) $ python manage.py createsuperuser
+
+  # Start server
+  (Final-Senior-Year-Project-XXXX) $ python manage.py runserver
   
-  source myvenv/bin/activate
-
-  (myvenv) $ pip install -r requirements.txt
-
-  (myvenv) $ python manage.py makemigrations
-
-  (myvenv) $ python manage.py migrate
-
-  (myvenv) $ python manage.py runserver
+  # Copy the IP address provided once your server has completed building the site. (It will say something like >> Serving at 127.0.0.1....).
+  
+  # Open the address in the browser
+  >>> http://127.0.0.1:XXXX
+  
+  
+  # Django Admin
+  >>> http://127.0.0.1:XXXX/admin/
   ```
-* Copy the IP address provided once your server has completed building the site. (It will say something like >> Serving at 127.0.0.1....).
-* Open the address in the browser
-* Don't forget to Change ALLOWED_HOSTS = ['127.0.0.1'] in settings.py
-* `Note`: It is important that when you create your virtualenv, do not create it in the same folder as the code you downloaded.
 
 
-## Installation on Windows
-
-* [Follow the guide here](https://help.github.com/articles/fork-a-repo) on how to clone or fork a repo
-* [Follow the guide here](http://pymote.readthedocs.io/en/latest/install/windows_virtualenv.html) on how to create virtualenv
-
-* To create a normal virtualenv (example _myvenv_) and activate it (see Code below).
-
-  ```
-  1. Create main project folder with name of your choice (eg. Final Year Project) and clone (git clone url) the project into that folder.
-   
-  2. Open the command prompt and navigate the project folder (Final Year Project)
-  
-  3. virtualenv finalyearproject-env   # Create a virtual environment for the project with it's own packages.
-  
-  4. finalyearproject-env\Scripts\activate    # Move into the virtual environment folder and activate the environment.
-  
-  5. cd ..   # move back into main project folder.
-  
-  6. cd eshopper    # Move into second (eshopper) folder.
-  
-  7. pip install -r requirements.txt  # install the requirements.
-
-  8. python manage.py migrate   # Migrate the data into the database.
-
-  9. python manage.py runserver   # Run the server.
-  
-  NOTE: You can use any text editor or IDE of your choice. 
-  ```
-* Copy the IP address provided once your server has completed building the site. (It will say something like >> Serving at 127.0.0.1....).
-* Open the address in the browser
-* Don't forget to Change ALLOWED_HOSTS = ['127.0.0.1'] in settings.py
-* `Note`: It is important that when you create your virtualenv, do not create it in the same folder as the code you downloaded.
-
+## Status
+Project is: _done_
 
 ## Contact
 Created by [Williano](https://williano.github.io/) - feel free to contact me!
