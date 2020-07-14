@@ -74,7 +74,7 @@ PayPal Payment Page
 
 
 ## Technologies
-* Python 3
+* Python 3.5
 * Javascript
 * Jquery 
 * Django 1.11
