@@ -1,5 +1,5 @@
 # E-Shopper
-A Multi-lingual e-commerce website.
+A Multi-lingual e-commerce website built with Django.
 
 
 ## Table of contents
