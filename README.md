@@ -57,9 +57,6 @@ PayPal Payment Page
 :-------------------------:
 ![Payment Page](https://user-images.githubusercontent.com/19711677/86519247-7b86dc00-bdfe-11ea-81f5-6a32aa760d7d.JPG)
 
- 
-
-
 ## Features
 
 * Multi-language support (10 international language)
