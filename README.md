@@ -15,7 +15,7 @@ A Multi-lingual e-commerce website built with Django.
 
 
 ## General info
-A multi-lingual e-commerce website I built with Python and Django for my final (senior) year project. It supports 10 international languages and has a lot of features a standard online shop needs.
+A multi-lingual E-Commerce website I built with Python and Django for my final (senior) year project. It supports 10 international languages and has a lot of features a standard online shop needs.
 
 ## Screenshots
 
