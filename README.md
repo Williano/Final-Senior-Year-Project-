@@ -69,7 +69,6 @@ PayPal Payment Page
 * Ad support
 * Live Chat Support
 
-
 ## Technologies
 * Python 3
 * Javascript
