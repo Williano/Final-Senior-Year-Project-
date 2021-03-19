@@ -20,7 +20,7 @@ django-sendgrid-v5==0.6.87
 django-tinymce==2.4.0
 django-watson==1.5.2
 django-webtest==1.9.2
-djangorestframework==3.9.1
+djangorestframework==3.11.2
 et-xmlfile==1.0.1
 feedparser==5.2.1
 google-api-python-client==1.4.1
