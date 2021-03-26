@@ -42,7 +42,7 @@ python-card-me==0.9.3
 python-dateutil==2.7.2
 python-http-client==3.0.0
 pytz==2017.3
-PyYAML==3.12
+PyYAML==5.4
 redis==2.10.3
 requests==2.18.4
 rsa==4.1
