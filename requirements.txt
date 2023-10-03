@@ -54,7 +54,7 @@ surlex==0.2.0
 tablib==0.12.1
 unicodecsv==0.14.1
 uritemplate==3.0.0
-urllib3==1.26.5
+urllib3==1.26.17
 waitress==2.1.2
 WebOb==1.8.1
 WebTest==2.0.29
