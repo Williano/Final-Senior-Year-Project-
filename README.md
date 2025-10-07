@@ -73,14 +73,21 @@ PayPal Payment Page
 * Python 3
 * Javascript
 * Jquery 
-* Django 1.11
+* Django 2.2.x (project created with 1.11, upgraded in requirements)
+* Django REST framework
 * HTML5
 * CSS3 
 * Bootstrap 4
 * Font awesome
-* PostgreSQL
+* MySQL 8 (default DB)
 * Celery
 * Redis
+* SendGrid (email backend)
+* django-jet (admin UI) + Google Analytics modules
+* django-parler (i18n for models)
+* django-paypal (payments)
+* django-crispy-forms, django-tinymce, sorl-thumbnail
+* django-newsletter, django-watson, django-extensions, import-export
 * Ngrok
 
 ## Setup
@@ -95,13 +102,41 @@ To run this app, you will need to follow these 3 steps:
   - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed on your Laptop.
 
 
-#### 2. Install Python and Pipenv
+#### 2. Install Python and tools
   - [Python3](https://www.python.org/downloads/)
-  
+  - One of:
+    - [Pipenv](https://pipenv-es.readthedocs.io/es/stable/)
+    - or [virtualenv](https://virtualenv.pypa.io/) / built-in `venv`
 
-  - [Pipenv](https://pipenv-es.readthedocs.io/es/stable/)
+#### 3. Database configuration (MySQL 8)
 
-#### 3. Local Setup and Running on Windows, Linux and Mac OS
+Default database is MySQL 8. Settings live in `eshopper/settings.py` under `DATABASES['default']`:
+
+```110:120:eshopper/settings.py
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'eshopper',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': 3306
+    }
+}
+```
+
+- Requires MySQL 8 server and `mysqlclient` Python package.
+- If you are importing an existing SQL dump file, create the DB and import it:
+
+```bash
+# create database (from MySQL shell)
+CREATE DATABASE eshopper CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+# import from OS shell (adjust dump path)
+mysql -uroot -p123456 eshopper < path/to/eshopper.sql
+```
+
+#### 4. Local Setup and Running on Windows, Linux and Mac OS
 
   ```
   # Clone this repository into the directory of your choice
@@ -110,11 +145,20 @@ To run this app, you will need to follow these 3 steps:
   # Move into project folder
   $ cd Final-Senior-Year-Project-
 
-  # Install from Pipfile
+  # Option A: Pipenv (recommended)
   $ pipenv install -r requirements.txt 
-
-  # Activate the Pipenv shell
+  # On Windows, ensure MySQL build deps are present (MySQL Connector/C or Visual C++ build tools)
+  $ pipenv run pip install mysqlclient
   $ pipenv shell
+
+  # Option B: Python venv (built-in)
+  $ python -m venv .venv
+  # Windows PowerShell
+  $ .\.venv\Scripts\Activate.ps1
+  # macOS/Linux
+  $ source .venv/bin/activate
+  (.venv) $ pip install -r requirements.txt
+  (.venv) $ pip install mysqlclient
 
   # Create database tables
   (Final-Senior-Year-Project-XXXX) $ python manage.py migrate
@@ -124,6 +168,8 @@ To run this app, you will need to follow these 3 steps:
 
   # Start server
   (Final-Senior-Year-Project-XXXX) $ python manage.py runserver
+
+  # If using built-in venv, shell prompt will differ, e.g. (.venv)
   
   # Copy the IP address provided once your server has completed building the site. (It will say something like >> Serving at 127.0.0.1....).
   

@@ -109,12 +109,12 @@ WSGI_APPLICATION = 'eshopper.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'eshopper',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
+        'USER': 'root',
+        'PASSWORD': '123456',
         'HOST': 'localhost',
-        'PORT': 5432
+        'PORT': 3306
 
     }
 }

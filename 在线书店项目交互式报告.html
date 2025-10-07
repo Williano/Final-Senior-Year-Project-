@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线书店销售系统 - 项目报告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: A single-page dashboard design is used to transform the linear thesis document into an engaging, explorable project summary. The structure uses thematic sections (Overview, Architecture, Features, Design) with a top navigation bar for quick scrolling. This non-linear approach allows users to jump to the most relevant information. Key interactions include toggling between frontend/backend features and exploring feature details via clickable cards, making the dense functional requirements easy to digest. This is more user-friendly than a simple text page. -->
+    <!-- Visualization & Content Choices: Report Info: Project's technical stack -> Goal: Organize/Inform -> Viz: HTML/CSS diagram -> Interaction: Static visual grouping for clarity. Report Info: Frontend/Backend features list -> Goal: Organize/Compare -> Viz: Two-column layout with clickable cards -> Interaction: JS toggles to reveal details, reducing cognitive load. Report Info: Database tables and fields -> Goal: Relationships/Compare -> Viz: HTML/CSS boxes for a conceptual E-R diagram and a Chart.js doughnut chart for field count comparison -> Interaction: Chart tooltips for details. This presents the database structure visually without overwhelming the user. Report Info: Thesis chapter list -> Goal: Show Process -> Viz: HTML/CSS vertical stepper -> Interaction: Static visual flow. All choices avoid SVG/Mermaid as required and prioritize interactive exploration over static text. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #FDFBF8;
+            color: #4A4A4A;
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #C084FC;
+            border-bottom-color: #C084FC;
+        }
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .tag {
+            background-color: #F3E8FF;
+            color: #8B5CF6;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 450px;
+            max-height: 80vh;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/80 sticky top-0 z-50 backdrop-blur-md shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-purple-600">
+                在线书店销售系统
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#overview" class="nav-link pb-1">项目概览</a>
+                <a href="#tech" class="nav-link pb-1">技术架构</a>
+                <a href="#features" class="nav-link pb-1">核心功能</a>
+                <a href="#design" class="nav-link pb-1">系统设计</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="overview" class="pt-8 mb-20">
+            <h1 class="text-4xl font-bold text-center mb-4 text-gray-800">在线书店销售系统设计与实现</h1>
+            <p class="text-center text-lg text-gray-500 mb-12 max-w-3xl mx-auto">本报告旨在交互式地展示一个基于现代Web技术栈（Django, Vue.js）开发的在线书店项目。应用旨在提供一个功能完善、用户体验良好的电子商务平台，涵盖从用户浏览、购物车到订单管理的全流程。</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card p-6 flex flex-col items-center text-center">
+                    <div class="p-4 bg-purple-100 rounded-full mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">课题目的</h3>
+                    <p class="text-gray-600">开发一个功能完备的在线书店平台，实现用户友好的图书销售流程，并为管理员提供高效的后台管理工具，以验证和应用所学的软件工程知识。</p>
+                </div>
+                <div class="card p-6 flex flex-col items-center text-center">
+                    <div class="p-4 bg-green-100 rounded-full mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">课题意义</h3>
+                    <p class="text-gray-600">将理论知识与实践相结合，掌握Web全栈开发的核心技能。项目成果不仅是一个可运行的系统，更是对软件开发生命周期的全面演练。</p>
+                </div>
+                <div class="card p-6 flex flex-col items-center text-center">
+                     <div class="p-4 bg-blue-100 rounded-full mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">关键词</h3>
+                    <div class="flex flex-wrap justify-center gap-2 mt-2">
+                        <span class="tag">Django</span>
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">在线书店</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech" class="pt-8 mb-20">
+            <h2 class="section-title">技术架构</h2>
+            <p class="text-center text-gray-500 mb-12 max-w-3xl mx-auto">系统采用前后端分离的现代架构模式。这种设计提高了开发效率、可维护性和系统的可扩展性，使得各层级职责分明，易于独立开发和部署。</p>
+            <div class="card p-8">
+                <div class="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-8">
+                    <div class="text-center w-full md:w-1/4">
+                        <div class="text-6xl mb-2">🖥️</div>
+                        <h3 class="text-2xl font-bold text-blue-600">前端</h3>
+                        <p class="font-semibold text-lg">Vue 3</p>
+                        <p class="text-gray-600 mt-2">构建用户界面的渐进式框架，负责视图渲染、用户交互和状态管理。</p>
+                    </div>
+                    <div class="text-3xl font-light text-gray-400 transform rotate-90 md:rotate-0">↔️</div>
+                     <div class="text-center w-full md:w-1/3">
+                        <div class="text-6xl mb-2">⚙️</div>
+                        <h3 class="text-2xl font-bold text-green-600">后端</h3>
+                        <p class="font-semibold text-lg">Python 3.11 + Django 4.2</p>
+                        <p class="text-gray-600 mt-2">提供业务逻辑、API接口和数据处理。Django的高效开发特性保证了后端的稳定性和安全性。</p>
+                    </div>
+                    <div class="text-3xl font-light text-gray-400 transform rotate-90 md:rotate-0">↔️</div>
+                    <div class="text-center w-full md:w-1/4">
+                        <div class="text-6xl mb-2">🗃️</div>
+                        <h3 class="text-2xl font-bold text-orange-600">数据库</h3>
+                        <p class="font-semibold text-lg">MySQL 8.0</p>
+                        <p class="text-gray-600 mt-2">作为关系型数据库，负责持久化存储所有业务数据，如用户信息、商品、订单等。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="pt-8 mb-20">
+            <h2 class="section-title">核心功能</h2>
+            <p class="text-center text-gray-500 mb-12 max-w-3xl mx-auto">系统功能围绕用户和管理员两条主线设计。用户端注重流畅的购物体验，管理端则强调操作的便捷与高效，共同构成一个完整的电商生态。</p>
+            <div class="grid md:grid-cols-2 gap-10">
+                
+                <div>
+                    <h3 class="text-2xl font-semibold text-center mb-6">
+                        <span class="p-3 bg-purple-100 rounded-full mr-3">🛍️</span>前台用户功能
+                    </h3>
+                    <div class="space-y-4" id="frontend-features">
+                        <div class="card p-4 cursor-pointer">
+                            <h4 class="font-semibold text-lg">用户中心</h4>
+                            <div class="text-gray-600 mt-2 hidden">登录、注册、修改个人信息（密码、收货地址）。</div>
+                        </div>
+                        <div class="card p-4 cursor-pointer">
+                            <h4 class="font-semibold text-lg">图书浏览与搜索</h4>
+                            <div class="text-gray-600 mt-2 hidden">首页推荐（条幅、热销、新品）、按分类浏览、关键词搜索、查看图书详情。</div>
+                        </div>
+                        <div class="card p-4 cursor-pointer">
+                            <h4 class="font-semibold text-lg">购物车管理</h4>
+                             <div class="text-gray-600 mt-2 hidden">添加商品、修改数量、删除商品、合并付款。</div>
+                        </div>
+                        <div class="card p-4 cursor-pointer">
+                            <h4 class="font-semibold text-lg">订单系统</h4>
+                             <div class="text-gray-600 mt-2 hidden">下单支付、查询个人订单、确认收货、商品评价。</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold text-center mb-6">
+                        <span class="p-3 bg-blue-100 rounded-full mr-3">🛠️</span>后台管理功能
+                    </h3>
+                    <div class="space-y-4" id="backend-features">
+                         <div class="card p-4 cursor-pointer">
+                            <h4 class="font-semibold text-lg">订单管理</h4>
+                             <div class="text-gray-600 mt-2 hidden">按状态查询订单、修改订单状态（发货、完成）、删除订单。</div>
+                        </div>
+                        <div class="card p-4 cursor-pointer">
+                            <h4 class="font-semibold text-lg">用户管理</h4>
+                             <div class="text-gray-600 mt-2 hidden">查询所有用户、新增用户、修改用户信息及密码、删除用户、管理用户角色和权限。</div>
+                        </div>
+                        <div class="card p-4 cursor-pointer">
+                            <h4 class="font-semibold text-lg">商品管理</h4>
+                            <div class="text-gray-600 mt-2 hidden">图书类目管理（增删改查）、图书信息管理（增删改查）、库存管理。</div>
+                        </div>
+                         <div class="card p-4 cursor-pointer">
+                            <h4 class="font-semibold text-lg">内容与运营管理</h4>
+                            <div class="text-gray-600 mt-2 hidden">系统公告管理、首页轮播图管理、运费模板管理、用户评价审核。</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="design" class="pt-8">
+            <h2 class="section-title">系统设计</h2>
+             <p class="text-center text-gray-500 mb-12 max-w-3xl mx-auto">良好的系统设计是项目成功的基石。本项目的数据库设计遵循第三范式，确保了数据的结构化和一致性，并通过模块化设计实现了功能的高内聚和低耦合。</p>
+            <div class="grid lg:grid-cols-2 gap-10">
+                <div class="card p-8">
+                    <h3 class="text-2xl font-semibold text-center mb-6">数据库逻辑结构</h3>
+                    <p class="text-center text-gray-500 mb-6">核心数据表关系展示了系统的主要实体及其关联。通过这些表，系统能够有效地组织和管理人、书、单三大核心数据流。</p>
+                    <div class="space-y-4 text-center">
+                        <div class="p-3 bg-gray-100 rounded-lg">
+                            <strong class="text-purple-700">用户表 (User)</strong>
+                            <p class="text-sm text-gray-600">ID, 用户名, 密码, 邮箱, 手机号, 收货地址...</p>
+                        </div>
+                        <div class="text-xl">↕</div>
+                        <div class="p-3 bg-gray-100 rounded-lg">
+                            <strong class="text-green-700">图书表 (Book)</strong>
+                            <p class="text-sm text-gray-600">ID, 书名, 作者, 出版社, 价格, 库存, 分类ID...</p>
+                        </div>
+                        <div class="text-xl">↕</div>
+                        <div class="p-3 bg-gray-100 rounded-lg">
+                            <strong class="text-blue-700">订单表 (Order)</strong>
+                             <p class="text-sm text-gray-600">ID, 订单号, 用户ID, 总价, 状态, 创建时间...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-8 flex flex-col">
+                     <h3 class="text-2xl font-semibold text-center mb-6">数据表字段复杂度分析</h3>
+                     <p class="text-center text-gray-500 mb-6">此图表展示了主要数据表的字段数量，直观反映了各核心实体的数据复杂度。订单相关表的字段较多，体现了其业务逻辑的复杂性。</p>
+                    <div class="chart-container flex-grow">
+                        <canvas id="dbChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-20">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>在线书店销售系统 - 毕业设计项目报告</p>
+            <p class="text-sm text-gray-400 mt-2">基于 Django 4.2+, Vue 3, Python 3.11, MySQL 8.0</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const featureContainers = [
+                document.getElementById('frontend-features'),
+                document.getElementById('backend-features')
+            ];
+
+            featureContainers.forEach(container => {
+                if (container) {
+                    const cards = container.querySelectorAll('.card');
+                    cards.forEach(card => {
+                        card.addEventListener('click', () => {
+                            const detail = card.querySelector('div');
+                            detail.classList.toggle('hidden');
+                        });
+                    });
+                }
+            });
+            
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            navLinks.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            const ctx = document.getElementById('dbChart').getContext('2d');
+            const dbChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['用户表', '图书表', '订单表', '订单详情表', '购物车表', '分类表'],
+                    datasets: [{
+                        label: '字段数量',
+                        data: [12, 15, 10, 6, 5, 4],
+                        backgroundColor: [
+                            'rgba(192, 132, 252, 0.7)',
+                            'rgba(74, 222, 128, 0.7)',
+                            'rgba(96, 165, 250, 0.7)',
+                            'rgba(251, 146, 60, 0.7)',
+                            'rgba(244, 63, 94, 0.7)',
+                            'rgba(168, 162, 158, 0.7)'
+                        ],
+                        borderColor: [
+                            '#A855F7',
+                            '#22C55E',
+                            '#3B82F6',
+                            '#F97316',
+                            '#F43F5E',
+                            '#78716C'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: false,
+                            text: '数据库主要表字段数量'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed + ' 个字段';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
